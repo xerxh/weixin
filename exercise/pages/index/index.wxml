@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view>
+    <view>kkjk</view>
+    <dialog id="dialog"
+     title="雪河清清水"
+     content="啦啦啦！我是雷神托尔···为了北方神的荣誉"
+     cancelText="明白"
+     confirmText="了解"
+     bind:cancelEvent="_cancelEvent"
+     bind:confirmEvent="_confirmEvent">
+    
+    </dialog>
+</view>
