@@ -1,0 +1,2 @@
+<!--components/son1/index.wxml-->
+<button bindtap="onClick">点击修改son2的数据</button>

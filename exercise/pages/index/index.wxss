@@ -13,9 +13,16 @@
 }
 
 .userinfo-nickname {
-  color: #aaa;
+    color: #aaa;
 }
 
 .usermotto {
-  margin-top: 200px;
+   margin-top: 200px;
+}
+.img {
+    margin-left:50%;
+}
+.wxParse{
+  display: flex;
+  flex-direction: column;
 }

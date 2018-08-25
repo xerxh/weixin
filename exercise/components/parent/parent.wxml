@@ -1,0 +1,5 @@
+<!--components/parent/parent.wxml-->
+<view>
+    <text>父组件</text>
+    <slot></slot>
+</view>

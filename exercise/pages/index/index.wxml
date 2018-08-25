@@ -11,8 +11,15 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view> -->
+
+<!-- // 引入模板 -->
+<import src="../../utils/wxParse/wxParse.wxml"/>
+
 <view>
-    <view>kkjk</view>
+    <image src='https://cdn.it120.cc/apifactory/2017/11/17/4eed2ccae3178578326f3adcd60a7b06.jpg' class='img' style='width:50px;height:50px'></image>
+    <carrousel 
+    imgUrls="{{banners}}"
+    autoplay="{{true}}"/>
     <dialog id="dialog"
      title="雪河清清水"
      content="啦啦啦！我是雷神托尔···为了北方神的荣誉"
@@ -22,4 +29,19 @@
      bind:confirmEvent="_confirmEvent">
     
     </dialog>
+    <button bindtap='toLoadPage'>懒加载</button> 
+    <button open-type="openSetting">打开授权设置页</button> 
+    <button open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>打开授权设置页</button>
+
+    <view>
+        <parent>
+            <!-- 子组件1 -->
+            <!-- <view class='wxParse'>
+                <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+            </view> -->
+            <sonb />
+            <!-- 子组件2 -->
+            <sonc />
+        </parent>
+    </view>
 </view>
