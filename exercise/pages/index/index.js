@@ -104,6 +104,12 @@ Page({
     // 获取dialog组件
     this.dialog = this.selectComponent('#dialog')
     console.log(this.dialog)
+    // canvas 动画
+    const ctx = wx.createCanvasContext('ripple');
+    ctx.arc(106, 106, 50, 0, 2 * Math.PI)
+    ctx.setFillStyle('red')
+    ctx.fill();
+    ctx.draw();
   },
   
   showDialog () {

@@ -44,4 +44,6 @@
             <sonc />
         </parent>
     </view>
+
+    <canvas class='canvas' canvas-id='ripple'></canvas>
 </view>
