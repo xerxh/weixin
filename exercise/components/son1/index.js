@@ -5,7 +5,7 @@ Component({
   behaviors: [sendBehaver],
   relations:{
     '../parent/parent' : {
-      type : 'ancestor'
+      type : 'parent'
     }
   },
   /**
@@ -27,11 +27,9 @@ Component({
    */
   methods: {
     onClick () {
-      console.log(this._parent('../parent/parent'))
-      var parent = this._parent('../parent/parent').getRelationNodes();
-      console.log(parent)
-      this._sibling('../son2/index').setData({
-        likeStr: this._sibling('../son2/index').data.likeStr+"son1"
+      var sibling = this._sibling({url:'../son2/index', parentUrl:'../parent/parent'});
+      sibling.setData({
+        likeStr: sibling.data.likeStr+"son1"
       })
     }
   },

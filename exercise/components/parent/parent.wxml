@@ -1,5 +1,5 @@
 <!--components/parent/parent.wxml-->
 <view>
-    <text>父组件</text>
+    <button bindtap="changeData">父组件</button>
     <slot></slot>
 </view>

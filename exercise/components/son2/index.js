@@ -4,7 +4,7 @@ Component({
   behaviors: [sendBehaver],
   relations:{
     '../parent/parent':{
-      type : 'ancestor'
+      type : 'parent'
     }
   },
   /**

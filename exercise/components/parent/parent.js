@@ -4,7 +4,10 @@ Component({
   behaviors: [sendBehaver],
   relations:{
     '../son1/index':{
-      type: 'descendant'
+      type: 'child'
+    },
+    '../son2/index':{
+      type: 'child'
     }
   },
   /**
@@ -25,6 +28,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    changeData () {
+      let son1 = this._sibling({url:'../son1/index'});
+      son1.setData({
+        parent: 'parent'
+      })
+      console.log(this._parent('../son1/index'))
+      
+    }
   }
 })
