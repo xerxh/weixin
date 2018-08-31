@@ -33,6 +33,10 @@ Component({
       son1.setData({
         parent: 'parent'
       })
+      let son2 = this._sibling({url: '../son2/index'});
+      son2.setData({
+        likeStr: son2.data.likeStr+'parent'
+      })
       console.log(this._parent('../son1/index'))
       
     }
