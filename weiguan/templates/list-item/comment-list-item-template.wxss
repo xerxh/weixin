@@ -1,0 +1,38 @@
+.commentListItemBox{
+  display: flex;
+  flex-direction: column;
+  padding:20rpx 40rpx;
+}
+
+.userBox{
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 0;
+}
+.userInfo{
+  display: flex;
+  justify-content: flex-start;
+}
+.avator{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.userName{
+  margin-right: 20rpx;
+}
+.date{
+  color: #D3C9C9;
+  font-size: 12px;
+}
+.commentItemScore{
+  display: inline;
+}
+.commentItemScore > image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.commentContent{
+  margin-left: 65rpx;
+  text-align: left;
+}

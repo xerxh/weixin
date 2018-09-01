@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "topNavigation": "../../components/topNavigation/index",
+    "wxparser": "plugin://wxparserPlugin/wxparser",
+    "my-comment": "../../components/comment/index",
+    "collection-advisory": "../../components/collection-advisory/index"
+  }
+}

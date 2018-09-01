@@ -1,0 +1,18 @@
+<!--components/techerIntroduce/index.wxml-->
+<view class='techerIntroduceBox'>
+    <text class='title'>老师介绍</text>
+    <!-- <navigator></navigator> -->
+    <navigator url="../../pages/techer/index?id={{item.id}}" 
+    class='techerInfoBox' 
+    wx:for="{{techerList}}"
+    wx:key="index">
+        <image class='techerImg' src="{{item.img}}"></image>
+        <view class='techerIntroduceContent'>
+            <text>{{item.name}}</text>
+            <view>
+                {{item.content}}
+            </view>
+        </view>
+    </navigator>
+</view>
+

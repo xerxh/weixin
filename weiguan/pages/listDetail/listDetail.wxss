@@ -1,0 +1,13 @@
+/* pages/listDetail/listDetail.wxss */
+@import "../../templates/list-item/comment-list-item-template.wxss";
+
+.listDetailBox{
+  padding: 200rpx 0 100rpx 0;
+}
+.htmlMark{
+  padding: 0 50rpx;
+  border-bottom: 9px solid #F2F2F2;  
+}
+.line{
+  border-top: 1px solid #EFEFEF;
+}

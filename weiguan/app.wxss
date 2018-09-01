@@ -1,0 +1,17 @@
+/**app.wxss**/
+page{
+  background: #FFFF;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 400rpx;
+  box-sizing: border-box;
+} 
+view,text{
+  word-break: break-all;
+  text-align: left;
+}

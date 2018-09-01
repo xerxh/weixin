@@ -1,0 +1,22 @@
+<!--pages/searchPage/index.wxml-->
+<topNavigation isShow="true">
+    <!-- 头部标题 -->
+    <text slot="centerTitle">{{topTitle}}</text>
+</topNavigation>
+<view class='searchBox'>
+    <search isShowBtn="true" /> 
+    <view class='commentBox'>
+      <text class='commentTitle'>{{searchTitle}}</text>
+      <view class="flexCol label">
+          <navigator
+            url="../listDetail/listDetail?id={{item.id}}"
+           class='labelText' wx:for="{{searchHotLabel}}" wx:key="index">
+              <text>{{item.label}}</text>
+          </navigator>
+          <!-- </view> -->
+      </view>
+    </view>
+</view>
+
+
+

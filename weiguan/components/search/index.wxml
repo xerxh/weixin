@@ -1,0 +1,6 @@
+<!--components/searcch/inde.wxml-->
+<view class='searcchContainer'>
+  <image class='searcchImg' src='../../asset/images/search.png'></image>
+  <input class='searcch' bindtap='jumpSearch' placeholder="艺术交换生覆盖国内及海外哪些院校？"/>
+  <text wx:if="{{isShowBtn}}" class='searchBtn'>搜索</text>
+</view>

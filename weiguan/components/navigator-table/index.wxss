@@ -1,0 +1,26 @@
+/* components/navigator-table/index.wxss */
+.navigatorTabContaner{
+  /* width: 700rpx; */
+  display: flex;
+  padding: 0 30rpx 0 30rpx;
+  justify-content: space-around;
+}
+.navigatorTabItem{
+    /* width: 90rpx; */
+}
+.navigatorTabItem > view{
+  height: 60rpx;
+  /* width: 100rpx; */
+  text-align: center;
+}
+
+/* 导航栏默认样式 */
+.activeDefault{
+  color: orange;
+  border-bottom: 3px solid orange;
+}
+/* 蓝色颜色样式 */
+.activeBlue{
+  color:#66CCFF;
+  border-bottom: 3px solid #66CCFF;
+}

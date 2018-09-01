@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navigator-tab":"../../components/navigator-table/index",
+    "search":"../../components/search/index",
+    "topNavigation":"../../components/topNavigation/index",
+    "bottom-tab":"../../components/bottom-table/index"
+  }
+}

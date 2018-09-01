@@ -1,0 +1,11 @@
+<!--components/collection-advisory/index.wxml-->
+<view class='collectionBg'>
+  <view class='collectionBox'>
+    <block wx:for="{{btnName}}" wx:key="index">
+
+      <!-- <view wx:if="{{item == '推荐'}}">{{item}}</view> -->
+
+      <view bindtap='saveCollection' data-index="{{index}}" class="{{isChangeBg ? 'bg' : ''}}">{{item}}</view>
+    </block>  
+  </view>
+</view>

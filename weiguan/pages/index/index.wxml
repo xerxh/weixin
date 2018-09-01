@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<!-- 主页列表内容子模板 -->
+<import src="../../templates/list-item/list-item-template.wxml" />
+
+<!-- 头部自定义导航栏 -->
+<topNavigation>
+    <!-- 导航中间标题 -->
+    <image slot="centerTitle" class='topImg' src="../../asset/images/top.png"></image>
+    <!-- 导航标签 -->
+    <navigator-tab tList="{{navData}}" bind:switchPage="getData" />
+    <!-- 搜索组件 -->
+    <view class='searchBoxShadow'>
+        <search bind:jump="jump" />
+    </view>
+</topNavigation>
+<!-- 主体内容 -->
+<view class="container">
+  <view  
+  wx:for="{{listData}}" wx:key="index"
+  data-id="{{index}}" class="list"
+  catchtap='navigatoDetail'>
+    <!-- <list-item itemData="{{item}}" index="{{index}}"/> -->
+    <view class='displayData'>
+        <text>👍920</text>
+    </view>
+    <template is='indexListItem' data="{{...item,index:index}}"></template>
+  </view>
+</view>
+<!-- <bottom-tab tList="{{bottomNav}}" nowIndex="{{bottomIndex}}"/> -->

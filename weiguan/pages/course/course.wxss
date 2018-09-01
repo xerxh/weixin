@@ -1,0 +1,73 @@
+/* pages/my/my.wxss */
+@import "../../templates/list-item/index-list-item-template.wxss";
+
+.courseBox{
+  margin-top:385rpx;
+  border-top: 1px solid #999999;
+  padding-bottom: 150rpx;
+}
+.headerBox{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+.navTab{
+  flex: 1
+}
+.tip{
+  margin-left: 30rpx;
+  padding-left: 30rpx;
+  /* padding-right: 210rpx; */
+  flex: 1;
+  font-size: 13px;
+  /* line-height: 1; */
+  border-left: 1px solid #999999;
+}
+.date{
+  font-size: 18px;
+  font-weight: bold;
+}
+.dateImg{
+  width: 55rpx;
+  height: 55rpx;
+}
+.imgBox{
+  width: 55rpx;
+  height: 55rpx;
+}
+.list{
+  position: relative;
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+  /* border-bottom: 1px solid black; */
+}
+.displayData{
+  position: absolute;
+  bottom: 20rpx;
+  right: 510rpx;
+  color: white;
+  font-size: 12px;
+  padding: 3rpx 10rpx;
+  background: #000;
+}
+
+/* 小程序日历样式 */
+.dateBox{
+  position: fixed;
+  width: 750rpx;
+  bottom: 0;
+  z-index: 1000;
+}
+.dateHeader{
+  font-size: large;
+  line-height: 100rpx;
+}
+.dateCalendar{
+  background: #F2F2F2;
+}
+.dateBoard{
+  background: #ffff;
+  /* font-weight: bold; */
+  font-size: 15px;
+  padding-bottom: 80rpx;
+}

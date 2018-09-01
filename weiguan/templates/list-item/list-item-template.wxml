@@ -1,0 +1,34 @@
+<!-- 首页列表内容项模板 -->
+<template name="indexListItem">
+    <view class='listItemContainer'>
+        <image class='ListItemImg' src="{{img}}"></image>
+        <view class='listItemBox'>
+          <view class='itemTitle'>
+              <text class='nmber'>0{{index+1}}</text>
+              {{title}}
+          </view>
+          <view class='itemContent'>
+             {{content}}
+          </view>
+        </view>
+      </view>
+</template>
+
+<!-- 评论部分列表内容项模板 -->
+<template name="commentListItem">
+    <view class='commentListItemBox'>
+        <view class='userBox'>
+            <view class='userInfo'>
+                <image class='avator' src="{{userAvator}}"></image>
+                <text class='userName'>{{userNanme}}</text>
+                <!-- <view class='commentItemScore'>
+                    <image wx:for="{{scoreSum}}" wx:key="*this" src="{{scoreImg}}"></image>
+                </view> -->
+            </view>
+            <text  class='date'>{{date}}</text>
+        </view>
+        <view class='commentContent'>
+            {{content}}
+        </view>
+    </view>
+</template>

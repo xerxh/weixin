@@ -1,0 +1,18 @@
+<!--components/navigator-table/index.wxml-->
+<view class='navigatorTabContaner'>
+  <view  class="navigatorTabItem" wx:for="{{tList}}" wx:key="*this">
+
+    <view wx:if="{{nowIndex==index}}" 
+     class='{{activeClass}}' 
+     catchtap='switchTab'
+     data-index="{{index}}">
+        {{item}}
+    </view>
+    <view wx:else
+     catchtap='switchTab'
+     data-index="{{index}}">
+        {{item}}
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,33 @@
+/* pages/searchPage/index.wxss */
+.searchBox{
+  margin-top: 200rpx;
+  padding: 0 30rpx;
+}
+.commentBox{
+  padding: 20rpx 0;
+}
+.flexCol{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  /* padding: 0 30rpx; */
+}
+.commentTitle{
+  font-size: 15px;
+  font-weight: bold;
+}
+.label{
+  justify-content: flex-start;
+  margin-top: 30rpx;
+  font-size: 14px;
+  /* color: #666697; */
+}
+.labelText{
+  /* margin-top: 30rpx; */
+  background: #F2F3F7;
+  border-radius: 10rpx;
+  height: 55rpx;
+  padding: 0 20rpx;
+  margin-right: 20rpx;
+  line-height: 55rpx;
+}

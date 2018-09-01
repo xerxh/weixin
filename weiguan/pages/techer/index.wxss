@@ -1,0 +1,38 @@
+/* pages/techer/index.wxss */
+.techerContainer{
+    padding-top: 200rpx;
+    width: 750rpx;
+    text-align: center;
+}
+.teacherAvatar{
+    width: 211rpx;
+    height: 211rpx;
+}
+.teacher{
+    margin-top: 40rpx;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 50rpx;
+    border-bottom: 1px solid #EFEFEF;
+}
+.teacherIntroduceContent{
+    padding: 0 40rpx;
+}
+.wxparser{
+    text-align: left;
+    font-size: 16px;
+    color: #999;
+}
+.titleBox{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 50rpx;
+    padding-bottom: 50rpx;
+}
+.titleBox > image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.titleBox > text{
+    line-height: 60rpx;
+}

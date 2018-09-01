@@ -1,0 +1,26 @@
+<!--components/comment/index.wxml-->
+<view class='commentBox'>
+    <view class="flexCol">
+        <text class='commentTitle'>{{commentTitle}}</text>
+        <view class='commentBtn' bindtap='sendComment'>我要评价</view>
+    </view>
+    <!-- <view class="scoreDisplay">
+        <view class='averageScore'>
+            5.0
+        </view>
+        <text class='average'>分</text>
+        <view class='scoreImg'>
+            <image wx:for="{{scoreSum}}" wx:key="index"
+            src='../../asset/images/score.png'></image>
+        </view>
+        <view class='numPeople'>69人评价</view>
+    </view>
+    <view class="flexCol label">
+        <view class='labelText' wx:for="{{commentLabel}}" wx:key="index">
+             <text>{{item.label}}</text>
+             <text wx:if="{{item.sum}}">({{item.sum}})</text> 
+        </view>
+    </view> -->
+    <slot></slot>
+</view>
+

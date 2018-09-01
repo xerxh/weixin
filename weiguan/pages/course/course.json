@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "topNavigation": "../../components/topNavigation/index",
+    "bottom-tab":"../../components/bottom-table/index",
+    "search": "../../components/search/index",
+    "calendar": "plugin://calendar/calendar",
+    "myDialog": "../../components/dialog/dialog",
+    "navigator-tab":"../../components/navigator-table/index"
+  }
+}

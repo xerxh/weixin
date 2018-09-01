@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "topNavigation": "../../components/topNavigation/index",
+        "wxparser": "plugin://wxparserPlugin/wxparser",
+        "bottom-tab":"../../components/bottom-table/index"
+    }
+}

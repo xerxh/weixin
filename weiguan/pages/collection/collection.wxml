@@ -1,0 +1,20 @@
+<!--pages/my/my.wxml-->
+<import src="../../templates/list-item/list-item-template.wxml" />
+
+<topNavigation>
+    <text slot="centerTitle">收藏</text>
+     <!-- 导航标签 -->
+     <navigator-tab tList="{{navData}}" bind:switchPage="getData" />
+</topNavigation>
+<view class='collectionBox'>
+    <view  wx:for="{{listData}}" 
+    wx:key="index"
+    data-id="{{index}}" class="list"
+    catchtap='navigatoDetail'>
+        <!-- <list-item itemData="{{item}}" index="{{index}}"/> -->
+        <view class='displayData'>
+            <text>👍920</text>
+        </view>
+        <template is='indexListItem' data="{{...item,index:index}}"></template>
+    </view>
+</view>

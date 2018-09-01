@@ -1,0 +1,16 @@
+<!--pages/my/my.wxml-->
+<topNavigation />
+    <!-- style="background-image:url(../../asset/images/advisory.png);" -->
+<view class='container'>
+    <button class='btn'
+    open-type="contact" 
+    session-from="weapp"
+    hover-class="none">
+        <view>
+            <image src='../../asset/images/advisory.png'></image>
+        </view>
+    </button>
+    <text class='name'>康石石</text>
+     <!-- <contact-button  size="30" session-from="weapp" class="guest-button">
+    </contact-button> -->
+</view>

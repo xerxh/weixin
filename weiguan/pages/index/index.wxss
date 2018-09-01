@@ -1,0 +1,28 @@
+/**index.wxss**/
+
+@import "../../templates/list-item/index-list-item-template.wxss";
+
+.list{
+  margin-bottom: 30rpx;
+  position: relative;
+  /* border-bottom: 1px solid black; */
+}
+.displayData{
+  position: absolute;
+  bottom: 10rpx;
+  right: 445rpx;
+  color: #fff;
+  font-size: 12px;
+  padding: 3rpx 10rpx;
+  background: #000;
+}
+.topImg{
+  width: 200rpx;
+  height: 72rpx;
+}
+.searchBoxShadow{
+  border-top: 1px solid black;
+  padding: 0 20rpx;
+  /* box-shadow: 0 10px 8px -8px gray inset; */
+  /* margin-top: 30rpx; */
+}

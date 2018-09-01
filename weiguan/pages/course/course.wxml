@@ -1,0 +1,50 @@
+<!--pages/my/my.wxml-->
+<import src="../../templates/list-item/list-item-template.wxml" />
+
+<topNavigation>
+    <text slot="centerTitle">课程</text>
+    <view class='headerBox'>
+      <!-- <text class='date'>2018.8.16</text>
+      <text class='tip'>赶紧上课吧!</text> -->
+      <view class="navTab">
+          <!-- 导航标签 -->
+          <navigator-tab tList="{{navData}}" bind:switchPage="getData" />
+      </view>
+      <view class='imgBox'>
+            <image hidden='{{!dateShow}}' 
+      bindtap="changeShow" class='dateImg' 
+      src='../../asset/images/date.png'></image>
+      </view>
+    </view>
+      
+    <search />
+</topNavigation>
+<view class='courseBox'>
+
+    <view  class="list"
+    wx:for="{{listData}}" wx:key="index"
+    data-id="{{index}}"
+    catchtap='navigatoDetail'>
+      <!-- <list-item itemData="{{item}}" index="{{index}}"/> -->
+      <view class='displayData'>
+          <text>22:00</text>
+      </view>
+      <navigator url='../videoPlay/videoPlay?id={{item.id}}'>
+            <template is='indexListItem' data="{{...item,index:index}}"></template>
+      </navigator>
+    </view>
+</view>
+<!-- 日历弹窗 -->
+<myDialog id="dateDialog" isShow="{{isShow}}" bind:changeShow="changeShow">
+    <view id="date" class='dateBox'>
+        <calendar weeks-type="cn" 
+        calendar-style="dateCalendar"
+        board-style="dateBoard"
+        days-color="{{days_style}}"
+        header-style="dateHeader"
+        bindnextMonth="next"
+        bindprevMonth="prev"
+        active-type="rounded" />
+    </view>
+</myDialog>
+<!-- <bottom-tab tList="{{bottomNav}}" nowIndex="{{nowIndex}}"/> -->

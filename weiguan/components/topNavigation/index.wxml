@@ -1,0 +1,10 @@
+<!--components/topNavigation/index.wxml-->
+<view class='top'>
+  <image wx:if="{{isShow}}" src="../../asset/images/goback.png" class='back' bindtap='goBack'></image>
+  <view class='topContainer'>
+    <!-- <image class='topImg' src="{{img}}"></image> -->
+    <slot name="centerTitle"></slot>
+  </view>
+  <!-- 插槽 -->
+  <slot></slot>
+</view>

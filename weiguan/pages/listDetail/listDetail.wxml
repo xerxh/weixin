@@ -1,0 +1,22 @@
+<!--pages/listDetail/listDetail.wxml-->
+<import src="../../templates/list-item/list-item-template.wxml" />
+
+<topNavigation isShow="true">
+    <text slot="centerTitle">详情</text>
+</topNavigation>
+<!-- 返回按钮 -->
+<view class='listDetailBox'>
+    <!-- 列表详情 -->
+    <view class='htmlMark'>
+          <wxparser rich-text="{{richText}}" />
+    </view>
+    <my-comment>
+        <view class='line'>
+          <block wx:for="{{commentData}}" wx:key="index">
+              <template is="commentListItem" data="{{...item}}"></template>
+          </block>
+        </view>
+    </my-comment>
+</view>
+<!-- 底部咨询收藏组件 -->
+<collection-advisory />

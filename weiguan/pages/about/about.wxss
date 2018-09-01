@@ -1,0 +1,5 @@
+/* components/about/about.wxss */
+.htmlMark{
+  margin-top: 200rpx;
+  padding: 0 50rpx;
+}

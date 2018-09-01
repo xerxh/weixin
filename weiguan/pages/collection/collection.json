@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "topNavigation": "../../components/topNavigation/index",
+    "navigator-tab":"../../components/navigator-table/index"
+  }
+}

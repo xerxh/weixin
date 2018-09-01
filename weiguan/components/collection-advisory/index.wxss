@@ -1,0 +1,29 @@
+/* components/collection-advisory/index.wxss */
+.collectionBox{
+  display: flex;
+  justify-content: space-between;
+  /* border-radius: 10rpx; */
+  /* box-shadow:0px 0px 5px 5px #93ECDF; */
+}
+.collectionBg{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #FCFCFC;  
+}
+.collectionBox > view{
+  width: 100%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  /* border-radius: 0; */
+}
+.collectionBox > view:nth-child(2){
+  background: #FFC814;
+  /* box-shadow:0px 0px 5px 5px #93ECDF;   */
+}
+.bg{
+  color:#999999;
+  background: #f2f2f2;
+}

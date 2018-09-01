@@ -1,0 +1,30 @@
+/* pages/advisory/advisory.wxss */
+.guest-button{
+  background :red;
+}
+button.btn{
+  width: 0;
+  height: 0;
+}
+.name{
+  margin-top: 200rpx;
+  font-size: 20px;
+}
+button > view{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  /* border: 1px solid red; */
+  transform: translateX(-100rpx);
+}
+button > view > image{
+  width: 200rpx;
+  height: 200rpx;
+}
+@keyframes ripple{
+  0% {width: 200rpx;height: 200rpx;transform: translateX(-100rpx);}
+  100% {width: 300rpx;height: 300rpx;transform: translateX(-150rpx))}
+} 

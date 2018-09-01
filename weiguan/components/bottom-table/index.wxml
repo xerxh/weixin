@@ -1,0 +1,22 @@
+<view class='bottomTabContaner'>
+  <view  class="bottomTabItem" wx:for="{{tList}}"
+   wx:key="index">
+    <button wx:if="{{item.name == '问询'}}" 
+    open-type="contact" 
+    session-from="weapp"
+    class='btn'>
+    <image src='{{item.icon}}'></image>
+    <view class="{{nowIndex==(index) ? 'active' : 'default'}}">
+      {{item.name}}
+    </view>
+    </button>
+    <view wx:else    
+    catchtap='switchTab'
+    data-index="{{index}}">
+        <image src='{{item.icon}}'></image>
+        <view class="{{nowIndex==(index) ? 'active' : ''}}">
+            {{item.name}}
+        </view>
+    </view>
+  </view>
+</view>

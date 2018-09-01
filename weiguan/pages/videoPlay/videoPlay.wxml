@@ -1,0 +1,89 @@
+<!--components/video/index.wxml-->
+
+<import src="../../templates/list-item/list-item-template.wxml" />
+
+<topNavigation isShow="true">
+    <!-- 头部标题 -->
+    <text slot="centerTitle">{{topTitle}}</text>
+</topNavigation>   
+<view class='listDetailBox'>
+    <!-- <image src="../../asset/images/goback.png" class='back' bindtap='goBack'></image> -->
+    <view class='videoBox'>
+        <video class='video' id='myVideo' 
+        danmu-list='{{danmuList}}'
+        danmu-btn
+        enable-danmu
+        controls
+        bindtimeupdate="timeupdate"  src='http://1256108302.vod2.myqcloud.com/c1d700e3vodtransgzp1256108302/41e0f8fe7447398154867693158/v.f20.mp4'></video>
+        <!-- <input bindblur="bindInputBlur"/>
+        <button bindtap="bindSendDanmu">发送弹幕</button> -->
+        <view class='videoContainer'>
+            <text class='title'>{{videoTitle}}</text>
+            <view class='label'>
+                <text>播放次数</text>
+                <text>2665</text>
+            </view>
+        </view>
+    </view>
+    <navigator-tab activeClass="activeBlue" bind:switchPage="switchPage" tList="{{navTitle}}" />
+    <block  wx:if="{{nowIndex == 0}}">
+
+        <techer-introduce />
+        <view data-id="{{nowIndex}}" class='navContent'>
+            <text class='courseDetailTitle'>课程详情</text>
+            <text>
+                {{navContent}}
+            </text>
+            <image src='../../asset/images/list.png'></image>
+        </view>
+        <my-comment>
+            <block wx:for="{{commentData}}" wx:key="index">
+                <template is="commentListItem" data="{{...item}}"></template>
+            </block>
+        </my-comment>
+    </block>
+    <block wx:elif="{{nowIndex == 1}}">
+        <block wx:for="{{videoList}}" wx:key="index">
+          <view class="listBox">  
+            <view class="videoListTitle">
+                <text>{{index+1}}.{{item.title}}</text>
+            </view>
+            <view>
+                <text>{{item.techerName}}</text>
+                <text>|</text>
+                <text>{{item.count}}次播放</text>
+            </view>
+          </view>
+        </block>
+    </block>
+    <block wx:else>
+        <view 
+        wx:for="{{listData}}" wx:key="index"
+        data-id="{{index}}" class="list"
+        catchtap='navigatoDetail'>
+          <!-- <list-item itemData="{{item}}" index="{{index}}"/> -->
+          <!-- <view> -->
+              <view class="listImgBox">
+                    <view class='displayData'>
+                            <text>👍920</text>
+                    </view>
+                    <image src="{{item.img}}"></image>
+              </view>
+              <view>
+                  <view class="listContentBox">
+                      <view class="listTitle">
+                          <view class="number">0{{index+1}}</view>
+                          {{item.title}}
+                      </view>
+                  </view>
+                  <view class='recommendContent'>
+                      {{item.content}}
+                  </view>
+              <!-- </view>   -->
+          </view>
+        </view>
+    </block>
+    <!-- <web-view src="https://test.com"></web-view> -->
+</view>
+<!-- 底部咨询收藏组件 -->
+<collection-advisory />

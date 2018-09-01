@@ -1,0 +1,33 @@
+/* pages/my/my.wxss */
+
+.myContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 200rpx 0;
+}
+.avatarImg{
+  margin-top: 150rpx;
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 30rpx;
+  border-radius: 50%;
+}
+.nickName{
+  font-weight: bold;
+}
+.tip{
+  color: red;
+}
+.topImg{
+  width: 200rpx;
+  height: 72rpx;
+}
+.signature{
+  padding: 50rpx 0;
+  font-size: 14px;
+  color: #999;
+}
+navigator{
+  margin-top: 50rpx;
+}

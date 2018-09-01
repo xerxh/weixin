@@ -1,0 +1,29 @@
+/* components/topNavigation/index.wxss */
+
+.top{
+  position: fixed;
+  width: 750rpx;
+  z-index:10;
+  top:0;
+  background: #FFFFFF;
+}
+.back{
+  position: fixed;
+  z-index: 100;
+  height: 50rpx;
+  width: 50rpx;
+  left: 20rpx;
+  top: 78rpx;
+}
+.topContainer{
+  width: 750rpx;
+  display: flex;
+  height: 200rpx;
+  align-items: center;
+  background: #FFFFFF;
+  justify-content: center;
+}
+/* .topImg{
+  width: 200rpx;
+  height: 72rpx;
+} */

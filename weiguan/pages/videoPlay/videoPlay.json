@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+      "navigator-tab": "../../components/navigator-table/index",
+      "topNavigation": "../../components/topNavigation/index",
+      "collection-advisory": "../../components/collection-advisory/index",
+      "my-comment": "../../components/comment/index",
+      "techer-introduce":"../../components/techerIntroduce/index"
+    }
+}

@@ -1,0 +1,14 @@
+<!--components/about/about.wxml-->
+<topNavigation isShow="true">
+        <text slot="centerTitle">关于我们</text>
+</topNavigation>
+<view>
+    <!-- <image src="../../asset/image/about.png"></image>
+    <text>
+        北京汉艺国际文化传播有限责任公司是由清华大学美术学院、中央美术学院、北京服装学院等顶级院校留学归国的教授和专家及RISD、UAL、ECA、PARSONS、ESMOD、RCA、SAIC、げいだい、홍익대학교等顶级国际艺术院校教授、国际著名设计师和艺术家联合组成的国际艺术教育机构，是为艺术留学生提供作品集培训、海外企业实习、艺术游学、大师工作营、留学申请咨询服务的知名企业。北京汉艺国际文化传播有限责任公司是由清华大学美术学院、中央美术学院、北京服装学院等顶级院校留学归国的教授和专家及RISD、UAL、ECA、PARSONS、ESMOD、RCA、SAIC、げいだい、홍익대학교等顶级国际艺术院校教授、国际著名设计师和艺术家联合组成的国际艺术教育机构，是为艺术留学生提供作品集培训、海外企业实习、艺术游学、大师工作营、留学申请咨询服务的知名企业。
+    </text>
+    <text>微博:@汉艺国际教育</text> -->
+    <view class='htmlMark'>
+        <wxparser rich-text="{{richText}}" />
+    </view>
+</view> 

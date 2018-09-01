@@ -1,0 +1,32 @@
+/* components/techerIntroduce/index.wxss */
+.techerIntroduceBox{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 50rpx;
+}
+.techerInfoBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.title{
+  padding-bottom: 40rpx;
+}
+.techerIntroduceContent view{
+  font-size: 13px;
+  color: #999;
+  word-wrap:break-word;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  width: 440rpx;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.techerImg{
+  width: 200rpx;
+  height: 200rpx;
+}

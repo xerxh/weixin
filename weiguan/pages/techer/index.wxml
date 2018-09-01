@@ -1,0 +1,18 @@
+<!--pages/techer/index.wxml-->
+<topNavigation isShow="true">
+        <!-- 头部标题 -->
+        <text slot="centerTitle">{{topTitle}}</text>
+</topNavigation> 
+<view class="techerContainer">
+    <image class="teacherAvatar" src="{{teacherAvatar}}"></image>
+    <view class='teacher'>{{teacherName}}</view>
+    <view class="teacherIntroduceContent">
+        <view class="titleBox">
+            <image src="{{teacherIcon}}"></image>
+            <text>关于{{teacherName}}</text>
+        </view>
+        <view class="wxparser">
+            <wxparser rich-text="{{content}}" />
+        </view>
+    </view>
+</view>
