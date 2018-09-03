@@ -16,10 +16,10 @@ const formatNumber = n => {
 
 // 微信http请求用promise封装
 /**
- * @url    ： 接口地址
- * @method ： 请求方法
- * @header ： 请求头部信息
- * @params :  请求参数
+ * @ url    ： 接口地址
+ * @ method ： 请求方法
+ * @ header ： 请求头部信息
+ * @ params :  请求参数
  */
 function http({ method = 'GET', url = '', params = {}, header = {'content-type': 'application/json'}} = {}) {
   wx.showLoading({
@@ -43,6 +43,34 @@ function http({ method = 'GET', url = '', params = {}, header = {'content-type':
     })
   })
 }
+// “code”: “0：系统错误 1:正常，2:内部错误, 3:用户过期”
+/**
+ * @ successCode ： 成功响应状态码
+ * @ systemErrorCode :  系统错误状态码
+ * @ internalErrorCode : 内部错误状态码
+ * @ userExpiredCode : 用户过期状态码
+ */
+const successCode = 1
+const systemErrorCode = 0
+const internalErrorCode = 2
+const userExpiredCode = 3
+// “type”: 1文章类别，2是收藏类别
+const articleType = 1
+const collectionType = 2
+/**
+ * @ systemErrorCodeFun :  系统错误处理函数
+ * @ internalErrorCodeFun : 内部错误处理函数
+ * @ userExpiredCodeFun : 用户过期处理函数
+ * @ defaultFun : 默认处理函数
+ */
+// 由于现在错误处理使用同一处理  所以采用同一函数
+let func = (msg) => {
+  console.log(msg)
+}
+const systemErrorCodeFun = func
+const internalErrorCodeFun = func
+const userExpiredCodeFun = func
+const defaultFun = func
 // GET请求
 const GET = ({url, params = {}, header = {}}) => {
   return http({
