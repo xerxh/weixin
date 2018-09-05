@@ -19,7 +19,6 @@ App({
     if(wx.getStorageSync('userInfo')){
       this.globalData.userInfo = wx.getStorageSync('userInfo');
     }else{
-
       // 获取用户信息
       wx.getSetting({
         success: res => {
