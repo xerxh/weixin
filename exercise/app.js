@@ -58,7 +58,7 @@ App({
       }),
     // wx.getUserInfo({
     //   success: res=>{
-    //     console.log(res)
+
     //   }
     // }),
     // wx.authorize({
