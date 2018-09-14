@@ -35,7 +35,6 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
       const vm = this
-      
       // let totalTopHeightSet = {
       //   'iPhone': 64,
       //   'iPhone X': 88,
