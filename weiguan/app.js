@@ -2,6 +2,7 @@
 App({
   globalData: {
     userInfo: null
+    
   },
   onLaunch: function () {
     // 登录
