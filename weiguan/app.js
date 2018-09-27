@@ -1,8 +1,7 @@
 //app.js
 App({
   globalData: {
-    userInfo: null
-    
+    userInfo: null  
   },
   onLaunch: function () {
     // 登录
