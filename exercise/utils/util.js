@@ -14,6 +14,20 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+// 对字符长度显示进行处理
+const omit = function (text, length) {
+  // console.log('asfasdfadf')
+
+  if (!text) {
+    return ''
+  }
+  console.log(text.title)
+  var short = text.title.substring(0, length)
+  console.log(short)
+  return short + '...'
+}
+
+
 // 微信http请求用promise封装
 /**
  * @ url    ： 接口地址
@@ -91,5 +105,6 @@ const POST = ({url, params = {}, header = {header:"Content-type: application/jso
 module.exports = {
   formatTime,
   GET,
-  POST
+  POST,
+  omit
 }
