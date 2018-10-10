@@ -93,6 +93,30 @@ const GET = ({url, params = {}, header = {}}) => {
     header
   })
 }
+const codeFun = (data, successCodeFun, loginFunc) => {
+  console.log(data)
+  // 对返回状态进行判断集中处理
+  switch (data.code * 1) { // 将数字字符串转化为数字
+    // 成功处理
+    case successCode:
+      successCodeFun(data)
+      break
+    // 系统错误处理  
+    case systemErrorCode:
+      systemErrorCodeFun(data.msg)
+      break
+    // 内部错误处理  
+    case internalErrorCode:
+      internalErrorCodeFun(data.msg)
+      break
+    // 用户过期处理  
+    case userExpiredCode:
+      userExpiredCodeFun(data.msg, loginFunc)
+      break
+    default:
+      defaultFun(data.msg)
+  }
+}
 // post请求
 const POST = ({url, params = {}, header = {header:"Content-type: application/json; charset=utf-8"}}) => {
   return http({

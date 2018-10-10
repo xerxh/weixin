@@ -6,6 +6,7 @@
     <carrousel 
     imgUrls="{{banners}}"
     autoplay="{{true}}"/>
+    
     <dialog id="dialog"
      title="雪河清清水"
      content="啦啦啦！我是雷神托尔···为了北方神的荣誉"
@@ -17,7 +18,7 @@
     </dialog>
     <button bindtap='toLoadPage'>懒加载</button> 
     <button open-type="openSetting">打开授权设置页</button> 
-    <button open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>打开授权设置页</button>
+    <button id="phoneNumber" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>打开授权设置页</button>
 
     <view>
         <parent>
@@ -26,6 +27,7 @@
                 <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
             </view> -->
             <sonb />
+            
             <!-- 子组件2 -->
             <sonc />
         </parent>

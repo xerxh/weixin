@@ -13,8 +13,9 @@ Page({
             success: function (res) {
               //从数据库获取用户信息
               that.queryUsreInfo();
+              console.log('用户已经授权')
               //用户已经授权过
-              wx.switchTab({
+              wx.navigateTo({
                 url: '../index/index'
               })
             }

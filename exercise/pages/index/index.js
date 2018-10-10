@@ -82,9 +82,10 @@ Page({
             }
           })
         }
-        this.getBanners();
+        // this.getBanners();
       }
     })
+    this.getBanners();
   },
   toLoadPage(){
     console.log(222)
@@ -103,6 +104,7 @@ Page({
   onReady: function () {
     // 获取dialog组件
     this.dialog = this.selectComponent('#dialog')
+    console.log(this.selectComponent('#phoneNumber'))
     console.log(this.dialog)
     // canvas 动画
     const ctx = wx.createCanvasContext('ripple');
@@ -131,6 +133,7 @@ Page({
   },
   //获取轮播图片
   getBanners() {
+    console.log(222)
     var self = this;
     var data = 'https://cdn.it120.cc/apifactory/2017/11/17/4eed2ccae3178578326f3adcd60a7b06.jpg';
     this.setData({

@@ -4,7 +4,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/loadPage/index",
-    "pages/loadPageMulti/index"
+    "pages/loadPageMulti/index",
+    "pages/index1/index",
+    "pages/second/second"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,7 +17,7 @@
   "tabBar": {
     "color": "#333",
     "selectedColor": "red",
-    "backgroundColor": "#CCCCCC",
+    "backgroundColor": "white",
     "borderStyle": "black",
     "position": "bottom",
     "list": [
@@ -28,6 +30,12 @@
       {
         "pagePath": "pages/loadPageMulti/index",
         "text": "多张",
+        "iconPath": "assets/icon-grid.png",
+        "selectedIconPath": "assets/icon-grid.png"
+      },
+      {
+        "pagePath": "pages/index1/index",
+        "text": "预加载",
         "iconPath": "assets/icon-grid.png",
         "selectedIconPath": "assets/icon-grid.png"
       }
