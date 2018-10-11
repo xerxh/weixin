@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
+    "pages/login/login",
     "pages/loadPage/index",
     "pages/loadPageMulti/index",
     "pages/index1/index",
