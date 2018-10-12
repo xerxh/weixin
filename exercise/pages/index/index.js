@@ -155,5 +155,43 @@ Page({
     //     }
     //   }
     // })
+  },
+  // 发送模板信息  谁点击 只能发送给谁
+  // form_id产生必须把消息发送给本人(比如用我自己的手机点击了一个事件触发发送模板消息，这个模板消息值能发送给我自己。支付prepay_id也一样，谁支付，就发送给谁，其他人不能发送)。坑坑坑！！！！！
+  testSubmit: function (e) {
+    console.log(e.detail.formId)
+    var self = this;
+    let _access_token = '14_utAajy5lZIgD2Y6pWX4GMjAPIH4Q2rYkl5JdJNoyJ9DJGY8BrIsVBUfRCyYrFbghvj2E5911EBMEJqpI_Y2w5Vea_ihjTMvKAze_yCzvw2SLHsZegO-BqIgcnyBND_u85Dm2USbGsOdWtHcwYXXeACAJII';
+    let url = 'https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=' + _access_token
+
+      ;
+    let _jsonData = {
+      access_token: _access_token,
+      touser: "o7GTq0EatFrClMXa7lnAIOh4Gw2k",
+      template_id: 'zZqQsKN_gbn53grghcMn6mwb-k2F-UQnSqrrFVkSvCE',
+      form_id: e.detail.formId,
+      page: "pages/index/index",
+      data: {
+        "keyword1": { "value": "测试数据一", "color": "#173177" },
+        "keyword2": { "value": "测试数据二", "color": "#173177" },
+        "keyword3": { "value": "测试数据三", "color": "#173177" },
+        "keyword4": { "value": "测试数据四", "color": "#173177" },
+      }
+    }
+    wx.request({
+      url: url,
+      data: _jsonData,
+      method: "POST",
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (err) {
+        console.log('request fail ', err);
+      },
+      complete: function (res) {
+        console.log("request completed!");
+      }
+    })
   }
+
 })

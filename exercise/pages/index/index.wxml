@@ -19,7 +19,9 @@
     <button bindtap='toLoadPage'>懒加载</button> 
     <button open-type="openSetting">打开授权设置页</button> 
     <button id="phoneNumber" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>打开授权设置页</button>
-
+    <form bind:submit="testSubmit" report-submit="true">
+          <button formType="submit">发送模板消息</button>
+    </form>
     <view>
         <parent>
             <!-- 子组件1 -->

@@ -126,6 +126,9 @@ const POST = ({url, params = {}, header = {header:"Content-type: application/jso
     header
   })
 }
+
+
+
 module.exports = {
   formatTime,
   GET,
