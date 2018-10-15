@@ -6,7 +6,8 @@
     "pages/loadPage/index",
     "pages/loadPageMulti/index",
     "pages/index1/index",
-    "pages/second/second"
+    "pages/second/second",
+    "pages/share/share"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,4 @@
+<!--pages/share/share.wxml-->
+<button open-type="share">
+   砍价
+</button>

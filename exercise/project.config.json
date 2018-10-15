@@ -24,13 +24,30 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "分享砍价测试",
+					"pathName": "pages/share/share",
+					"query": "source=测试分享砍价",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "0wmA5hZ1sY6WsFCP1aafzwl0pSGSR-lxx5eX3RXsDlk@cr4dev",
+						"shareKey": "EyzQ2xRAyJAeBDrLpQBy9VSRMS0RkZqeaGrvqk3tyKNp-f418gO2RC7YL2NPFdx7Nf9pKvBZPhaRG_7Qqe4e_A~~"
+					}
+				}
+			]
 		}
 	}
 }

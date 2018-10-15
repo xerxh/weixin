@@ -16,6 +16,9 @@
      bind:confirmEvent="_confirmEvent">
     
     </dialog>
+    <navigator url='../share/share' style='color:red;margin-top:50rpx;'>
+          <button>分享砍价</button>
+    </navigator>
     <button bindtap='toLoadPage'>懒加载</button> 
     <button open-type="openSetting">打开授权设置页</button> 
     <button id="phoneNumber" open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>打开授权设置页</button>
