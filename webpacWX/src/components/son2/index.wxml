@@ -1,0 +1,2 @@
+<!--components/son2/index.wxml-->
+<view>{{likeStr}}</view>

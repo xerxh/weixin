@@ -1,0 +1,21 @@
+<!--components/carrousel/index.wxml-->
+<swiper 
+class='swiperCarrousel' 
+autoplay='{{autoplay}}'
+indicator-active-color='#a39f99'
+interval='{{intervalTime}}'
+duration='{{durationTime}}'
+previous-margin="{{'80rpx'}}"
+next-margin="{{'80rpx'}}"
+circular
+bindchange='bindChange'
+style='height: {{swiperHeight}}px'
+>
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src='{{item}}' 
+        class="slide-image {{swiperIndex == index ? 'active' : 'quit'}}"
+        mode='aspectFill'/>
+      </swiper-item>
+  </block> 
+</swiper>

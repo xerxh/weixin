@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/loadPage/index",
+    "pages/loadPageMulti/index",
+    "pages/index1/index",
+    "pages/second/second",
+    "pages/share/share"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "red",
+    "backgroundColor": "white",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/loadPage/index",
+        "text": "单张",
+        "iconPath": "assets/icon-square.png",
+        "selectedIconPath": "assets/icon-square.png"
+      },
+      {
+        "pagePath": "pages/loadPageMulti/index",
+        "text": "多张",
+        "iconPath": "assets/icon-grid.png",
+        "selectedIconPath": "assets/icon-grid.png"
+      },
+      {
+        "pagePath": "pages/index1/index",
+        "text": "预加载",
+        "iconPath": "assets/icon-grid.png",
+        "selectedIconPath": "assets/icon-grid.png"
+      }
+    ]
+  }
+}

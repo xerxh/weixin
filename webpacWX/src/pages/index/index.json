@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+      "dialog" : "/components/dialog/dialog",
+      "carrousel" : "/components/carrousel/index",
+      "parent" : "/components/parent/parent",
+      "sonb": "/components/son1/index",
+      "sonc": "/components/son2/index"
+  }
+}
