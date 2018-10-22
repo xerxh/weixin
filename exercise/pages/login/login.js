@@ -11,6 +11,7 @@ Page({
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
       var that = this;
+      
       //插入登录的用户的相关信息到数据库
       // wx.request({
       //   url: getApp().globalData.urlPath + 'hstc_interface/insert_user',
