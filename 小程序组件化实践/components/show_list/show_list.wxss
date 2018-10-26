@@ -1,0 +1,11 @@
+/* components/show_list/show_list.wxss */
+
+.loading {
+  margin: 50rpx 0 50rpx 0;
+}
+
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

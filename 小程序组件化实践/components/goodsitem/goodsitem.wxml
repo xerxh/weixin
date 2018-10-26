@@ -1,0 +1,9 @@
+<view class='goodsItem'>
+  <image src='{{imagePath}}'></image>
+  <text>{{title}}</text>
+  <view>
+  <text>{{price}}</text>
+  <!-- <text hidden='{{isHidden}}'>{{btnName}}</text> -->
+   <slot />
+  </view>
+</view>

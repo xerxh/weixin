@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 轮播图 -->
+<swiper class='swiperView' indicator-dots  autoplay="true" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{bannerList}}" wx:key="key">
+    <swiper-item>
+      <image src="{{item.imagePath}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<goods_list  style="width:100%" itemList="{{bannerList}}" ></goods_list>
+
+
+
+
+</view>

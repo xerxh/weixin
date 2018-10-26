@@ -1,0 +1,26 @@
+/**index.wxss**/
+.swiperView{
+
+  width: 100%;
+  height: 200px;
+}
+
+.slide-image{
+
+  width: 100%;
+  height: 200px;
+
+}
+
+.hotList{
+
+  width: 100%;
+
+
+}
+
+.hotListItem{
+  width: 48%;
+  height: 150px;
+
+}

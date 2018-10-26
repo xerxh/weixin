@@ -1,0 +1,10 @@
+<!--components/goodslist/goodslist.wxml-->
+<view class='goodslistView'>
+  <block wx:for="{{itemList}}">
+  <goods_item style="width:50%" imagePath="{{item.imagePath}}" title="{{item.title}}"
+   price="{{item.title}}" btnName="">
+  
+  <text>btn</text>
+</goods_item>
+  </block>
+</view>

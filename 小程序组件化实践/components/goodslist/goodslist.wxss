@@ -1,0 +1,10 @@
+/* components/goodslist/goodslist.wxss */
+.goodslistView{
+
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+
+
+}

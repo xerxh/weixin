@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+      "my_loading": "../../components/loading/index"
+  }
+}

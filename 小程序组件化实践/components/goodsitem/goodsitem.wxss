@@ -1,0 +1,11 @@
+/* components/goodsitem/goodsitem.wxss */
+.goodsItem{
+  padding: 10px;
+}
+
+.goodsItem image{
+
+  width: 100%;
+
+
+}

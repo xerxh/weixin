@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/auth/auth",
+    "pages/share/share",
+    "pages/mine/mine",
+    "pages/integralMall/integralMall"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/nav/homeicon__unselected@2x.png",
+        "selectedIconPath": "images/nav/homeicon__selected@2x.png"
+      },
+      {
+        "pagePath": "pages/integralMall/integralMall",
+        "text": "积分商城",
+        "iconPath": "images/nav/课程icon__unselected@2x.png",
+        "selectedIconPath": "images/nav/课程icon__selected@2x.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/nav/我的icon__unselected@2x.png",
+        "selectedIconPath": "images/nav/我的icon__selected@2x.png"
+      }
+    ]
+  }
+}

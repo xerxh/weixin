@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+   "my_dialog": "../../components/dialog/dialog",
+   "my_show_list": "../../components/show_list/show_list",
+   "goods_item":"../../components/goodsitem/goodsitem",
+   "goods_list": "../../components/goodslist/goodslist"
+  },
+  "enablePullDownRefresh": true
+}

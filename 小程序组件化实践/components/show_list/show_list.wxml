@@ -1,0 +1,5 @@
+<!--components/show_list/show_list.wxml-->
+<my_loading class="loading-center" wx:if="{{loadingCenter}}"/>
+<view wx:if="{{!loadingCenter}}">
+   列表循环
+</view>

@@ -1,0 +1,56 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wxa1dc16c1be86f28f",
+	"projectname": "sodo%E5%B0%8F%E7%A8%8B%E5%BA%8F1.0",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "分享到群",
+					"pathName": "pages/share/share",
+					"query": "source=开始",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "0wmA5hZ1sY6WsFCP1aafzwl0pSGSR-lxx5eX3RXsDlk@cr4dev",
+						"shareKey": "KQkNCi8D4Qgik0UnV65RB_FHEczHPTBno6Ecr91Sb3JnnVfZmlYQSkOEL0LVx_xb3CS5smrIKMW5OHMh0LyXNA~~"
+					}
+				}
+			]
+		}
+	}
+}
