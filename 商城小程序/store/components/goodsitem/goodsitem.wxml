@@ -1,0 +1,18 @@
+<wxs src="./format.wxs" module="filter" />
+
+<view class='goodsItem external-width items_fa' bindtap='goodsClicked' data-id="{{goodsId}}" data-isvideo="{{isvideo}}" >
+  <view class="goodsBox items_innner">
+    <image src='{{imagePath}}' class='lessongoods-img items_img'></image>  
+    <view class="textBox item_text">
+      <text class="title">{{artcleTiltle}}</text>
+      <text class='goodsName'>{{filter.format(title)}}</text>
+      <view class='goodsProperty'>
+        <view class="priceBox">
+          <slot name="tourDiyCount"></slot>      
+          <text class="price" wx:if="{{price}}">￥{{price}}</text>
+        </view>
+        <slot></slot>
+      </view>
+    </view>
+  </view>
+</view>

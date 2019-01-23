@@ -1,0 +1,26 @@
+<!--个人主页-->
+<navi_TopView>
+  <image slot="centerTitle" class="topImg" src="../../images/top.png" />
+    <user_info></user_info>
+    <navigator_table 
+    tList="{{navData}}"
+    nowIndex="{{switchIndex}}" 
+    bind:switchPage="switchPage"/>
+</navi_TopView>
+<view class="body">
+  <view 
+    class='border-top'
+    hidden='{{switchIndex !== 0}}'>
+    <my_course/>  
+  </view>
+  <view 
+    class='border-top'
+    hidden='{{switchIndex !== 1}}'>
+    <my_buy />  
+  </view>
+  <view
+    class='border-top'
+    hidden='{{switchIndex !== 2}}'>
+    <my_money />
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "navi_TopView":"../../components/navitopview/navitopview",
+    "user_info": "../../components/userInfo/userInfo",
+    "navigator_table": "../../components/navigator-table/index",
+    "my_course": "./myCourse/myCourse",
+    "my_buy": "./myBuy/myBuy",
+    "my_money": "./myMoney/myMoney"
+  }
+}

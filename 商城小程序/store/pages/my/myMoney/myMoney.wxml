@@ -1,0 +1,12 @@
+<!--pages/my/myMoney/myMoney.wxml-->
+<view class='boxStyle'>
+  <view class='flex between'>
+    <view class='flex column'>
+      <text>账号余额</text>
+      <text>320.00</text>
+    </view>
+    <text>明细</text>
+  </view>
+  <button>分销订单</button>
+  <button bindtap="jump">立即提现</button>
+</view>

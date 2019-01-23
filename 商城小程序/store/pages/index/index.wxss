@@ -1,0 +1,91 @@
+/**index.wxss**/
+.container{
+  padding-top: 248rpx;
+  width: 750rpx;
+}
+.topImg{
+  width: 140rpx;
+  height: 50rpx;
+
+}
+.pageTitle{
+  position: absolute;
+  left: 30rpx;
+  top: 82rpx;
+  /* padding-left: 20rpx; */
+  font-size: 20px;
+}
+.swiperView{
+
+  width: 690rpx;
+  height: 300rpx;
+  background-color: #D4D4D4;
+  border-radius: 10rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.swiperLine {
+  display: flex;
+  width: 20rpx;
+  height: 300rpx;
+  background-color: #D4D4D4;
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.searchBoxShadow{
+  padding: 0 30rpx 0 0;
+}
+.typeBox{
+  width: 85%;
+  padding-bottom: 30rpx;
+}
+.goodsList{
+ box-shadow:0px 10px 0px 0px #abcdef inset;
+ padding-top: 10px; 
+}
+.slotText{
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.imageClass{
+width: 120rpx;
+height: 120rpx;
+border-radius: 50%;
+background-color: #EBEFFF;
+}
+.textClass{
+font-size: 26rpx;
+}
+.box_margin{
+  margin-bottom: 20px;
+}
+footer{
+  display: flex;
+  margin:15rpx 31rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.actualWidth{
+  /* width: 250rpx;  */
+  display: flex;
+  margin-right: 30rpx;
+  border: 1px solid gainsboro;
+  padding: 20rpx 21rpx 20rpx 30rpx;
+}
+goods_item > view > view > view {
+  /* height: 100%; */
+  /* background: red; */
+  margin-left: 20rpx;
+}
+/* 外部样式类 */
+.my_style{
+  width: 280rpx;
+  margin-bottom: 22rpx;
+}

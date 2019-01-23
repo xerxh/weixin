@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navi_TopView":"../../components/navitopview/navitopview",
+    "user_info": "../../components/userInfo/userInfo"
+  }
+}

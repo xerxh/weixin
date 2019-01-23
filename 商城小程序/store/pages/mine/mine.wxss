@@ -1,0 +1,158 @@
+/* pages/mine/mine.wxss */
+
+.container{
+  padding-top: 180rpx;
+  background-color: #F9F9F9;
+}
+.topImg{
+  width: 180rpx;
+  height: 50rpx;
+}
+
+.imageClass{
+
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+
+}
+.textClass{
+  font-size: 15px;
+}
+
+.btn{
+  width: 375px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  background-color: transparent;
+}
+
+.btn image{
+  width: 20px;
+  height: 20px;
+}
+.topBox {
+  padding-left: 40rpx;
+  padding-bottom: 30rpx;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.testimonials {
+  margin-top: 18rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.orderBox {
+  width: 100%;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.myOrder {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.myOrderList {
+  font-size: 30rpx;
+  color: #333333;
+  /* font-weight: 700;   */
+}
+.orderRight {
+  margin-right: 30rpx;
+}
+.checkAllOrder {
+  font-size: 20rpx;
+  color: #999999;
+}
+.orderRight image {
+  width: 20rpx;
+  height: 20rpx;
+  transform: rotate(180Deg);
+  opacity: 0.5;
+}
+
+.orderLine {
+  width: 670rpx;
+  height: 2rpx;
+  border-bottom: 2rpx solid #E6E6E6;
+}
+
+.orderForm {
+  /* width: 100%; */
+  height: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.non-payment, .no-evaluation {
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+  font-size: 24rpx;
+  color: #333;
+  flex-direction: column;
+  align-items: center;
+}
+.non-payment image {
+  width: 36rpx;
+  height: 36rpx;
+}
+.no-evaluation image {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.suggestAndAbout {
+  width: 100%;
+}
+
+.suggestBox, .aboutBox {
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  font-size: 30rpx;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.suggestAndAbout image {
+  width: 20rpx;
+  height: 20rpx;
+  /* margin-right: 40rpx; */
+}
+
+.botoomLine {
+  margin-left: 20rpx;
+  width: 670rpx;
+  border-bottom: 2rpx solid #E6E6E6;
+}
+
+.userView{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 150rpx;
+  /* height: 150rpx; */
+  border-radius: 50%;
+}
+
+.avatarImg{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.userView text{
+  text-align: center;
+}

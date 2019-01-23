@@ -1,0 +1,67 @@
+/* pages/musicList/musicListBox/musicListBox.wxss */
+
+.scroll_box{
+  width: 675rpx;
+  margin: 0 auto;
+}
+.flex_between{
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+}
+.courseSum{
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+}
+.flex_start{
+  display: flex;
+}
+.btnBox{
+  display: flex;
+  align-items: center;
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(102,102,102,1);
+}
+.flex_start > view:first-child{
+  margin-right: 30rpx;
+}
+.icon{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.nowPlay{
+  padding: 26rpx 0 26rpx 26rpx;
+  margin-top: 20rpx;
+  position: relative;
+  border:1px solid rgba(255,200,20,1);
+  border-radius:6rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(255,200,20,1);
+}
+.nowPlay:before{
+  content: "";
+  width: 0;
+  height: 0;
+  border: 14rpx solid transparent;
+  border-bottom-color: rgba(255,200,20,1);
+  position: absolute;
+  right: 10%;
+  top: -24rpx;
+}
+.nowPlay::after{
+  content: "";
+  width: 0;
+  height: 0;
+  border: 14rpx solid transparent;
+  border-bottom-color: #ffffff;
+  position: absolute;
+  right: 10%;
+  top: -20rpx;
+}

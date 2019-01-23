@@ -1,0 +1,28 @@
+<!--components/purchase/index.wxml-->
+<view class='purchasePanel'>
+  <button open-type="contact" 
+      session-from="weapp"
+      hover-class="none">
+    <image src='../../images/service.png'></image>
+  </button>
+  <view class="collectionBtn" bindtap='collectedClicked'>
+    <image src="{{isCollected==true?'../../images/enshrined.png':'../../images/nonEnshrine.png'}}"></image>
+  </view>
+  <view class='purchaseBtn' wx:if="{{isPurchase == 1}}">
+    <view bindtap='purchaseClicked'>立即购买</view>  
+  </view>
+  <view class='purchaseBtn shareBox' wx:elif="{{isPurchase == 2}}">
+    <view class='shareBtn' bindtap='purchaseClicked'>立即购买</view>
+    <view class='shareBtn share' bindtap='shareClicked'>找人砍价</view>
+  </view>
+  <view class='purchaseBtn tourDiyBox' wx:else>
+    <view class='tourDiyBtn' bindtap='purchaseClicked'>
+      <view>￥5000</view>
+      <view>单独购买</view>
+    </view>
+    <view class='tourDiyBtn tourDiy' bindtap='tourDiyClicked'>
+      <view>￥4500</view>
+      <view>3人拼团</view>
+    </view>
+  </view>
+</view>

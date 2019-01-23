@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "topNavigation": "../../components/navitopview/navitopview",
+    "search": "../../components/search/index"
+
+  }
+}

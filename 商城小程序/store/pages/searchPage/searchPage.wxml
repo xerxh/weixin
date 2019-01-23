@@ -1,0 +1,47 @@
+<!--pages/searchPage/index.wxml-->
+<import src="../../templete/list-item/list-item-template.wxml" />
+
+<topNavigation isShow="true">
+
+    <image slot="centerTitle" class='topImg' src="../../images/top.png"></image>
+    <view>
+        <search clear-position="clearPosition" 
+        bind:search="search" inputVal="{{inputValue}}"
+        placeholder="{{pleacholders}}" isShowBtn="true" bind:clear ="clear"/>
+    </view>
+</topNavigation>
+<view class="listBox" style='align-items: left'>
+    <!-- <view class="historyMemoryBox" wx:if="{{isShowHistory}}">
+      <view class="clearHitory" bindtap="clearHitory">清空</view>    
+      <view class="hitoryTitle">历史记录</view>
+      <block wx:for="{{historyListData}}">
+        <view class="historyItem" bindtap="searchItem">{{item}}</view>
+      </block>
+    </view> -->
+    <view class="hotListDataBox" wx:if="{{isShowHot}}">
+      <view class="hotTitle">热门搜索</view>
+      <block wx:for="{{hotListData}}">
+        <view class="hotItem"  bindtap="searchItem">{{item}}</view>
+      </block>
+    </view>
+    <view class="courseListBox" wx:if="{{isShowCourse}}">
+      <block wx:for="{{courseListData}}">
+        <view class="courseItemBox"  bindtap="jumpItemDetails" data-id="{{item.curriculumId}}">
+          <image src="{{item.picurl}}" class="img"></image>
+          <view class="courseBox">
+            <text class="courseTitle">{{item.curriculumName}}</text>
+            <view class="bottom">
+              <view class="price">￥{{item.discountPrice}}</view>              
+              <view class="total">{{item.virtualPurchases}}人购买</view>              
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+</view>
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+/* pages/my/myMoney/myMoney.wxss */
+.flex{
+  display: flex
+
+}
+.between{
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.column{
+  flex-direction: column;
+  justify-content: space-between;
+  height: 140rpx;
+}
+.boxStyle{
+  padding: 40rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500rpx;
+}
+button {
+  width: 100%;
+}

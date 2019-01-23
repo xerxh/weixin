@@ -1,0 +1,11 @@
+/* pages/my/my.wxss */
+.topImg{
+  width: 157rpx;
+  height: 57rpx;
+}
+.body{
+  margin-top: 380rpx;
+}
+.border-top{
+  border-top: 1px solid gray;
+}

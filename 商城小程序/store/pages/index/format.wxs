@@ -1,0 +1,12 @@
+
+// 进行空格替换
+var format = function(text) {
+  return text.replace(" ","\u00A0")
+}
+
+/*
+* 导出
+*/
+module.exports = {
+  format:format
+}

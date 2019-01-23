@@ -1,0 +1,11 @@
+<!--pages/my/myCourse/myCourse.wxml-->
+<view class='border-top'>
+  <view class='flex boxStyle' wx:for="{{10}}">
+    <image
+    class='img' src='http://file.hartedu.com/hart/user/1/1542351198_32698582c8c047a9962d3e0c9bf53ec8.jpg' />
+    <view class='flex cloumn margin_left'>
+      <text>PS核心技法</text>
+      <text>学习进度30%</text>
+    </view>
+  </view>
+</view>

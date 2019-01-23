@@ -1,0 +1,42 @@
+/* components/navigator-table/index.wxss */
+.navigatorTabContaner{
+  /* width: 700rpx; */
+  display: flex;
+  margin-top: 32rpx;
+  /* padding: 0 30rpx 0 30rpx; */
+  justify-content: space-around;
+}
+.navigatorTabItem{
+    /* width: 90rpx; */
+    flex: 1;
+    text-align: center;
+    font-size:26rpx;
+    line-height: 60rpx;
+    font-family:  PingFang-SC-Regular;
+    color: #333333;
+}
+
+.navigatorTabItem > view{
+  /* width: 100rpx; */
+  /* height: 60rpx; */
+  display: inline-block;
+  text-align: center;
+
+  /* margin: 0 auto; */
+}
+
+
+
+/* 导航栏默认样式 */
+.activeDefault{
+  color: #ffc814;
+  font-family:PingFang-SC-Bold;
+  font-size:34rpx;
+  border-bottom: 2.5px solid #ffc814;
+}
+/* 蓝色颜色样式 */
+.activeBlue{
+  color:#3d8fff;
+  font-size: 34rpx;
+  border-bottom: 2.5px solid #3d8fff;
+}

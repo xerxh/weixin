@@ -1,0 +1,8 @@
+<!--components/comment/index.wxml-->
+<view class='commentBox'>
+    <view class="flexCol">
+        <text class='commentTitle'>{{commentTitle}}</text>
+    </view>
+    <slot></slot>
+</view>
+

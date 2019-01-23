@@ -1,0 +1,4 @@
+<!--components/goodslist/goodslist.wxml-->
+<view class='goodslistView'>
+<slot></slot>
+</view>

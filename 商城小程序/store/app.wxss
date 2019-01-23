@@ -1,0 +1,37 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0 0; */
+  box-sizing: border-box;
+} 
+.lineDiv{
+
+width: 100%;
+/* height: 5px; */
+border-bottom: 20rpx solid #f3f3f3;
+
+}
+.topImg{
+  width: 140rpx;
+  height: 50rpx;
+}
+.alert {
+  display: flex;
+  justify-content: space-around;
+  padding: 100rpx 0;
+}
+.alert text {
+  color: #999999;
+  font-size: 24rpx;
+}
+.flex_colum{
+  display: flex;
+  flex-direction: column;
+}
+.flex_start{
+  display: flex;
+}

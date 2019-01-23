@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+   "my_dialog": "../../components/dialog/dialog",
+   "goods_item":"../../components/goodsitem/goodsitem",
+   "navi_TopView":"../../components/navitopview/navitopview",
+   "search":"../../components/search/index",
+   "custom_box": "../../components/custombox/index",
+   "good_item_listBox": "../../components/goodlistBox/goodlistbox",
+   "footer_item": "./footerItem/footerItem"
+  },
+  "enablePullDownRefresh": true
+}

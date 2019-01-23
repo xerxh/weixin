@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "music_list_item": "../../../components/musiclistitem/musiclistitem",
+    "music_bg_play": "../../../components/BgMusicplay/musicplay"
+  }
+}

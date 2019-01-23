@@ -1,0 +1,80 @@
+<!--index.wxml-->
+
+<navi_TopView>
+    <!-- 导航标签 -->
+    <!-- <view class='pageTitle'>首页</view> -->
+    <!-- 搜索组件 -->
+    <view class='searchBoxShadow' hidden='{{networkType == "none"}}'>
+        <search bind:jump="jump" placeholder="{{pleacholder}}" isDisable="true" />
+    </view>
+</navi_TopView>
+
+<view class="container">
+<!-- 轮播图 -->
+  <swiper class='swiperView' circular="true" indicator-dots='true'  autoplay="true" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{bannerList}}" wx:key="{{item.bannerId}}">
+      <swiper-item >
+        <image src="{{item.picurl}}" bindtap="jumpCourseDetail" data-id="{{item.content}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 轮播图右侧黑线 -->
+  <!-- <div class="swiperLine"></div> -->
+<!-- 导航栏 -->
+<view  class="typeBox">
+  <custom_box list="{{goodsTypeList}}"  my-image-class="imageClass" my-text-class="textClass" style="width:100%" bind:itemSkip="itemSkip">
+  </custom_box>
+</view>
+ <div class="lineDiv"></div>
+
+
+<!-- 热门推荐 -->
+  <good_item_listBox paramsObj="{{hotParamsObj}}">
+    <view class="box_margin" wx:for="{{hotList}}" wx:key='key'>
+      <goods_item external-width='actualWidth' 
+        class="hotListItem"
+        imagePath="{{item.picurl}}" 
+        title="{{item.curriculumName}}" 
+        price="{{item.discountPrice}}" 
+        goodsId="{{item.curriculumId}}" 
+        bind:goDetail="goDetail">
+        <text class="slotText" slot="tourDiyCount">{{item.virtualPurchases}}人购买</text>
+      </goods_item>
+    </view>
+  </good_item_listBox>
+  <div class="lineDiv"></div>
+<!-- 最新上线 -->
+  <good_item_listBox paramsObj="{{recentParamsObj}}">
+    <view class="box_margin" wx:for="{{recently}}" wx:key='key'>
+      <goods_item external-width='actualWidth' 
+        class="hotListItem" 
+        imagePath="{{item.picurl}}" 
+        title="{{item.curriculumName}}" 
+        price="{{item.discountPrice}}" 
+        goodsId="{{item.curriculumId}}" 
+        bind:goDetail="goDetail">
+        <text class="slotText" slot="tourDiyCount">{{item.virtualPurchases}}人购买</text>
+      </goods_item>
+    </view>
+  </good_item_listBox>
+
+  <!-- 最新上线 -->
+  <good_item_listBox paramsObj="{{recentParamsObj}}">
+      <view class="box_margin" wx:for="{{recently}}" wx:key='key'>
+        <goods_item external-width='actualWidth' 
+          class="hotListItem" 
+          imagePath="{{item.picurl}}" 
+          title="{{item.curriculumName}}" 
+          price="{{item.discountPrice}}" 
+          goodsId="{{item.curriculumId}}" 
+          bind:goDetail="goDetail">
+          <text class="slotText" slot="tourDiyCount">{{item.virtualPurchases}}人购买</text>
+        </goods_item>
+      </view>
+    </good_item_listBox>
+
+  <!-- footer -->
+  <footer>
+    <footer_item my_style="my_style" wx:for="{{4}}" wx:key="{{index}}" />
+  </footer>  
+</view>

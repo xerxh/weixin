@@ -1,0 +1,10 @@
+<!--pages/index/footerItem/footerItem.wxml-->
+<view class="containerBox my_style">
+  <view>
+    <text class="title">康石石</text>
+    <view class="content">这里是简介简介</view>
+  </view>
+  <view>
+    <image class="iconImg" src="../../../images/logo.png" />
+  </view>
+</view>

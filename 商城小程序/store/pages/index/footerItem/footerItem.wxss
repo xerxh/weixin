@@ -1,0 +1,31 @@
+/* pages/index/footerItem/footerItem.wxss */
+.iconImg{
+  width:74rpx;
+  height:74rpx;
+  background:rgba(244,244,244,1);
+  border-radius:6rpx;
+}
+.containerBox{
+  display: flex;
+  /* width:334rpx; */
+  height:150rpx;
+  align-items: center;
+  background:rgba(244,244,244,1);
+  border-radius:6rpx;
+  justify-content: space-between;
+  padding: 29rpx;
+}
+.content{
+  font-size:22rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  line-height:70rpx;
+}
+.title{
+  font-size:30rpx;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  color:rgba(0,0,0,1);
+  line-height:70rpx;
+}

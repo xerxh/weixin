@@ -1,0 +1,23 @@
+<!--components/musiclistitem/musiclistitem.wxml-->
+<view class="flex_between">
+  <view class="flex_leftStyle">
+    <view>{{index + 1}}. 可好玩又好用的西方服装史</view>
+    <view>
+      <text>21分03秒</text>
+      |
+      <text>226人学过</text>
+      |
+      <text>已学完</text>
+    </view>
+  </view>
+  <view class="flex_start">
+    <view class="btnBox">
+      <image class="icon" src="../../images/music/up.png" />
+      <!-- <text>正序</text> -->
+    </view>
+    <view class="btnBox" bindtap="playMusic">
+      <image class="icon" src="{{isPlay ? playOrparuse.paruseSrc : playOrparuse.src}}" />
+      <text>播放</text>
+    </view>
+  </view>
+</view>

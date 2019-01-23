@@ -1,0 +1,26 @@
+<!--pages/musicList/musiclist.wxml-->
+<navi_TopView isShow="true" bg="bg">
+    <!-- 导航中间标题 -->
+    <text slot="centerTitle">{{headerTitle}}</text>
+    <!-- 导航标签 -->
+    <view  class="flex_start boxStyle">
+      <image class="img" 
+        src="http://file.hartedu.com/hart/user/1/1542351231_c19f814ef2ed4bb1af5ea3d90c373619.jpg" />
+      <vew class="flex_colum position_style">
+        <text>作品集</text>
+        <text>Open-Lecture 02 | 美国先锋派SCI-Arc：从塞尚绘画演绎建筑自治性</text>
+        <view class="layout">
+          <text>258人加入学习</text>
+          <view class="flex">
+            <image src="../../images/musicSearch.png"></image>
+            <image src="../../images/dowload.png"></image>
+            <!-- <text>下载</text> -->
+          </view>
+        </view>
+      </vew>
+    </view>
+</navi_TopView>
+<!-- 音频列表 -->
+<view class='container'>
+  <musicList></musicList>
+</view>

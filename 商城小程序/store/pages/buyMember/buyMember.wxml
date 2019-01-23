@@ -1,0 +1,38 @@
+<!--购买会员-->
+<navi_TopView>
+  <image slot="centerTitle" class="topImg" src="../../images/top.png" />
+</navi_TopView>
+<view class="body">
+  <user_info />
+  <view class="memberBox">
+    <view class="memberItemBox">
+      <view
+        class="item" 
+        wx:for="{{3}}"
+        wx::key="{{index}}">
+        <text>12个月</text>
+        <text>￥498</text>
+        <text>初级会员</text>
+      </view>
+    </view>
+    <button class="btn">立即开通</button>
+  </view>
+  <view class="btnGroup">
+    <view class="flex_start margin_top">
+      <view class="swicthBox">
+        <switch bindchange="switchChange">同意</switch>
+      </view>
+      <navigator class="navigator" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        用户协议
+      </navigator>
+    </view>
+    <view class="flex_start margin_top">
+        <view class="swicthBox">
+          <switch bindchange="switchChange">不同意</switch>
+        </view>
+      <navigator class="navigator" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        隐私协议
+      </navigator> 
+    </view>   
+  </view>
+</view>

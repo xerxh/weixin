@@ -1,0 +1,13 @@
+<!--pages/extractMoneyDetail/extractMoneyDetail.wxml-->
+<navi_TopView isShow="true">
+  <text slot="centerTitle">提现明细</text>
+</navi_TopView>
+<view class='margin-top'>
+  <view class='flex between' wx:for="{{3}}">
+    <view class='flex column'>
+      <text>提现成功</text>
+      <text>2019-01-10 12:05:26</text>
+    </view>
+    <text>120.0元</text>
+  </view>
+</view>

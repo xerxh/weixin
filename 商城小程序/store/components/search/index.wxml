@@ -1,0 +1,17 @@
+<!--components/searcch/inde.wxml-->
+<view class='searcchContainer'>
+  <image class='searcchImg' src='../../images/search.png'></image>
+  <image class='searchClear clear-position' wx:if="{{inputVal}}" 
+  bindtap='clearInput'
+  src='../../images/error.svg'></image>
+  <input class='searcch' bindtap='jumpSearch' disabled="{{isDisable}}"
+  value="{{inputVal}}"
+  confirm-type="search" 
+  bindinput="getInput"
+  bindconfirm="search"
+  placeholder="{{placeholder}}"/>
+
+  <text wx:if="{{isShowBtn}}"
+  bindtap='search' 
+  class='searchBtn'>搜索</text>
+</view>

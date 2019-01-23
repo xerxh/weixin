@@ -1,0 +1,91 @@
+<!-- 首页列表内容项模板 -->
+<template name="indexListItem">
+    <view class='listItemContainer'>
+        <image class='ListItemImg' src="{{picurl}}"></image>
+        <view class='listItemBox'>
+          <view class='itemTitle'>
+              <view class='nmber' wx:if="{{index<9}}">
+                <image  src='../../asset/images/sort@3x.png'></image>
+                <text>0{{index+1}}</text>   
+              </view>
+              <view class='nmber' wx:else>
+                <image  src='../../asset/images/sort@3x.png'></image>
+                <text>{{index+1}}</text>
+              </view>
+              {{articlename}}
+              <!-- {{articlename}} -->
+          </view>
+          <view class='itemContent'>
+             {{intro}}
+          </view>
+        </view>
+    </view>
+</template>
+
+<!-- 课程列表内容项模板 -->
+<template name="courseListItem">
+      <view class='listItemContainer'>
+        <image class='ListItemImg' src="{{picurl}}"></image>
+        <view class='listItemBox'>
+          <view class='itemTitle'>
+              <view class='nmber' wx:if="{{index<9}}">
+                <image  src='../../asset/images/sort@3x.png'></image>
+                <text>0{{index+1}}</text>   
+              </view>
+              <view class='nmber' wx:else>
+                <image  src='../../asset/images/sort@3x.png'></image>
+                <text>{{index+1}}</text>
+              </view>
+              {{curriculumname}}
+          </view>
+          <view class='itemContent'>
+             {{intro}}
+          </view>
+        </view>
+    </view>
+</template>
+
+<!-- 收藏列表内容项模板 -->
+<template name="collectionListItem">
+      <view class='listItemContainer'>
+        <image class='ListItemImg' src="{{picurl}}"></image>
+        <view class='listItemBox'>
+          <view class='itemTitle'>
+              <view class='nmber' wx:if="{{index<9}}">
+                <image  src='../../asset/images/sort@3x.png'></image>
+                <text>0{{index+1}}</text>   
+              </view>
+              <view class='nmber' wx:else>
+                <image  src='../../asset/images/sort@3x.png'></image>
+                <text>{{index+1}}</text>
+              </view>
+              {{objname}}
+          </view>
+          <view class='itemContent'>
+             {{intro}}
+          </view>
+        </view>
+    </view>
+</template>
+
+<!-- 评论部分列表内容项模板 -->
+<template name="commentListItem">
+    <view class='commentListItemBox'>
+        <view class='userBox'>
+            <view class='userInfo'>
+                <image class='avator' src="{{picurl}}"></image>
+                <text class='userName'>{{userName}}</text>
+            </view>
+            <text  class='date'>{{createDate}}</text>
+        </view>
+        <view class='commentContent'>
+            {{content}}
+        </view>
+        <view hidden='{{!replyMsg}}' class="adminReply">
+          <view class='authorTitle'>作者回复</view>
+          <view class='authorContent'>
+              {{replyMsg}}
+          </view>
+        </view>
+    </view>
+</template>

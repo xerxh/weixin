@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/Inquiry/lnquiry",
+    "pages/collection/collection",
+    "pages/course/course",
+    "pages/lesson/index",
+    "pages/musicList/musiclist",
+    "pages/searchPage/searchPage",
+    "pages/buyMember/buyMember",
+    "pages/my/my",
+    "pages/extractMoney/extractMoney",
+    "pages/extractMoneyDetail/extractMoneyDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/nav/homeIcon__unselected@2x.png",
+        "selectedIconPath": "images/nav/homeIcon__selected@2x.png"
+      },
+      {
+        "pagePath": "pages/Inquiry/lnquiry",
+        "text": "问询",
+        "iconPath": "images/nav/homeIcon__unselected@2x.png",
+        "selectedIconPath": "images/nav/homeIcon__selected@2x.png"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏",
+        "iconPath": "images/nav/homeIcon__unselected@2x.png",
+        "selectedIconPath": "images/nav/homeIcon__selected@2x.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/nav/teacherIcon__unselected@2x.png",
+        "selectedIconPath": "images/nav/teacherIcon__selected@2x.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx95635a1a7b207fc0"
+  ],
+  "plugins": {
+    "wxparserPlugin": {
+      "version": "0.2.1",
+      "provider": "wx9d4d4ffa781ff3ac"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "navi_TopView": "../../components/navitopview/navitopview",
+    "custom_box": "../../components/custombox/index",
+    "wxparser": "plugin://wxparserPlugin/wxparser",
+    "navigator-tab": "../../components/navigator-table/index",
+    "my-comment": "../../components/comment/index",
+    "purchasePanel":"../../components/purchase/index",
+    "techer-introduce": "../../components/techerIntroduce/index",
+    "goods_items": "../../components/goodsitem/goodsitem"
+  },
+  "enablePullDownRefresh": true
+
+}

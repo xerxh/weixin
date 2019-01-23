@@ -1,0 +1,27 @@
+/* components/userInfo/userInfo.wxss */
+.flex_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.flex_colum{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.avatar{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  overflow: hidden;
+  margin: 0 30rpx;
+}
+.btn{
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid black;
+  padding: 5rpx 35rpx;
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,19 @@
+/* pages/extractMoneyDetail/extractMoneyDetail.wxss */
+.margin-top{
+  margin-top: 200rpx;
+}
+.flex{
+  display: flex;
+}
+.column{
+  flex-direction: column;
+  justify-content: space-between;
+  height: 115rpx;
+}
+.between{
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid gray;
+  margin: 0 30rpx;
+  padding: 40rpx 0;
+}

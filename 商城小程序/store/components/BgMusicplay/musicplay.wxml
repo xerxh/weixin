@@ -1,0 +1,94 @@
+<!--components/musicplay/musicplay.wxml-->
+
+<view class="music_play_box {{defaultShow ? '' : 'top'}}">
+  <!-- 默认显示 -->
+  <view hidden="{{!defaultShow || !isShow}}" bindtap="allShowComponent">
+    <!-- <slider bindchange="slider2change" step="5" /> -->
+    <!-- <progress 
+      percent="{{progress}}" 
+      stroke-width="3" 
+      activeColor="black"
+      backgroundColor="gray" /> -->
+    <view class="flex_start">
+      <view>
+        <image class="closeImg" src="../../images/music/close.png" />
+        <image class="musicImg" 
+          src="http://file.hartedu.com/hart/user/1/1542351231_c19f814ef2ed4bb1af5ea3d90c373619.jpg" />
+      </view>
+     
+      <view class="musicTitle">
+        中世纪艺术的游戏
+      </view>
+      <view>
+        <!-- <image class="icon" src="../../images/music/left.png"></image>
+        <image class="icon play" src="../../images/music/playMusic.png"></image>
+        <image class="icon" src="../../images/music/right.png"></image> -->
+        <image 
+          wx:for="{{fixedBtnArray}}"
+          wx:key="{{index}}"
+          data-item="{{item}}"
+          data-index="{{index}}"
+          class="icon {{item.mark == 'musicPlay' ? 'play' : ''}}"
+          catchtap="play_music" 
+          src="{{isPlay ? item.activeSrc : item.src}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 整个组件页面 -->
+  <view hidden="{{defaultShow}}" class="container_box">
+    <image class="arrow_bottom" 
+      catchtap="noShowCompoent"
+      src="../../images/music/arrow-bottom.png"/>
+    <view class="music_img_box">
+      <image class="music_inner_img" 
+        src="http://file.hartedu.com/hart/user/1/1542351231_c19f814ef2ed4bb1af5ea3d90c373619.jpg" />
+      <view class="width_box">中世纪的艺术游戏</view>
+      <view class="flex_between width_box">
+        <text class="btn">定时</text>
+        <text class="btn">倍速</text>
+        <text class="btn">音质</text>
+      </view>
+    </view>
+    <view class="btnBox">
+      <view class="music_progress_box">
+        <view class="music_time">
+          {{progressValue}}
+        </view>
+        <slider
+          class="slider slider_box" 
+          bindchange="sliderchange" 
+          bindchanging="sliderchanging"
+          step="1"
+          max="{{musicAlltime}}"
+          value="{{musicTime}}"
+          block-size="12" />
+        <view class="music_time">
+          {{progressAllTime}}
+        </view>  
+      </view>
+      <view class="music_btn">
+        <!-- <image src="../../images/music/jumpLeftTime.png" />
+        <image src="../../images/music/musicLeft.png"></image> -->
+        <image 
+          wx:for="{{musicBtn}}"
+          wx:key="{{index}}"
+          data-item="{{item}}"
+          data-index="{{index}}"
+          class="{{item.mark == 'musicPlay' ? 'playImg' : ''}}"
+          catchtap="play_music" 
+          src="{{isPlay ? item.activeSrc : item.src}}"></image>
+        <!-- <image src="../../images/music/musicRight.png"></image>
+        <image src="../../images/music/jumpRightTime.png"/> -->
+      </view>
+      <view class="flew_around">
+        <view wx:for="{{btnArray}}" wx:key="{{index}}">
+          <image class="icon_btn" src="{{item.src}}"></image>
+          <view class="btn_name">{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 音频播放  隐藏-->
+  <!-- <audio class="music_audio" 
+    src="http://fs.w.kugou.com/201901041659/698f08eff6287024ca6169ef5ec6c353/G126/M0A/03/19/XpQEAFwnad2AIjAnAExHK36ZIw4323.mp3"> -->
+</view>

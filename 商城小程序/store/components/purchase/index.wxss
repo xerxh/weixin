@@ -1,0 +1,66 @@
+/* components/purchase/index.wxss */
+.purchasePanel{
+  display: flex;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-top:1px solid gray;
+}
+.purchasePanel button{
+  width: 0;
+  height: 0;
+  flex-grow: 1
+}
+button >image{
+
+  position: fixed;
+  bottom: 24rpx;
+}
+
+.purchasePanel image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.purchasePanel > view{
+
+  height: 98rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.collectionBtn{
+
+  flex-grow:1;
+}
+.purchaseBtn{
+  flex-grow:2;
+  background-color:#FAD352
+
+}
+view.shareBox, view.tourDiyBox {
+  width: 50%;
+  flex-direction: row;
+  background-color:#D4D4D4;
+  
+}
+.shareBtn {
+  display: flex;
+  flex-grow:1;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around
+}
+.share, .tourDiy {
+  background-color:#FAD352
+  
+}
+.tourDiyBtn {
+  display: flex;
+  flex-grow: 1;
+  /* height: 100%; */
+  flex-direction: column;
+}

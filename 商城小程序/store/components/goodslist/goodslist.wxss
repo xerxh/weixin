@@ -1,0 +1,9 @@
+/* components/goodslist/goodslist.wxss */
+.goodslistView{
+  /* width: 750rpx; */
+  align-items:center;
+  display: flex;
+  /* justify-content: s; */
+  flex-wrap:wrap;
+  /* padding: 10px 0; */
+}

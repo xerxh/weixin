@@ -1,0 +1,9 @@
+<!--用户信息-->
+<view class="flex_box">
+  <open-data class="avatar" type="userAvatarUrl"></open-data>
+  <view class="flex_colum">
+    <open-data type="userNickName"></open-data>
+    <text>初级会员</text>
+  </view>
+  <text class="btn">会员续费</text>
+</view>

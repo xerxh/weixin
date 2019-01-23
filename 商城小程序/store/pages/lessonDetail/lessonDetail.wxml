@@ -1,0 +1,93 @@
+<!--pages/lessonDetail/lessonDetail.wxml-->
+<import src="../../templete/list-item-template.wxml" />
+
+<navi_TopView isShow="true">
+    <text slot="centerTitle" >详情</text>
+</navi_TopView>
+
+<view class='listDetailBox'>
+<view class='videoBox'>
+        <video class='video' id='myVideo'
+            wx:if="{{course.isvideo == '1'}}"
+            initial-time="{{currentTime}}"
+            controls
+            autoplay="{{isAutoPlay}}"
+            poster="{{videoPic}}"
+            bindtimeupdate="timeupdate"  
+            src='{{course.videourl}}'>
+        </video>
+        <view class='videoContainer'>
+            <!-- <image wx:if="{{course.isvideo == '0'}}" src="{{course.picurl}}"></image> -->
+            <view class='title'>{{course.curriculumName}}</view>
+            <view class='videoContainerBottom'>
+              <text wx:if="{{course.discountPrice}}" class="price">￥{{course.discountPrice}}</text>
+              <text class="count">{{course.virtualPurchases}}人购买</text>
+            </view>
+        </view>
+    </view>
+<!-- 导航条 -->
+    <view style='border-bottom:1px solid #f3f3f3;padding-top: 40rpx;' wx:if="{{course.isvideo == 1}}">
+      <navigator-tab activeClass="activeBlue" bind:switchPage="switchNav" tList="{{navTitleName}}" />  
+    </view>
+
+<!-- 详情 -->
+    <block  wx:if="{{nowIndex == 0}}">
+        <techer-introduce app="test" isHidden="{{isHiddenTeacher}}" teacherList="{{teacherList}}" />
+        <view data-id="{{nowIndex}}" class='navContent' hidden="{{showClassInfo}}">
+            <view class='courseDetailTitle'>课程详情</view>
+            <view class='richBox' wx:for="{{richText}}" wx:key="index">
+                <wxparser wx:if="{{firstRender[index]}}"  rich-text="{{item}}" />
+            </view>
+        </view>
+        <!-- 评论 -->
+        <view  wx:if="{{isHidden == true}}" class="comment">
+          <text>购买评论</text>
+          <view class='comment-content'>
+            <block wx:for="{{commentData}}" wx:key="{{index}}">
+              <template is="commentListItem" data="{{...item}}" ></template>
+              <div class="lineDiv"></div>
+            </block>
+          </view>
+        </view> 
+    </block>
+
+  <!-- 目录 -->
+    <block wx:elif="{{nowIndex == 1}}">
+        <block  wx:for="{{videoList}}" wx:key="{{index}}">
+          <view class="listBox {{selectIndex == index?'activeState':''}}" data-index="{{index}}" bindtap="jumpCourse">  
+            <view class="videoListTitle">
+                <text>{{index+1}}.{{item.name}}</text>
+            </view>
+            <view class="timeBox">
+                <image class='time' src="{{selectIndex == index? timeImg : selectTimeImg}}"></image>                
+                <view class="{{selectIndex == index?'activeState':''}}">{{item.duration}}</view>
+            </view>
+          </view>
+        </block>
+    </block>
+
+  <!-- 相关推荐 -->
+    <block wx:else>
+        <view 
+        wx:for="{{listData}}" wx:key="{{index}}"class="list">
+          <goods_items items_fa="items_fa" items_img="items_img" items_innner="items_innner" item_text="item_text" imagePath="{{item.picurl}}" title="{{item.curriculumName}}" price="{{item.discountPrice}}" goodsId="{{item.curriculumId}}" bind:goDetail="goDetail">
+            <text>{{item.virtualPurchases}}人购买</text>
+          </goods_items>
+        </view>
+    </block>
+<!-- 底部购买组件 -->
+<purchasePanel bind:collection="collectionBtnClicked" bind:purchase="purchaseBtnClicked" isCollected="{{iscollect}}"></purchasePanel>
+</view>
+
+<!-- 订单界面 -->
+<view class='orderPanel' hidden="{{isPanelHidden}}" bindtap='hiddenOrderPanel' id="orderPanel">
+    <view class='orderContainer' id='orderContainer'>
+      <image src = "{{course.picurl}}"></image>
+      <view class='middleView'>
+        <view class="curriculumName">{{course.curriculumName}}</view>
+        <view class="discountPrice">¥{{course.discountPrice}}</view>
+      </view>
+      <!-- 购买按钮 -->
+      <view class='purchaseBtn' catchtap='purchase'>立即付款</view>
+    </view>
+</view>

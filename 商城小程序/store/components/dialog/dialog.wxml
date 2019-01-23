@@ -1,0 +1,19 @@
+<!--components/dialog/dialog.wxml-->
+<view class='wx_dialog_container' catchtap='isShowTap' hidden='{{!isShow}}'>
+    <view class='wx_dialog' wx:if="{{!isSlot}}" catchtap='_stop_bubble'>
+        <view class='wx_dialog_title'>
+            {{title}}
+        </view>
+        <view class='wx_dialog_content'>
+            {{content}}
+        </view>
+        <view class='wx_dialog_footer'>
+            <view class='btn' catchtap='_cancelEvent'>{{cancelText}}</view>
+            <view class='btn' catchtap='_confirEvent'>{{confirmText}}</view>
+        </view>
+    </view>
+
+    <view class='wx_dialog' wx:if="{{isSlot}}" catchtap='_stop_bubble'>
+        <slot></slot>
+    </view>
+</view>

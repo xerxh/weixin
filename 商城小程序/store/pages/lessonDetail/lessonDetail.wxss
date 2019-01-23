@@ -1,0 +1,282 @@
+/* pages/lessonDetail/lessonDetail.wxss */
+
+@import "../../templete/comment-list-item-template.wxss";
+@import "../../templete/index-list-item-template.wxss";
+.listDetailBox{
+  padding-top: 130rpx;
+  padding-bottom: 125rpx;
+  width: 750rpx;
+  text-align: center;
+}
+
+.video{
+  height: 420rpx;
+  width: 100%;
+}
+.videoContainer{
+  /* display: flex;
+  flex-direction: cloumn;
+  justify-content: space-between; */
+  text-align: left;
+  padding: 30rpx 30rpx 40rpx;
+  border-bottom: 20rpx solid #f3f3f3;
+}
+
+.videoContainer image{
+  width: 100%;
+  height: 200px;
+}
+
+.videoContainerBottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title{
+  font-size: 32rpx;
+  font-family: PingFang-Sc-Bold;
+  color: #333333;
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin-bottom: 30rpx;
+}
+.price {
+  font-size: 26rpx;
+  color: #CF0101;
+}
+.count {
+  color: #999;
+  font-size: 20rpx;
+}
+.courseDetailTitle{
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 40rpx 0;
+}
+.label{
+  margin-top: 10rpx;
+  font-size: 11px;
+  font-family: "Arial Normal", Arial;
+  font-weight: 400;
+  color: rgb(153, 153, 153);
+}
+.navContent{
+  border-top: 20rpx solid #f3f3f3;
+  font-size: 13px;
+  text-align: left;
+  padding: 0 40rpx;
+  border-bottom: 20rpx solid #f3f3f3;
+}
+.navContent > image{
+  margin-top: 30rpx;
+  width: 680rpx;
+  height: 300rpx;
+}
+.richBox{
+  font-size:  28rpx;
+  color: #333333;
+}
+/* 目录 */
+.listBox{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Regular;
+  color: #666666;
+  align-items: center;
+  padding: 25rpx 30rpx 25rpx 32rpx;
+  /* line-height: 80rpx; */
+}
+.timeBox{
+  display: flex;
+  /* width: 200rpx; */
+  align-content: center;
+}
+.timeBox view{
+  width: 100rpx;
+}
+.time{
+  margin: auto 20rpx;
+  width: 13px;
+  height: 13px;
+}
+.videoListTitle{
+  text-align: left;
+  /* color: #FFD214; */
+  /* margin-left: 50rpx; */
+  font-size: 16px;
+  overflow: hidden;
+  width: 60%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.videoListTitle+view{
+  text-align: left;
+  margin-left: 80rpx;
+  font-size: 13px;
+  color: #999;
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.listImgBox{
+  position: relative;
+}
+.listImgBox > image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.listContentBox{
+  /* position: relative; */
+  text-align: left;
+}
+.number{
+  /* position: absolute;
+  top: 0; */
+  display: inline;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 10rpx;
+  padding:0 15rpx;
+}
+.list{
+  margin-top: 2px;
+  position: relative;
+  display: flex;
+  padding: 20rpx 30rpx;
+  justify-content: flex-start;
+  /* box-sizing: border-box; */
+  /* border-bottom: 1px solid black; */
+}
+.listTitle{
+  margin-left: 20rpx;
+}
+/* .displayData{
+  position: absolute;
+  bottom: 20rpx;
+  right: 15rpx;
+  color: #fff;
+  font-size: 12px;
+  padding: 3rpx 10rpx;
+  background: #000;
+} */
+.recommendContent{
+  text-align: left;
+  margin-top: 15rpx;
+  font-size: 14px;
+  margin-left: 20rpx;
+  color: #999;
+}
+
+.activeState{
+  color: #3D8FFF;
+  background: #f5f7f9;
+}
+
+.picker{
+  /* display: flex;
+  justify-content: space-around; */
+  display: inline-block;
+  font-size: 13px;
+  padding: 0 4px;
+  border-radius: 3px;
+  border: 1px solid blue;
+}
+.picker image{
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+}
+
+.orderPanel{
+
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.orderContainer{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  height: 700rpx;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.orderContainer image{
+
+  width: 250rpx;
+  height: 250rpx;
+  margin-top:-125rpx; 
+
+}
+
+.middleView{
+  width: 690rpx;
+  margin-top: 60rpx;
+}
+.curriculumName {
+  color: #333;
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+}
+.discountPrice {
+  font-size: 26rpx;
+  color: #CF0101;
+}
+
+.purchaseBtn{
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+  height: 90rpx;
+  background-color: #FAD352;
+  position: fixed;
+  bottom: 0;
+}
+
+/* 评论 */
+.comment text {
+  display: block;
+  /* margin-top: 27rpx; */
+  font-size: 32rpx;
+  text-align: left;
+  color: #333333;
+}
+.comment-content {
+  /* padding-left: 30rpx; */
+}
+
+/* 外部样式类 */
+.items_fa {
+  display: flex;
+  align-items: center;
+  width: 690rpx;
+}
+
+view.items_innner {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+view.item_text {
+  width: 380rpx;
+  height: 200rpx;
+}
+
+.items_img {
+width:280rpx;
+height:200rpx;
+border-radius:10rpx;
+}

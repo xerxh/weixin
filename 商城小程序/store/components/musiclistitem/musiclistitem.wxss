@@ -1,0 +1,38 @@
+/* components/musiclistitem/musiclistitem.wxss */
+.flex_between{
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 0;
+  /* padding-bottom: 30rpx; */
+  border-bottom: 1px solid rgba(230,230,230,1);
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  /* color:rgba(153,153,153,1); */
+  font-size:32rpx;
+}
+/* 完成的样式 */
+.complete{
+  color:rgba(153,153,153,1);
+}
+.flex_start{
+  display: flex;
+}
+.flex_leftStyle > view:nth-child(2){
+  margin-top: 20rpx;
+  font-size:24rpx;
+}
+.btnBox{
+  display: flex;
+  align-items: center;
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+}
+.flex_start > view:first-child{
+  margin-right: 30rpx;
+}
+.icon{
+  width: 36rpx;
+  height: 36rpx;
+}

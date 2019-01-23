@@ -1,0 +1,23 @@
+<!--提现-->
+<navi_TopView isShow="true">
+  <text slot="centerTitle">提现</text>
+</navi_TopView>
+<view class='margin-top'>
+  <view class='flex column'>
+    <text>分销佣金(元)</text>
+    <text>320.00</text>
+  </view>
+  <view class='flex between'>
+    <text>可提现</text>
+    <text>320.00</text>
+  </view>
+  <view class='flex between' bindtap='jump'>
+    <text>已提现</text>
+    <text>470.00</text>
+  </view>
+  <view class='flex between'>
+    <text>待打款佣金</text>
+    <text>0.00</text>
+  </view>
+  <button class='btn'>我要提现</button>
+</view>

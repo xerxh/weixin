@@ -1,0 +1,59 @@
+<!--pages/lesson/index.wxml-->
+<navi_TopView isShow="true" bg="bg">
+    <!-- 导航中间标题 -->
+    <text slot="centerTitle">{{headerTitle}}</text>
+      <!-- 导航标签 -->
+    <!-- <navigator-tab 
+    tList="{{navData}}" bind:switchPage="switchNav" wx:if="{{searchInput}}"/>
+    <view wx:else>
+      <search clear-position="clearPosition" 
+            bind:search="search" 
+            placeholder="{{pleacholders}}" isShowBtn="true"/>
+    </view> -->
+    <view class="flex_start titleImgBox">
+      <vew class="flex_colum position_style">
+        <text>作品集</text>
+        <text>Open-Lecture 02 | 美国先锋派SCI-Arc：从塞尚绘画演绎</text>
+      </vew>
+      <view>
+        <image class="titleImg" src="../../images/zpj.png"></image>
+      </view>
+    </view>
+</navi_TopView>
+<!-- 列表 -->
+<view class='container'>
+
+  <view  wx:for="{{3}}" w:key="{{index}}">
+    <good_item_listBox paramsObj="{{paramsObj[index]}}">
+      <view class="goodslistView">
+        <view class="item_box" 
+          wx:for="{{dataList}}"
+          wx:key="{{index}}"
+          wx:if="{{index < 4}}">
+          <goods_item external-width='actualWidth' 
+              lessongoods-img="lessongoodsImg" 
+              style="width:44%" 
+              imagePath="{{item.picurl}}" 
+              title="{{item.curriculumName}}" 
+              price="{{item.discountPrice}}" 
+              sum="{{item.virtualPurchases}}"
+              goodsId="{{item.curriculumId}}" 
+              isvideo="{{item.isvideo}}"  
+              bind:goDetail="goDetail">
+            <!-- <text wx:if="{{item.virtualPurchases}}">{{item.virtualPurchases}}人购买</text> -->
+          </goods_item>
+          <view class="studentPepleBg" />
+          <view class="studentPeple">
+            {{item.virtualPurchases}}人加入学习
+          </view>
+        </view>
+      </view>
+    </good_item_listBox>  
+  </view>
+
+<!--
+  <view class="alert">
+    <text>暂无更多结果</text>
+  </view>
+-->
+</view>

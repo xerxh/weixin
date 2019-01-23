@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navi_TopView": "../../components/navitopview/navitopview",
+    "musicList": "./musicListBox/musicListBox"
+  },
+  "enablePullDownRefresh": false
+}

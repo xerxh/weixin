@@ -1,0 +1,11 @@
+<!--components/navitopview/navitopview.wxml-->
+<view class='top bg'>
+  <image class='topImg' wx:if="{{isShow}}" src="../../images/goback.png" class='back' bindtap='goBack'></image>
+  <view class='topContainer bg'>
+    <!-- <image class='topImg' src="{{img}}"></image> -->
+    <slot name="centerTitle"></slot>
+  </view>
+  <!-- 插槽 -->
+  <slot></slot>
+</view>
+

@@ -1,0 +1,64 @@
+/* components/comment/index.wxss */
+.commentBox{
+  padding: 20rpx 0;
+}
+.flexCol{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  padding: 0 30rpx;
+}
+.commentTitle{
+  font-size: 15px;
+  margin: 20rpx 0;
+  font-weight: bold;
+}
+.commentBtn{
+  margin: 5rpx 0;
+  height: 60rpx;
+  width: 160rpx;
+  line-height: 60rpx;
+  color: #ffff;
+  font-size: 24rpx;
+  background: #3d8fff;
+  box-shadow: 4rpx 4rpx 8rpx 3rpx rgba(61,143,255, 0.3);
+  border-radius: 25rpx;
+  text-align: center;
+}
+.scoreDisplay{
+  text-align: left;
+}
+.scoreDisplay > view{
+  display: inline-block;
+}
+.averageScore{
+  color :#66CCFF;
+  font-size: 26px;
+}
+.average{
+  color :rgb(148, 190, 211);
+  margin-left: 10rpx;
+}
+.scoreImg > image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+.numPeople{
+  margin-left: 20rpx;
+  color: #D3C9C9;
+  font-size: 12px;
+}
+.label{
+  justify-content: flex-start;
+  font-size: 10px;
+}
+.labelText{
+  margin-top: 30rpx;
+  background: #EBF3FF;
+  border-radius: 20rpx;
+  height: 40rpx;
+  padding: 5rpx 20rpx;
+  margin-right: 20rpx;
+  line-height: 40rpx;
+}

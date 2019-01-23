@@ -1,0 +1,50 @@
+/* components/goodlistBox/goodlistbox.wxss */
+.hotList, .newList{
+  /* height: 496rpx; */
+  width: 750rpx;
+  overflow:hidden;
+  white-space:nowrap;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.menuPanel{
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 32rpx 0 40rpx;
+ padding-left: 21rpx;
+ 
+}
+
+.menuPanel .hotLine {
+  width: 8rpx;
+  height: 38rpx;
+  /* background-color:  #000; */
+  background:rgba(255,200,20,1);
+  position: absolute;
+  left: 24rpx;
+}
+.menuPanel .hotTitle {
+  /* font-size: 30rpx; */
+  font-size:38rpx;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  color:rgba(0,0,0,1);
+}
+.menuPanel .moreImg{
+  width: 20rpx;
+  height: 20rpx;
+  transform: rotate(180Deg) translateX(40rpx);
+  opacity: .5;
+}
+.menuPanel .getMore {
+  /* font-size: 20rpx; */
+  /* position: absolute; */
+  /* right: 80rpx; */
+  /* color:#999999; */
+  margin-right: 30rpx;
+  font-size:26rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}

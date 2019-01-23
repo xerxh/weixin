@@ -1,0 +1,75 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wxa1dc16c1be86f28f",
+	"projectname": "%E6%B1%89%E8%89%BA%E5%9B%BD%E9%99%85(%E5%95%86%E5%9F%8E)2.0(git)",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "分享到群",
+					"pathName": "pages/share/share",
+					"query": "source=开始",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "0wmA5hZ1sY6WsFCP1aafzwl0pSGSR-lxx5eX3RXsDlk@cr4dev",
+						"shareKey": "KQkNCi8D4Qgik0UnV65RB_FHEczHPTBno6Ecr91Sb3JnnVfZmlYQSkOEL0LVx_xb3CS5smrIKMW5OHMh0LyXNA~~"
+					}
+				},
+				{
+					"id": 1,
+					"name": "作品集页面",
+					"pathName": "pages/lesson/index",
+					"query": "id=''&title=基础课"
+				},
+				{
+					"id": 2,
+					"name": "音频列表界面",
+					"pathName": "pages/musicList/musiclist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购买会员",
+					"pathName": "pages/buyMember/buyMember",
+					"query": ""
+				}
+			]
+		}
+	}
+}

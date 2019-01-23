@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navi_TopView": "../../components/navitopview/navitopview",
+    "custom_box": "../../components/custombox/index"
+  }
+}
