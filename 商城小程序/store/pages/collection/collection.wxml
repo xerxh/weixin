@@ -1,2 +1,19 @@
-<!--收藏-->
-<text>pages/collection/collection.wxml</text>
+<!--pages/lesson/index.wxml-->
+<navi_TopView>
+    <!-- 导航中间标题 -->
+    <text slot="centerTitle">{{headerTitle}}</text>
+      <!-- 导航标签 -->
+    <!-- <navigator-tab 
+    tList="{{navData}}" bind:switchPage="switchNav" wx:if="{{searchInput}}"/>
+    <view wx:else>
+     -->
+    <search clear-position="clearPosition" 
+      bind:search="search" 
+      bind:clear="clear"
+      placeholder="{{pleacholders}}" isShowBtn="true"/>
+    <!-- </view> -->
+</navi_TopView>
+<!-- 列表 -->
+<view class='container' wx:if="{{isShow}}">
+  <collectionList search="{{search}}" more="{{more}}" firstRender="{{firstRender}}"></collectionList>
+</view>

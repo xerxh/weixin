@@ -1,6 +1,6 @@
 // pages/lesson/index.js
-import { StoreModel } from '../../models/storeIndex.js'
-let storeModel = new StoreModel()
+import { lessonIndex } from '../../models/lessonIndex.js'
+let LessonIndex = new lessonIndex()
 var util = require('../../utils/util.js')
 
 Page({
@@ -10,27 +10,10 @@ Page({
   data: {
     // 头部标题
     headerTitle:'',
-    nowIndex:0,
-    pageindex:0,
-    pageSize:10,
-
-
+    categoryId: '',
+    headerObj: {},
     // 商品列表数组
-    dataList: [],
-    paramsObj: {
-      0: {
-        title: '基础课',
-        isSeeMore: true
-      },
-      1: {
-        title: '理论课',
-        isSeeMore: true      
-      },
-      2: {
-        title: '进阶课',
-        isSeeMore: true
-      }
-    }
+    dataList: []
   },
 
   /**
@@ -38,12 +21,22 @@ Page({
    */
   onLoad: function (options) {
     var categoryId = options.id;
-    var title = decodeURIComponent(options.title);
-    categoryId = categoryId === undefined ? '' : categoryId;
+    var headerTitle = decodeURIComponent(options.title);
     // 根据对应的id查找数据
-    console.log(options,'获取页面加载时的参数');
-    this.getdata('', {
-      headerTitle:options.title
+    console.log(options,'获取页面加载时的参数')
+    // 获取头部数据
+    LessonIndex.getCategoryInfo(categoryId)
+      .then(res => {
+        let {data: { data: headerObj } } = res
+        this.setData({
+          headerObj
+        })
+        console.log(res)
+      })
+    // 获取列表数据
+    this.getdata(categoryId, {
+      headerTitle,
+      categoryId
     })
   },
   /**
@@ -63,26 +56,30 @@ Page({
   // 获取商品列表
   getdata: function (categoryid, setSomeDate = {}){
 
-    let criteria = this.data.criteria
-    let pageindex = this.data.pageindex
-    let pagecount = this.data.pageSize
-    return storeModel.getGoodsList(categoryid, criteria, pageindex, pagecount)
+    return LessonIndex.getGoodsList(categoryid)
     .then(res => {
-      let arr = this.data.dataList.concat(res.data.data); 
+      let { data : {data: arr} } = res
+      arr.map(item => {
+        item.paramsObj = {
+          title: item.categoryName,
+          categoryId: item.categoryId,
+          isSeeMore: true
+        }
+      })
+      console.log(arr)
       this.setData({
         dataList: arr,
         ...setSomeDate,
-        pageindex: ++this.data.pageindex,
       })
     })
   },
   // 进入详情页面
   goDetail:function(e){
     console.log(e.detail.goodsID,'lesson')
-    var goodsId = e.detail.goodsID
-    var isvideo = e.detail.isvideo;
+    var id = e.detail.goodsID
+    // 跳转到音乐列表
     wx.navigateTo({
-      url: `../lessonDetail/lessonDetail?curriculumId=${goodsId}&isvideo=${isvideo}`,
+      url: `/pages/musicList/musiclist?id=${id}`,
     })
   },
   /**
@@ -96,9 +93,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    let categoryid=''
-    // 加载更多
-    this.getdata(categoryid)
+
   },
   /**
    * 用户点击右上角分享

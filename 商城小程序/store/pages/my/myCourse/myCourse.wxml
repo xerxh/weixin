@@ -1,11 +1,15 @@
 <!--pages/my/myCourse/myCourse.wxml-->
 <view class='border-top'>
-  <view class='flex boxStyle' wx:for="{{10}}">
+  <view class='flex boxStyle' 
+    wx:for="{{dataArray}}" 
+    data-id="{{item.curriculumId}}"
+    bindtap="jumpCourseList">
     <image
-    class='img' src='http://file.hartedu.com/hart/user/1/1542351198_32698582c8c047a9962d3e0c9bf53ec8.jpg' />
+    class='img' src='{{item.picurl}}' />
     <view class='flex cloumn margin_left'>
-      <text>PS核心技法</text>
-      <text>学习进度30%</text>
+      <text class="title">{{item.curriculumName}}</text>
+      <text class="allTime">{{item.intro}}</text>
     </view>
   </view>
+  <view wx:if="{{empty}}" class="empty">暂无相关数据</view>
 </view>

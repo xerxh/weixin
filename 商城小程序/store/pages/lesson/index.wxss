@@ -61,7 +61,7 @@
   top: 200rpx;
   left: 0rpx;
   right: 0rpx;
-  width:334rpx;
+  width:329rpx;
   height:38rpx;
   background:#9B9B9B;
   opacity:0.2;

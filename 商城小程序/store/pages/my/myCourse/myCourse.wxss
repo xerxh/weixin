@@ -9,16 +9,31 @@
 }
 .boxStyle{
   padding: 30rpx 0;
-  margin: 0 40rpx;
-  border-bottom: 1px solid gray;
+  margin: 0 30rpx;
+  border-bottom: 1px solid rgba(221,221,221,1);
 }
-.border-top{
-  border-top: 1px solid gray;
-}
+
 .cloumn{
   flex-direction: column;
   justify-content: space-between;
 }
 .margin_left{
   margin-left: 30rpx;
+  padding: 20rpx 0;
+}
+.title{
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+}
+.allTime{
+  font-size:22rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+}
+
+.empty{
+  text-align: center;
 }

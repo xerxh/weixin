@@ -25,7 +25,7 @@ Component({
       const paramsObj = this.data.paramsObj
       console.log(paramsObj)
       wx.navigateTo({
-        url: `/pages/lesson/index?id=''&title=${paramsObj.title}`
+        url: `/pages/course/course?url=${paramsObj.url}&title=${paramsObj.title}&id=${paramsObj.categoryId}`
       })
     }
   }

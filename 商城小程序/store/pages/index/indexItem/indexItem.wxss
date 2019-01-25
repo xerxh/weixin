@@ -1,0 +1,109 @@
+/* pages/lesson/index.wxss */
+.container{
+    margin-top: 250rpx;
+  }
+  .goodsItem.lesson-goodsImg {
+    width: 330rpx;
+    height: 330rpx
+  } 
+  .lessongoodsImg{
+    width: 330rpx;
+    height: 238rpx;
+  }
+  .actualWidth{
+    width: 100%;
+  }
+  .goodslistView{
+    /* width: 750rpx; */
+    align-items:center;
+    display: flex;
+    /* justify-content: s; */
+    flex-wrap:wrap;
+    /* padding: 10px 0; */
+  }
+  .position_style{
+    /* margin-left: 60rpx;
+    padding: 40rpx 0; */
+    /* width: 337rpx; */
+  }
+  .position_style text:first-child{
+    margin-bottom: 20rpx;
+    font-size:56rpx;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(0,0,0,1);
+    line-height:98rpx;
+  }
+  .position_style text:nth-child(2) {
+    font-size:26rpx;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    width: 337rpx;
+    color:rgba(0,0,0,1);
+    line-height:38rpx;
+  }
+  .item_box{
+    width: 45%;
+    margin-right: 5%;
+    position: relative;
+  }
+  .titleImg{
+    width: 240rpx;
+    height: 168rpx;
+    margin-left: 95rpx;
+  }
+  .titleImgBox{
+    align-items: center;
+    padding: 60rpx 58rpx 93rpx 30rpx;
+  }
+  .studentPepleBg{
+    position: absolute;
+    top: 200rpx;
+    left: 0rpx;
+    right: 0rpx;
+    width:329rpx;
+    height:38rpx;
+    background:#9B9B9B;
+    opacity:0.2;
+    border-radius:10rpx;
+    text-indent: 10rpx;
+  }
+  .studentPeple{
+    position: absolute;
+    top: 200rpx;
+    left: 20rpx;
+    right: 0rpx;
+    height:38rpx;
+    font-size:20rpx;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    line-height: 38rpx;
+    color:rgba(255,255,255,1);
+  }
+  /* 穿透 */
+  goods_item > view > view{
+    /* flex-direction: column; */
+  }
+  goods_item > view{
+    margin-bottom: 30rpx;
+  }
+  goods_item > view > view > view{
+    margin-left: 15rpx;
+    padding-right: 35rpx;
+  }
+  goods_item > view > view > view > view{
+    margin-top: 30rpx;
+    margin-bottom: 19rpx;
+  }
+  .bg{
+    height:420rpx;
+    background:rgba(198,198,198,1) !important;
+  }
+  
+  .clearPosition{
+    right: 135rpx;
+  }
+
+  .topSize{
+    margin-top:160rpx;
+  }

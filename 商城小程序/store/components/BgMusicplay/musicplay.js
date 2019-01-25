@@ -3,6 +3,8 @@ import {
   formatMusicTime 
 } from "../../utils/util"
 let bgAudio = wx.getBackgroundAudioManager()
+import { musicModel } from "../../models/musicListModel"
+const MusicMode = new musicModel()
 Component({
   /**
    * 组件的属性列表
@@ -23,9 +25,15 @@ Component({
       observer:function(val, oldVal) {
         console.log('回调')
         console.log(val, oldVal)
+
         if(this.data.musicList[val]){
           this.data.innerAudioContext.pause()
-          this.data.innerAudioContext.title = '啦啦啦啦'
+          this.data.localprogressAllTime = 0  // 清空缓存的数据
+          this.data.localSum = 0
+          this.triggerEvent('sendLocalAllTime', {
+            localprogressAllTime: 0
+          })
+          this.data.innerAudioContext.title = this.data.musicList[val].videoName
           this.data.innerAudioContext.src = this.data.musicList[val].src
           setTimeout(() => {
             this.data.innerAudioContext.play()
@@ -48,18 +56,28 @@ Component({
         console.log('切换播放')
         switch (val) {
           case true:
-            // this.data.innerAudioContext.pause()
-            if(this.data.isStop){
-              this.data.innerAudioContext.title = '我是雷神托尔'
-              this.data.innerAudioContext.src = this.data.musicList[this.data.nowMusicMark].src
-            }
-            this.data.innerAudioContext.play()
-            this.setData({
-              isPlay: true,
-              isStop: false
-            })
+              // this.data.innerAudioContext.pause()
+              if(this.data.isStop){
+                this.data.innerAudioContext.title = this.data.musicList[this.data.nowMusicMark].videoName
+                this.data.innerAudioContext.src = this.data.musicList[this.data.nowMusicMark].src
+              }
+              console.log('播放开始')
+              this.data.innerAudioContext.play()
+              this.setData({
+                isPlay: true,
+                isStop: false
+              })
             break;
           case false:
+            console.log('暂停')
+            if(this.data.localprogressAllTime){
+              this.setData({
+                progressAllTime: formatMusicTime(this.data.localprogressAllTime),
+                progressValue: formatMusicTime(this.data.localprogressAllTime),
+                musicAlltime: this.data.localprogressAllTime,
+                musicTime: this.data.localprogressAllTime
+              })
+            }
             this.data.innerAudioContext.pause()
             this.setData({
               isPlay: false
@@ -103,11 +121,11 @@ Component({
         activeSrc: "../../images/music/right.png"}
     ],
     btnArray: [
-      {src: '../../images/music/musicList.png', title: '搜索'},
-      {src: '../../images/music/article.png', title: '文稿'},
-      {src: '../../images/music/collection.png', title: '收藏'},
+      {src: '../../images/music/musicList.png', title: '列表', mark: 1},
+      {src: '../../images/music/article.png', title: '文稿', mark: 2},
+      // {src: '../../images/music/collection.png', title: '收藏', mark: 3},
       // {src: '../../images/music/download.png', title: '下载'},
-      {src: '../../images/music/musicShare.png', title: '分享'},
+      // {src: '../../images/music/musicShare.png', title: '分享', mark: 4},
     ],
     // 音乐最大时间
     musicAlltime: 0,
@@ -115,6 +133,10 @@ Component({
     progressValue: 0,
     // 音乐播放器的总时间
     progressAllTime: 0,
+    // 缓存总时间 当自然结束 却没有下一曲进行播放的时候进行显示
+    localprogressAllTime: 0,
+    //  缓存标记
+    localSum: 0,
     // 正在播放的音乐的下标
     // nowMusicMark: 1,
     // 音乐播放时间
@@ -141,27 +163,31 @@ Component({
       //   isStop: false
       // })
       // // 切换列表的播放视图
-      // this.triggerEvent('swicthPlay', {
-      //   isplay:true,
-      //   nowMusicMark: this.data.nowMusicMark
-      // })
+      this.triggerEvent('swicthPlay', {
+        isplay:true,
+        nowMusicMark: this.data.nowMusicMark
+      })
     });
-    innerAudioContext.onEnded(() => {
+    innerAudioContext.onEnded((e) => {
       console.log('音频自然播放结束事件');
+      // 发送请求改变状态
+      this.triggerEvent('musicOver',{
+        nowMusicMark: this.data.nowMusicMark
+      })
       // 进行下一音频的自动播放
       this.next_music(this.data.nowMusicMark + 1)
     });
     innerAudioContext.onStop(() => {
       console.log('音频停止事件');
       this.setData({ // 停止时记录状态
-        isPlay: false,
+        // isPlay: false,
         isStop: true,
-        isSelectPlay: false
+        // isSelectPlay: false
       })
       // 记录是否为停止的状态
       // 切换列表的播放视图
       this.triggerEvent('swicthPlay', {
-        // isplay:false,
+        isplay:false,
         close: true,
         nowMusicMark: this.data.nowMusicMark
       })
@@ -174,7 +200,7 @@ Component({
       // // 切换列表的播放视图
       // this.triggerEvent('swicthPlay', {
       //   isplay: false,
-      //   nowMusicMark: this.data.nowMusicMark
+      //   nowMusicMark: this.data.nowMusicMark,
       // })
     })
     innerAudioContext.onError((res) => {
@@ -194,8 +220,15 @@ Component({
           progressAllTime: formatMusicTime(innerAudioContext.duration),
           progressValue: formatMusicTime(innerAudioContext.currentTime),
           musicAlltime: innerAudioContext.duration,
-          musicTime: innerAudioContext.currentTime
+          musicTime: innerAudioContext.currentTime,
         })
+        // 缓存总时间
+        if(this.data.localSum == 0) {
+          this.setData({
+            localprogressAllTime: innerAudioContext.duration
+          })
+          this.data.localSum += 1
+        }
       }
     })
     this.data.innerAudioContext = innerAudioContext
@@ -210,11 +243,30 @@ Component({
         defaultShow: !this.data.defaultShow
       })
     },
+    closeBg() {
+      console.log('关闭整个组件'),
+      this.setData({
+        isShow: false
+      })
+      this.triggerEvent('isShowList', false) 
+      this.data.innerAudioContext.pause()
+      this.triggerEvent('swicthPlay', {
+        isplay: false,
+        nowMusicMark: this.data.nowMusicMark,
+        close: true
+      })
+    },
     sliderchanging(e) {  // 拖拽过程事件  改变进度条
       console.log('拖拽中', e.detail)
       this.setData({
         isSlider: true,
         progressValue: formatMusicTime(e.detail.value)
+      })
+      // 将缓存清空
+      this.data.localprogressAllTime = 0
+      this.data.localSum = 0
+      this.triggerEvent('sendLocalAllTime', {
+        localprogressAllTime: this.data.localprogressAllTime
       })
     },
     sliderchange(e) { // 进度拖拽完成后事件
@@ -238,6 +290,18 @@ Component({
           title: '已经到最后的曲目了',
           icon: 'none'
         })
+        // 缓存下总时间
+        console.log(this.data.localprogressAllTime, '总时间')
+        console.log(this.data)
+        // 父元素保存作为标记 用来判断
+        this.triggerEvent('swicthPlay', {
+          isplay: false,
+          nowMusicMark: this.data.nowMusicMark
+        })
+        this.triggerEvent('sendLocalAllTime', {
+          localprogressAllTime: this.data.localprogressAllTime
+        })
+        console.log(this.data.musicAlltime, '总时间')
       }else{
         this.triggerEvent('swicthPlay', {
           isplay: true,
@@ -273,6 +337,21 @@ Component({
         case 'musicLeft': // 上一曲
           this.next_music(this.data.nowMusicMark - 1)
           break  
+      }
+    },
+
+    isShowList(e) {
+      switch (e.currentTarget.dataset.mark) {
+        case 1:
+          this.triggerEvent('isShowList')   
+          break;
+        case 2: // 文稿
+          console.log(this.data.musicList[this.data.nowMusicMark])
+          wx.navigateTo({
+            url: `/pages/musicDetail/musicDetail?id=${this.data.musicList[this.data.nowMusicMark].videoId}`
+          })
+        default:
+          break;
       }
     }
   }

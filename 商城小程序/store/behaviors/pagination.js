@@ -30,10 +30,12 @@ let paginationBev = Behavior({
           this.setData({
             empty: true
           })
+          console.log('没有数据')
         }
+        console.log('返回,已经是最后一页了')
       }
       let temp = this.data.dataArray.concat(dataArray)
-      this.data.start += this.data.count
+      this.data.start++
       this.setData({
         dataArray: temp
       })
@@ -41,7 +43,7 @@ let paginationBev = Behavior({
     },
     // 判断是否已经到达最后一页
     hasMore: function () {
-      return this.data.ending
+      return !this.data.ending
     },
     // 现在的当前页
     getCurrentStart: function () {
@@ -53,7 +55,8 @@ let paginationBev = Behavior({
       this.data.start = 0
       this.data.dataArray = []
       this.setData({
-        dataArray: []
+        dataArray: [],
+        empty: false
       })
     },
     // 获取页面的数据

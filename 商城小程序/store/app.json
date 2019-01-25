@@ -11,11 +11,15 @@
     "pages/buyMember/buyMember",
     "pages/my/my",
     "pages/extractMoney/extractMoney",
-    "pages/extractMoneyDetail/extractMoneyDetail"
+    "pages/extractMoneyDetail/extractMoneyDetail",
+    "pages/plusCanGetMoney/plusCanGetMoney",
+    "pages/musicDetail/musicDetail",
+    "pages/web-view/web-view"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#c7c7c7",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"

@@ -1,0 +1,31 @@
+<view>
+    <good_item_listBox 
+        paramsObj="{{paramsObj}}"
+        >
+        <view class="goodslistView">
+        <view class="item_box" 
+            wx:for="{{dataArray}}"
+            wx:for-item="sonItem"
+            wx:key="{{index}}">
+            <goods_item external-width='actualWidth' 
+                lessongoods-img="lessongoodsImg" 
+                style="width:44%" 
+                imagePath="{{sonItem.picurl}}" 
+                title="{{sonItem.curriculumName}}"
+                artcleTiltle="{{sonItem.intro}}" 
+                price="{{sonItem.discountPrice}}" 
+                sum="{{sonItem.virtualPurchases}}"
+                goodsId="{{sonItem.curriculumId}}" 
+                isvideo="{{sonItem.isvideo}}"  
+                bind:goDetail="goDetail">
+            <!-- <text wx:if="{{item.virtualPurchases}}">{{item.virtualPurchases}}人购买</text> -->
+            </goods_item>
+            <view class="studentPepleBg" />
+            <view class="studentPeple">
+            {{sonItem.virtualPurchases}}人加入学习
+            </view>
+        </view>
+        </view>
+    </good_item_listBox> 
+    <noSearch top-size="topSize" isHidden="{{!empty}}"></noSearch>
+</view>

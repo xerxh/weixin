@@ -9,11 +9,18 @@ Component({
   properties: {
     musicList: {
       type: Array,
-      value: [
-        // {src: 'https://m10.music.126.net/20190107191029/92e9bcb34a6f562fc88ed42929410254/ymusic/5ae0/dac2/d103/b4698431f1955a8a625e8512c39d9467.mp3'},
-        // {src: 'https://m10.music.126.net/20190108110250/ea549c43acd3e77db0dc1553163f3869/ymusic/ccaa/8e8a/15c2/d96af3e78ff4b10d36bbb0ee7e5c1114.mp3'},
-        // {src: 'https://m10.music.126.net/20190108110756/6ba716241aaa24d30726a0c99c15e14d/ymusic/daa2/ba38/a36f/15d65cf96448ce30d7fb13dfff6a243b.mp3'},
-      ]
+      value: [],
+      observer: function(val) {
+        console.log(val, '歌曲列表')
+      }
+    },
+    // 正在播放的音乐的下标
+    nowMusicMark: {
+      type: Number,
+      value: -1,
+      observer: function(val) {
+        console.log(val, '现在的下标')
+      }
     }
   },
 
@@ -59,7 +66,7 @@ Component({
     // 音乐播放器的总时间
     progressAllTime: 0,
     // 正在播放的音乐的下标
-    nowMusicMark: 1,
+    // nowMusicMark: 1,
     // 音乐播放时间
     musicTime: 0,
   },
@@ -115,6 +122,9 @@ Component({
         defaultShow: !this.data.defaultShow
       })
     },
+    close() {
+
+    },
     sliderchange(e) { // 进度拖拽事件
       console.log(e.detail.value)
       this.data.innerAudioContext.pause()
@@ -137,6 +147,7 @@ Component({
       const index = item.currentTarget.dataset.index
       switch (btnInfo.mark) {
         case 'musicPlay': // 播放按钮
+          console.log(this.data.nowMusicMark, '播放')
           this.data.innerAudioContext.src = this.properties.musicList[this.data.nowMusicMark].src
           console.log(this.properties.musicList[this.data.nowMusicMark].src)
           if(this.data.isPlay){

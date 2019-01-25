@@ -1,10 +1,9 @@
 import { config } from '../config.js'
-
+// http请求
 let header = {
   "Content-Type": "application/json;charset=UTF-8"
 }
 
-// http请求
 class HTTP {
   constructor() {
     // 基础url
@@ -35,7 +34,26 @@ class HTTP {
           // 如果请求返回状态为2开头
           if (startChar == '2') {
             // 成功处理方法
-            resolve(res)
+            switch (res.data.code) {
+              case 0: // 正常
+                resolve(res)
+                break;
+              case 1003: // 用户过期
+                // resolve(res)
+                reloadLogin()
+                break;
+              default:
+                // 错误码处理方法
+                wx.showToast({
+                  title: res.data.msg,
+                  icon: 'none',
+                  duration: 1000
+                })
+                // _this.showError(res.data.code)
+                reject()
+                break;
+            }
+           
           } else {
             // 错误码处理方法
             _this.showError(code)

@@ -1,8 +1,8 @@
 <!--pages/index/footerItem/footerItem.wxml-->
-<view class="containerBox my_style">
+<view class="containerBox my_style" bindtap="jumpOut">
   <view>
-    <text class="title">康石石</text>
-    <view class="content">这里是简介简介</view>
+    <text class="title">{{obj.title}}</text>
+    <view class="content">{{obj.intro}}</view>
   </view>
   <view>
     <image class="iconImg" src="../../../images/logo.png" />

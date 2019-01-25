@@ -65,3 +65,21 @@
   right: 10%;
   top: -20rpx;
 }
+
+.z-index{
+  z-index: 999999;
+  position: fixed;
+  height: 600rpx;
+  bottom: 120rpx;
+  left: 0;
+  right: 0;
+  padding: 0 50rpx;
+  overflow: scroll;
+  background: #ffffff;
+}
+.z-index::-webkit-scrollbar {
+  width: 3px;
+}
+/* .z-index::-webkit-scrollbar-thumb {
+  background-color:red;
+} */

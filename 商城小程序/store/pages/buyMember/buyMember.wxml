@@ -1,38 +1,60 @@
 <!--购买会员-->
-<navi_TopView>
+<wxs src="./format.wxs" module="tools" />
+
+<navi_TopView bg="bg" isShow="true">
   <image slot="centerTitle" class="topImg" src="../../images/top.png" />
 </navi_TopView>
 <view class="body">
-  <user_info />
+  <!-- 用户信息 -->
+  <view class="bg">
+    <user_info userInfo="{{userInfo}}"/>  
+  </view>
   <view class="memberBox">
     <view class="memberItemBox">
       <view
-        class="item" 
-        wx:for="{{3}}"
-        wx::key="{{index}}">
-        <text>12个月</text>
-        <text>￥498</text>
-        <text>初级会员</text>
+        class="item {{isActive[index] ? 'active' : ''}}" 
+        wx:for="{{memerList}}"
+        data-index="{{index}}"
+        wx::key="{{index}}"
+        bindtap="changeActive">
+        <text class="mounth" hidden="{{item.isApplyFor}}">{{item.usefulLife}}{{tools.isMonth(item.isMonth)}}</text>
+        <view class="price" hidden="{{item.isApplyFor}}">
+          <text class="priceIcon">￥</text>
+          <text>{{item.price}}</text>
+        </view>
+        <!--申报按钮 plus-->
+        <view class="price" hidden="{{!item.isApplyFor}}">
+          <text class="plusName">{{item.memberName}}</text>
+        </view>
+        <view class="btnApply" hidden="{{!item.isApplyFor}}">
+          {{item.applyForStatus == 0 ? '申报中' : '需要申报'}}
+        </view>
+        <text class="level"  hidden="{{item.isApplyFor}}">{{item.memberName}}</text>
       </view>
     </view>
-    <button class="btn">立即开通</button>
+    <button class="btn" bindtap="buyMember">{{isPlus ? '立即申请' : '立即购买'}}</button>
   </view>
   <view class="btnGroup">
-    <view class="flex_start margin_top">
+  <view 
+    wx:for="{{btnList}}"
+    class="btnBox"
+    data-jumpurl="{{item.url}}">
+    <view class="btnNameBox">
       <view class="swicthBox">
-        <switch bindchange="switchChange">同意</switch>
+        <switch 
+          data-index="{{index}}" 
+          bindchange="switchChange">{{item.isSelected ? '同意' : '不同意'}}</switch>
       </view>
-      <navigator class="navigator" target="" url="" hover-class="navigator-hover" open-type="navigate">
-        用户协议
-      </navigator>
+      <text 
+        bindtap="jump"
+        data-index="{{index}}"
+        data-id="{{item.id}}"
+        class="btnName">{{item.name}}</text>
     </view>
-    <view class="flex_start margin_top">
-        <view class="swicthBox">
-          <switch bindchange="switchChange">不同意</switch>
-        </view>
-      <navigator class="navigator" target="" url="" hover-class="navigator-hover" open-type="navigate">
-        隐私协议
-      </navigator> 
-    </view>   
+    <image
+      bindtap="jump" 
+      data-index="{{index}}"
+      class="btn_arrow" src="../../images/my/btn_arrow.png"/>
+  </view>  
   </view>
 </view>

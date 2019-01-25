@@ -1,0 +1,5 @@
+<!--components/nonesearch/index.wxml-->
+<view class="nosearch top-size" hidden="{{isHidden}}">
+    <image class="noPic" src="../../images/nosearch.png"></image>
+    <view class="noTip">暂无相关数据</view>
+</view>

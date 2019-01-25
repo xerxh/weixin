@@ -61,4 +61,8 @@ image{
   font-weight:bold;
   color:rgba(0,0,0,1);
   line-height:70rpx;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space:nowrap;
+  /* width:275rpx; */
 }

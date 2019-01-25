@@ -1,0 +1,17 @@
+<!--pages/plusCanGetMoney/plusCanGetMoney.wxml-->
+<navi_TopView isShow="true">
+  <text slot="centerTitle">代言人收益</text>
+  <view class="line" />
+</navi_TopView>
+<view class='margin-top'>
+  <view class='flex boxStyle' wx:for="{{dataList}}">
+    <view class='flex cloumn margin_left'>
+      <text class='smallTitile'>{{item.orderNo}}</text>
+      <text class="bigTitle">{{item.nickName}}</text>
+    </view>
+    <view class='flex cloumn margin_left'>
+      <text class='smallTitile'>{{item.memberName}}</text>
+      <text class="bigTitle">{{item.operationMoney}}</text>
+    </view>
+  </view>
+</view>

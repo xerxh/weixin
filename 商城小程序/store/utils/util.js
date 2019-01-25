@@ -2,7 +2,7 @@
 import { LoginModel } from '../models/login.js'
 let loginModel = new LoginModel()
 
-  const formatTime = date => {
+const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -51,24 +51,62 @@ const upload_share_Result = (res, type, uid) => {
   // })
 }
 
-// 登录逻辑
-const loginAction = ()=>{
-
-  return new Promise((resolve, reject)=>{
+// 登陆调用
+const login = (paramsObj, resolve, reject) => {
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        loginModel.Weixinlogin(res.code, "applet", "1.0").then(res => {
+        const code = res.code
+        console.log(code, 'code')
+        loginModel.Weixinlogin({code, ...paramsObj})
+        .then(res => {
           let result = res.data
-          if (result.code == 0) {
-            wx.setStorageSync("uid", result.data.userId || "")
-            wx.setStorageSync("token", result.data.token || "")
+          // "code": 0：正常，  1001：系统错误，1002：内部错误，1003：登陆过期
+          switch(result.code) {
+            case 0:
+              wx.setStorageSync("uid", result.data.userId || "");
+              wx.setStorageSync("token", result.data.token || "");
+              resolve(res.data)
+              break;
+            case 1003: // 登陆过期需要重新登陆
+              login(paramsObj, resolve, reject)
+            default:
+              reject('发生了网络异常')
+              break;
           }
-          resolve('登录成功')
         })
+        .catch((error) => {
+          reject(error)
+        })
+      },
+      fail: error => {
+        // 如果失败进行重新调用登陆
+        login(paramsObj, resolve, reject)
       }
     })
+}
+
+// 重新登陆调用
+const reloadLogin = () => {
+  return new Promise((resolve, reject)=>{
+    wx.getUserInfo({
+      success: function(res){
+        let paramsObj = res.userInfo;
+        login(paramsObj, resolve, reject)
+      },
+      fail: function() {
+        // fail
+        reloadLogin()
+      }
+    })
+  })
+}
+
+// 登录逻辑
+const loginAction = (paramsObj)=>{
+  return new Promise((resolve, reject)=>{
+    login(paramsObj, resolve, reject)
   })
 
 }
@@ -92,10 +130,26 @@ const formatMusicTime = (time) => {
     return [oMintes,oSeconds].join(":")
   }
 }
+
+// 生成一个不同位数的完全随机数
+const chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+const random = function generateMixed(n) {
+  var res = "";
+  for (var i = 0; i < n; i++) {
+    var id = Math.ceil(Math.random() * 35);
+    res += chars[id];
+  }
+  return res;
+}
+
 module.exports = {
   formatTime,
   upload_share_Result,
   loginAction,
+  login,
+  reloadLogin,
   share,
+  random,
   formatMusicTime
 }

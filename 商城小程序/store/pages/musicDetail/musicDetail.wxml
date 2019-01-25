@@ -1,0 +1,12 @@
+<!--pages/musicDetail/musicDetail.wxml-->
+<navi_TopView isShow="true">
+    <text slot="centerTitle" >{{title}}</text>
+</navi_TopView>
+<view class="margin_top">
+  <view class='navContent'>
+    <!-- <view class='courseDetailTitle'>课程详情</view> -->
+    <view class='richBox' wx:for="{{richText}}" wx:key="index">
+        <wxparser wx:if="{{firstRender[index]}}"  rich-text="{{item}}" />
+    </view>
+  </view>
+</view>

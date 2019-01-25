@@ -3,22 +3,29 @@
 const app = getApp()
 import { StoreModel } from '../../models/storeIndex.js'
 let storeModel = new StoreModel()
-import { config } from '../../config.js'
 var util = require('../../utils/util.js')
 
 Page({
   data: {
-    searchKeyWords: [],
     bannerList: [],
     goodsTypeList: [],
+
     //热门推荐
     hotList: [],
     hotParamsObj: {},
+
     pleacholder: '',
     //最新上线
     recently: [],
-    // recentParamsObj
-    recentParamsObj: {},
+    recentlyParamsObj: {},
+    // 汉艺推荐
+    recommendList: [],
+    recommenedParamsObj: {},
+
+    // 底部数据
+    footerData: [],
+
+    dataList: [],
     interval: 3000,
     duration:'400',
     hasUserInfo: false,
@@ -58,13 +65,26 @@ Page({
         }
       })
     }
+    // 设置底部数据
+    // 1:公司简介，2：帮助中心，3：会员制度，4：用户协议，5：隐私协议' guid
+    this.setData({
+      footerData: [
+        {title: '康石石', mark: 1, intro: '公司简介'},
+        {title: '会员制度', intro: '公司简介', guid: 3},
+        {title: '公司简介', intro: '会员制度', guid: 1},
+        {title: '待定', intro: '公司简介', mark : -1}
+      ]
+    })
+
+  },
+  onShow() {
     //获取数据
     this.getSearchKeywords();
     this.getBannerList();
     this.getGoodsType();
-    this.getGoodsHotList();
+    this.getGoodsHotList();    
     this.getRecentGoods();
-
+    this.getHyRecomend();
   },
   //分享
   onShareAppMessage(res) {
@@ -74,45 +94,19 @@ Page({
   itemSkip: function (e) {
     var categoryId = e.detail.itemid;
     var title = e.detail.title;
-    console.log(e.detail.title)
-    if (e.detail.title == '砍价商品') {
-      wx.navigateTo({
-        url: '../bargain/bargain',
-      })
-    } else if (e.detail.title == '分享专用') {
-      console.log('分享')
-      wx.navigateTo({
-        url: `../myShare/index?id=${categoryId}&title=${title}`
-      })
-    } else if (e.detail.title == '拼团商品') {
-      console.log('拼团')
-      wx.navigateTo({
-        url: `../tourDiy/index?id=${categoryId}&title=${title}`
-      })
-    } else if (e.detail.title == '确认订单') {
-      console.log('确认订单')
-      wx.navigateTo({
-        url: `../affirmOrder/affirmOrder?id=${categoryId}&title=${title}`
-      })
-    } else if (e.detail.title == '开发票') {
-      console.log('开发票')
-      wx.navigateTo({
-        url: `../invoice/invoice?id=${categoryId}&title=${title}`
-      })
-    }else {
-      wx.navigateTo({
-        url: `../lesson/index?id=${categoryId}&title=${title}`
-      })
-    }
-    
+    console.log(title, categoryId)
+    wx.navigateTo({
+      url: `/pages/lesson/index?id=${categoryId}&title=${title}`
+    })
   },
   // 获取搜索关键字
   getSearchKeywords: function () {
     return new Promise((resolve, reject) => {
-      storeModel.getSearchKeywords().then(res => {
+      storeModel.getSearchKeywords(1)
+      .then(res => {
+        console.log(res.data.data)
         this.setData({
-          searchKeyWords: res.data.data,
-          pleacholder: res.data.data[0]
+          pleacholder: res.data.data
         })
         resolve()
       })
@@ -121,7 +115,8 @@ Page({
   //  获取轮播图
   getBannerList: function () {
     return new Promise((resolve, reject)=>{
-      storeModel.getBannerList().then(res => {
+      storeModel.getBannerList()
+      .then(res => {
         console.log(res);
         this.setData({
           bannerList: res.data.data
@@ -133,7 +128,8 @@ Page({
   // 获取商品类别
   getGoodsType: function () {
     return new Promise((resolve, reject)=>{
-      storeModel.getType(-1).then(res => {
+      storeModel.getType(-1)
+      .then(res => {
         console.log(res.data.data, '这是课程大类');
         this.setData({
           goodsTypeList: res.data.data
@@ -143,70 +139,61 @@ Page({
       })
     })
   },
-  // 获取热门商品
+  // 获取热门推荐
   getGoodsHotList: function () {
     return new Promise((resolve, reject)=>{
-      
-      var hotListData = wx.getStorageSync('HotListData')
-      if(hotListData){
+      storeModel.getHotList().then(res => {
         this.setData({
-          hotList: hotListData.slice(0, 2),
+          hotList: res.data.data,
           hotParamsObj: {
-            title: '今日更新', 
+            title: '热门推荐', 
+            url: '/home/getHotCurriculum',
             isSeeMore: true
           }
         })
         resolve()
-      }else{
-        storeModel.getHotList().then(res => {
-          console.log(res, '这是热门商品')
-          wx.setStorageSync('HotListData', res.data.data)
-          this.setData({
-            hotList: res.data.data.slice(0, 2),
-            hotParamsObj: {
-              title: '今日更新', 
-              isSeeMore: true
-            }
-          })
-          resolve()
-        })
-      }
+      })
     })
   },
-  // 获取数据
+  // 获取最新课程
   getRecentGoods: function () {
     return new Promise((resolve, reject)=>{
-      var recentListData = wx.getStorageSync('recentlyListData')
-      if (recentListData) {
+      storeModel.getRecentGoods().then(res => {
         this.setData({
-          recently: recentListData.slice(0, 2),
-          recentParamsObj: {
-            title: '汉艺推荐', 
+          recently: res.data.data,
+          recentlyParamsObj: {
+            title: '最新课程',
+            url: '/home/getNewCurriculum', 
             isSeeMore: true
           }
         })
         resolve()
-      } else {
-        storeModel.getRecentGoods().then(res => {
-          wx.setStorageSync('recentlyListData', res.data.data)
-          this.setData({
-            recently: res.data.data.slice(0, 2),
-            recentParamsObj: {
-              title: '汉艺推荐', 
-              isSeeMore: true
-            }
-          })
-          resolve()
+      })
+    })
+  },
+  // 获取汉艺推荐
+  getHyRecomend: function() {
+    return new Promise((resolve, reject)=>{
+      storeModel.getHyRecomend().then(res => {
+        console.log(res)
+        this.setData({
+          recommendList: res.data.data,
+          recommenedParamsObj: {
+            title: '汉艺推荐', 
+            url: '/home/getHartRecd',
+            isSeeMore: true
+          }
         })
-      }
+        resolve()
+      })
     })
   },
   // 跳转课程详情页
   goDetail: function (e) {
     console.log("-----", e)
     var id = e.detail.goodsID
-    wx: wx.navigateTo({
-      url: '../lessonDetail/lessonDetail?curriculumId=' + id,
+    wx.navigateTo({
+      url: '/pages/musicList/musiclist?id=' + id,
     })
   },
   getUserInfo: function (e) {
@@ -228,16 +215,29 @@ Page({
   jumpCourseDetail: function (e) {
     console.log(e);
     let url = '';
-    if (e.target.dataset.id.indexOf('.') == -1) {
+    let {type, id} = e.target.dataset
+    switch (type) { // 1: 课程,2 :h5,3:小程序',
+      case 1:
         console.log('跳转到详情页')
-        url = '../lessonDetail/lessonDetail?curriculumId=' + e.target.dataset.id
-    }else {
-        console.log('跳转到web-view')    
-      url = '../web-view/web-view?content=' + e.target.dataset.id
+        url = '/pages/musicList/musiclist?id=' + e.target.dataset.id
+        wx.navigateTo({
+          url: url,
+        })
+        break;
+      case 2:
+        url = '/pages/web-view/web-view?content=' + e.target.dataset.id
+        wx.navigateTo({
+          url: url,
+        })
+        break;
+      default:
+        wx.showToast({
+          title: '类型有问题',
+          icon: 'none',
+          duration: 1000
+        })
+        break;
     }
-    wx.navigateTo({
-      url: url,
-    })
   },
   getMore: function(e) {
     wx.navigateTo({
@@ -248,8 +248,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    // 显示下拉加载菊花图动画
+    wx.showNavigationBarLoading()
+    // 进行数据初始化
     this.setData({
-      searchKeyWords: [],
       bannerList: [],
       goodsTypeList: [],
       //热门推荐
@@ -262,11 +264,17 @@ Page({
     wx.removeStorageSync('HotListData')
     wx.removeStorageSync('recentlyListData')
         //获取数据
-    Promise.all([this.getSearchKeywords(), this.getBannerList(), this.getGoodsType(), this.getGoodsHotList(), this.getRecentGoods()]).then(res => {
-      wx.hideNavigationBarLoading() //完成停止加载
-      wx.stopPullDownRefresh() //停止下拉刷新
-
-    })
+    Promise.all([
+        this.getSearchKeywords(), 
+        this.getBannerList(), 
+        this.getGoodsType(), 
+        this.getGoodsHotList(), 
+        this.getRecentGoods()
+      ])
+      .then(res => {
+        wx.hideNavigationBarLoading() //完成停止加载
+        wx.stopPullDownRefresh() //停止下拉刷新、
+      })
   }
 
 })

@@ -1,0 +1,9 @@
+/* pages/musicDetail/musicDetail.wxss */
+.margin_top{
+    margin-top: 170rpx;
+}
+.navContent{
+    font-size: 13px;
+    text-align: left;
+    padding: 0 40rpx;
+}

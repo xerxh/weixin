@@ -1,1 +1,7 @@
-{}
+{
+    "navigationBarTitleText": "咨询",
+    "usingComponents": {
+      "topNavigation": "../../components/navitopview/navitopview"
+    },
+    "enablePullDownRefresh": false
+  }

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "good_item_listBox": "../../../components/goodlistBox/goodlistbox",
+    "goods_item": "../../../components/goodsitem/goodsitem",
+    "noSearch": "../../../components/nonesearch/index"
+  }
+}

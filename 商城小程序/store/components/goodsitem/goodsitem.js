@@ -20,7 +20,7 @@ Component({
     },
     artcleTiltle: {
       type: String,
-      value:'插画的历程-夜的八章曲'
+      value:''
     },
     sum: {
       type: Number,
@@ -36,15 +36,15 @@ Component({
     },
     title: {
       type: String,
-      value: '名称'
+      value: ''
     },
     price: {
       type: String,
-      value: '人民币:10000'
+      value: ''
     },
     btnName:{
       type: String,
-      value: '打我啊'
+      value: ''
     },
     isHidden: {
         type:Boolean,
@@ -61,7 +61,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    typeArr:["你打我啊","打你啊"]
+    typeArr:[]
 
   },
 

@@ -4,8 +4,10 @@
   height: 57rpx;
 }
 .body{
-  margin-top: 380rpx;
+  margin-top: 500rpx;
 }
-.border-top{
-  border-top: 1px solid gray;
+
+/* 顶部背景色 */
+.bg{
+  background:rgba(198,198,198,1) !important;
 }

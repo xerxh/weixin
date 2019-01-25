@@ -18,16 +18,19 @@
   font-family:PingFang-SC-Bold;
   margin-bottom: 20rpx;
 }
+.intro{
+  flex: 1;
+}
 .layout{
   display: flex;
   justify-content: space-between;
-  margin: 90rpx 0 0 0;
+  /* margin: 90rpx 0 0 0; */
 }
 .boxStyle{
   padding: 52rpx 24rpx 52rpx 24rpx;
 }
 .img{
-  width: 340rpx;
+  width: 230rpx;
   height: 280rpx;
   background:rgba(202,202,202,1);
   border-radius:8rpx;
@@ -43,4 +46,9 @@
 .container{
   margin-top: 500rpx;
   margin-bottom: 140rpx;
+}
+
+.share-btn{
+  margin-top:28rpx;
+  margin-left:10rpx;
 }

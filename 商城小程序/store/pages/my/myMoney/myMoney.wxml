@@ -1,12 +1,26 @@
 <!--pages/my/myMoney/myMoney.wxml-->
 <view class='boxStyle'>
-  <view class='flex between'>
+  <view class='flex between fontStyle'>
     <view class='flex column'>
       <text>账号余额</text>
-      <text>320.00</text>
+      <text class="money">{{myAccount.sumMoney}}</text>
     </view>
-    <text>明细</text>
+    <view class="moneyDetailBtn" 
+      data-jumpurl="/pages/extractMoney/extractMoney"
+      bindtap="jump">
+      <text>明细</text>
+      <text>></text>
+    </view>
   </view>
-  <button>分销订单</button>
-  <button bindtap="jump">立即提现</button>
+  <view 
+    wx:for="{{btnList}}"
+    class="btnBox"
+    data-jumpurl="{{item.url}}" 
+    bindtap="jump">
+    <view class="btnNameBox">
+      <image class="btnImg" src="{{item.src}}"/>
+      <text class="btnName">{{item.name}}</text>
+    </view>
+    <image class="btn_arrow" src="../../../images/my/btn_arrow.png"/>
+  </view>
 </view>

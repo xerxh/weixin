@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.3",
+	"libVersion": "2.5.0",
 	"appid": "wxa1dc16c1be86f28f",
 	"projectname": "%E6%B1%89%E8%89%BA%E5%9B%BD%E9%99%85(%E5%95%86%E5%9F%8E)2.0(git)",
 	"debugOptions": {
@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -68,6 +68,25 @@
 					"name": "购买会员",
 					"pathName": "pages/buyMember/buyMember",
 					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/web-view/web-view",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/musicList/musiclist",
+					"query": "parentId=c74f2998479d4179b5c27239fcd8ddd&id=113",
+					"scene": "1008"
 				}
 			]
 		}

@@ -1,13 +1,14 @@
 <!--pages/my/myBuy/myBuy.wxml-->
 <view class='border-top'>
-  <view class='flex boxStyle' wx:for="{{10}}">
+  <view class='flex boxStyle' wx:for="{{dataArray}}">
     <view class='flex cloumn margin_left'>
-      <text class='smallTitile'>订单编号：454575754545</text>
-      <text>PS核心技法</text>
+      <text class='smallTitile'>订单编号：{{item.orderNo}}</text>
+      <text class="bigTitle">{{item.memberName}}</text>
     </view>
     <view class='flex cloumn margin_left'>
-      <text class='smallTitile'>2019-12-20</text>
-      <text>198.00</text>
+      <text class='smallTitile'>{{item.payTime}}</text>
+      <text class="bigTitle">{{item.expense}}</text>
     </view>
   </view>
+  <view wx:if="{{empty}}" class="empty">暂无相关数据</view>
 </view>

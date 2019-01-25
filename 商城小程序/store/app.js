@@ -17,26 +17,18 @@ App({
     user: null,
     // 搜索默认值
     pleacholder: '',
+    referrerNo: '',
+    parentId: ''
   },
   onLaunch: function (options) {
     console.log(options,'app的onLaunch')
+    // 获取分享数据
+    if(options.query.parentId) {
+      console.log('获取分享id', options.query)
+      this.globalData.parentId = options.query.parentId
+    }
     this.globalData.shareTicket = options.shareTicket
-    util.loginAction().then(res => {
-      console.log(res)
-    })
-    // 登录
-    // wx.login({
-    //   success: res => {
-    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
-    //     loginModel.Weixinlogin(res.code,"applet","1.0").then(res=>{
-    //       let result = res.data
-    //       if (result.code == 0) {
-    //         wx.setStorageSync("uid", result.data.userId || "")
-    //         wx.setStorageSync("token", result.data.token || "")
-    //       }
-    //     })
-    //   }
-    // })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {

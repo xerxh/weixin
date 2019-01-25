@@ -4,35 +4,97 @@
   height: 57rpx;
 }
 .body{
-  margin-top: 170rpx;
+  margin-top: 125rpx;
 }
 .memberBox{
   display: flex;
-  margin-top: 50rpx;
-  border-top: 1px solid gray;
-  border-bottom: 6px solid gray;
-  justify-content: space-around;
+  border-bottom: 1px solid rgba(221,221,221,1);
+  /* justify-content: space-around; */
   flex-direction: column;
   align-items: center;
-  height: 400rpx;
-  padding: 50rpx 0;
+  /* height: 400rpx; */
+  padding: 70rpx 30rpx;
 }
 .memberItemBox{
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.active{
+  background:rgba(255,247,220,1);
+}
+.mounth{
+  font-size:24rpx;
+  font-family:PingFang-SC-Heavy;
+  font-weight:800;
+  color:rgba(0,0,0,1);
+}
+.price{
+  font-size:46rpx;
+  font-family:DIN-Bold;
+  font-weight:bold;
+  color:rgba(255,200,20,1);
+  margin: 26rpx 0 23rpx 0;
+}
+.priceIcon{
+  font-size: 22rpx;
+}
+.level{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
 }
 .item{
-  width: 25%;
-  height: 200rpx;
+  width: 29%;
+  margin: 1% 1%;
+  /* height: 200rpx; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid gray;
+  padding: 23rpx 0 16rpx 0;
 }
 .btn{
-  width: 93%;
+  width: 690rpx;
+  margin-top: 70rpx;
+  height:90rpx;
+  background: rgba(255,213,98,1);
+  font-size:34rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+}
+.btnBox {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid rgba(221,221,221,1);
+}
+.btnNameBox{
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.btnName {
+  margin-left: 18rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+  flex: 1;
+}
+.btnBox:last-child{
+  border: 0;
+}
+.btn_arrow{
+  width:14rpx;
+  height:26rpx;
 }
 .btnGroup{
 
@@ -51,12 +113,12 @@
 /*swtich样式-start*/
 /*swtich整体大小*/
 .wx-switch-input{
-  width:82rpx !important;
+  width:100rpx !important;
   height:40rpx !important;
 }
 /*白色样式（false的样式）*/
 .wx-switch-input::before{
-  width:80rpx !important;
+  width:100rpx !important;
   height: 36rpx !important;
   border: 1px solid gray !important;
 }
@@ -72,4 +134,29 @@
 }
 .swicthBox{
   width: 250rpx;
+}
+/* 顶部组件背景 */
+.bg{
+  background: rgba(248,224,133,1) !important;
+}
+/* 穿透属性 */
+user_info > view > text{
+  color:rgba(255,200,20,1) !important;
+}
+.btnApply{
+  width:140rpx;
+  height:46rpx;
+  background:rgba(255,213,98,1);
+  border-radius:18rpx;
+  margin:26rpx 0 23rpx 0;
+  font-size:27rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plusName{
+  font-size:34rpx;
 }

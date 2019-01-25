@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "navi_TopView": "../../components/navitopview/navitopview",
-    "musicList": "./musicListBox/musicListBox"
+    "musicList": "./musicListBox/musicListBox",
+    "img-btn": "../../components/image-button/index"
   },
   "enablePullDownRefresh": false
 }

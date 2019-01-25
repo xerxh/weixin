@@ -1,0 +1,29 @@
+function memberGrade(level) {
+   switch(level){
+        case 1:
+            return '体验会员'
+            break
+        case 2:
+            return '普通会员'
+            break
+        case 3:
+            return '高级会员'
+            break          
+    }
+}
+
+function isMonth(mark) {
+   switch(mark){
+        case 1:
+            return '月'
+            break
+        case 0:
+            return '天'
+            break        
+    }    
+}  
+
+module.exports = {
+    memberGrade: memberGrade,
+    isMonth: isMonth
+}

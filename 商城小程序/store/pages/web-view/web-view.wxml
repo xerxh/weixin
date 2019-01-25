@@ -1,0 +1,5 @@
+<!--pages/web-view/web-view.wxml-->
+<view class="margin_top">
+  <web-view src="{{url}}">
+  </web-view>
+</view>

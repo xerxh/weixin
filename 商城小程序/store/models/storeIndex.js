@@ -3,58 +3,62 @@ class StoreModel extends HTTP {
   constructor() {
     super()
   }
-// 获取搜索关键字
-  getSearchKeywords(){
+  // 获取搜索关键字
+  getSearchKeywords(type){
     var params = {
-      url: 'hart/api/home/getSearchlist',
+      url: '/home/getSearchlist',
+      data: {
+        type
+      }
     }
     return this.request(params)
 
   }
-// 轮播图
+  // 轮播图
   getBannerList() {
     var params = {
-      url: 'hart/api/home/getBanner',
+      url: '/home/getBanner',
     }
     return this.request(params)
   }
-// 获取商品类别
+  // 获取课程类别
   getType($categoryId) {
     let params = {
-      url: 'hart/api/home/getCCategoryList',
+      url: '/home/getCCategoryList',
       data:{
         categoryId: $categoryId
       }
     }
     return this.request(params)
   }
-  // 获取商品列表
-  getGoodsList($categoryId, $criteria, $pageindex, $pagecount) {
-    let params = {
-      url: 'hart/api/curriculum/getCurriculumList',
-      data: {
-        categoryId: $categoryId,//可为空
-        criteria: $criteria,//可为空
-        pageindex: $pageindex,
-        pagecount: $pagecount //每页行数，为 - 1时表示不分页
-      },
-      method: 'POST'
-    }
-    return this.request(params)
+  // 获取汉艺推荐
+  getHyRecomend() {
+    return this.request({
+      url: '/home/getHartRecd'
+    })
   }
   // 获取热门推荐
   getHotList() {
     let params = {
-      url: 'hart/api/home/getRecdCurriculum',
+      url: '/home/getHotCurriculum',
     }
     return this.request(params)
   }
-// 获取最近上线的商品
+  // 获取最新课程
   getRecentGoods() {
     let params = {
-      url: 'hart/api/home/getNewCurriculum',
+      url: '/home/getNewCurriculum',
     }
     return this.request(params)
+  }
+  // 跳转出口
+  jumpOut(guid) {
+    return this.request({
+      url: '/universal/getHartDetail',
+      data: {
+        guid
+      }
+    })
   }
 }
 

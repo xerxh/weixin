@@ -1,7 +1,7 @@
 const config = {
   // 服务器地址
-  // api_blink_url: 'http://10.0.192.12:8686/',
-  api_blink_url: 'https://scxcx.hanyiguoji.com/',
+  api_blink_url: 'https://csscxcx.hartedu.com/hart/market/api',
+  // api_blink_url: 'http://10.0.192.12:8686/hart/market/api',
 
     /**
      * 错误状态码
@@ -12,9 +12,9 @@ const config = {
      * code : 0：系统错误 1:正常，2:内部错误, 3:用户过期
      */
     error_code: {
-      '0' : '出现了一个系统错误',
-      '2' : '出现了一个内部错误',
-      '3' : '用户已经过期'
+      '1001' : '出现了一个系统错误',
+      '1002' : '出现了一个内部错误',
+      '1003' : '用户已经过期'
     }
 
 }

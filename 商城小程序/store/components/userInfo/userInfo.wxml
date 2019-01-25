@@ -1,9 +1,15 @@
 <!--用户信息-->
-<view class="flex_box">
+<view class="flex_box bg">
   <open-data class="avatar" type="userAvatarUrl"></open-data>
   <view class="flex_colum">
-    <open-data type="userNickName"></open-data>
-    <text>初级会员</text>
+    <open-data type="userNickName" class="userName"></open-data>
+    <view class="memberMarkBox">
+      <image  
+        class="icon"
+        wx:if="{{memerImgMark[userInfo.memberGrade]}}"
+        src="{{memerImgMark[userInfo.memberGrade].src}}"/>
+      <text  class="memberMark">{{userInfo.memberName}}</text>    
+    </view>
   </view>
-  <text class="btn">会员续费</text>
+  <text class="btn" bindtap="jumpBuy" wx:if="{{isShow}}">会员续费</text>
 </view>

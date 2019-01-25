@@ -1,6 +1,6 @@
 <!--components/goodlistBox/goodlistbox.wxml-->
 <view class='hotList'>
-  <view class='menuPanel'>
+  <view class='menuPanel' wx:if="{{!paramsObj.isHidden}}">
     <div class="hotLine"></div>
     <text class="hotTitle">{{paramsObj.title}}</text>
     <text class="getMore" 

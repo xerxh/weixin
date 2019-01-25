@@ -10,15 +10,63 @@
 .column{
   flex-direction: column;
   justify-content: space-between;
-  height: 140rpx;
+  /* height: 140rpx; */
 }
+.fontStyle{
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  padding: 60rpx 50rpx;
+  border-bottom: 1px solid rgba(221,221,221,1);
+}
+
 .boxStyle{
-  padding: 40rpx 50rpx;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   height: 500rpx;
 }
-button {
-  width: 100%;
+
+.money{
+  font-size:100rpx;
+  font-family:PingFang-SC-Heavy;
+  font-weight:800;
+  color:rgba(0,0,0,1);
+  margin-top: 59rpx;
+}
+.moneyDetailBtn{
+  margin-bottom: 45rpx;
+  line-height:34rpx;
+}
+.btnBox {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid rgba(221,221,221,1);
+}
+.btnNameBox{
+  display: flex;
+  align-items: center;
+}
+.btnName {
+  margin-left: 18rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+}
+.btnBox:last-child{
+  border: 0;
+}
+.btn_arrow{
+  width:14rpx;
+  height:26rpx;
+}
+.btnImg{
+  width: 37rpx;
+  height: 36rpx;
 }

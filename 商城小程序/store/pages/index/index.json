@@ -6,7 +6,8 @@
    "search":"../../components/search/index",
    "custom_box": "../../components/custombox/index",
    "good_item_listBox": "../../components/goodlistBox/goodlistbox",
-   "footer_item": "./footerItem/footerItem"
+   "footer_item": "./footerItem/footerItem",
+   "indexItem": "./indexItem/indexItem"
   },
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": false
 }

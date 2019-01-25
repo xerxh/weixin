@@ -5,15 +5,17 @@
     <!-- 导航标签 -->
     <view  class="flex_start boxStyle">
       <image class="img" 
-        src="http://file.hartedu.com/hart/user/1/1542351231_c19f814ef2ed4bb1af5ea3d90c373619.jpg" />
+        src="{{AudioCoverInfo.picurl}}" />
       <vew class="flex_colum position_style">
-        <text>作品集</text>
-        <text>Open-Lecture 02 | 美国先锋派SCI-Arc：从塞尚绘画演绎建筑自治性</text>
+        <text>{{AudioCoverInfo.curriculumName}}</text>
+        <text class="intro">{{AudioCoverInfo.intro}}</text>
         <view class="layout">
-          <text>258人加入学习</text>
+          <text>{{AudioCoverInfo.virtualPurchases || 0}}人加入学习</text>
           <view class="flex">
-            <image src="../../images/musicSearch.png"></image>
-            <image src="../../images/dowload.png"></image>
+            <image src="{{ AudioCoverInfo.isCollect ? isCollectImgList['actived'] : isCollectImgList['url'] }}" bindtap="collection"></image>
+            <img-btn class="share-btn" open-type="share">
+              <image slot="img" src="../../images/dowload.png"></image>            
+            </img-btn>
             <!-- <text>下载</text> -->
           </view>
         </view>
@@ -22,5 +24,8 @@
 </navi_TopView>
 <!-- 音频列表 -->
 <view class='container'>
-  <musicList></musicList>
+  <musicList 
+    curriculumId="{{AudioCoverInfo.curriculumId}}"
+    bind:getAudioList="getAudioList" 
+    AudioList="{{AudioList}}" />
 </view>

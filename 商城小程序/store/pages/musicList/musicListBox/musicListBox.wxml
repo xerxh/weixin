@@ -13,11 +13,11 @@
   bindscrolltolower="" 
   bindscroll="">
   <view class="flex_between">
-    <text class="courseSum">共八节</text>
+    <text class="courseSum">共{{AudioList.length}}节</text>
     <view class="flex_start">
-      <view class="btnBox">
+      <view class="btnBox" bindtap="sortList">
         <image class="icon" src="../../../images/music/sort.png" />
-        <text>正序</text>
+        <text>{{sort ? '正序' : '倒序'}}</text>
       </view>
       <view class="btnBox">
         <image 
@@ -31,21 +31,43 @@
       </view>
     </view>
   </view>
-  <view class="nowPlay" hidden="{{nowMusicIndex == -1}}">
-    继续播放：{{nowMusicIndex}}.中世纪的艺术游戏
+  <view class="nowPlay" hidden="{{nowMusicIndex == -1}}" decode="{{true}}">
+    继续播放：{{nowMusicIndex + 1}}. {{AudioList[nowMusicIndex].videoName}}
   </view>
-  <block wx:for="{{10}}" wx:key="{{index}}">
-    <music_list_item 
-      bind:musicPlay="musicPlay"
-      isPlay="{{isPlayList[index]}}"
-      index="{{index}}" />    
-  </block>
+  <view  class="{{!isShowListData ? '' : 'z-index'}}">
+    <block 
+      wx:for="{{AudioList}}" 
+      wx:key="{{index}}">
+      <music_list_item 
+        bind:musicPlay="musicPlay"
+        obj="{{item}}"
+        isPlay="{{isPlayList[index]}}"
+        index="{{index}}" />    
+    </block>
+  </view>
 </scroll-view>
 <!-- 音频播放 -->
 <music_bg_play 
   isShow="{{isShowFixComponent}}"
   bind:swicthPlay="swicthPlay"
-  musicList="{{musicList}}" 
+  bind:musicOver="musicOver"
+  bind:isShowList="isShowList"
+  bind:sendLocalAllTime="sendLocalAllTime"
+  musicList="{{AudioList}}" 
   nowMusicMark="{{nowMusicIndex}}" 
   isSelectPlay="{{isPlay}}"/>
 
+<!--音频列表 
+<view class="z-index" hidden="{{!isShowListData}}">
+  <view 
+    class="scroll_list"
+    wx:for="{{AudioList}}" 
+    wx:key="{{index}}">
+    <music_list_item 
+      bind:musicPlay="musicPlay"
+      obj="{{item}}"
+      isPlay="{{isPlayList[index]}}"
+      index="{{index}}" />    
+  </view>
+</view>
+-->

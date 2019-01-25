@@ -1,2 +1,20 @@
-<!--问询-->
-<text>pages/Inquiry/lnquiry.wxml</text>
+<!--pages/my/my.wxml-->
+<topNavigation >
+    <image slot="centerTitle" class='topImg' src="../../asset/images/top.png"></image>
+</topNavigation>
+<view class='container'>
+    <button class='btn'
+    open-type="contact" 
+    session-from="weapp"
+    hover-class="none">
+        <view>
+            <image  src='../../images/advisory.png'></image>
+        </view>
+        <view class='name'>
+          <image src='../../images/lianxi.png'></image>
+          联系TA
+        </view>
+    </button>
+     <!-- <contact-button  size="30" session-from="weapp" class="guest-button">
+    </contact-button> -->
+</view>

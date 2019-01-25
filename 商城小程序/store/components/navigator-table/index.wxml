@@ -1,5 +1,5 @@
 <!--components/navigator-table/index.wxml-->
-<view class='navigatorTabContaner' hidden='{{isHidden}}'>
+<view class='navigatorTabContaner line' hidden='{{isHidden}}'>
   <block   wx:for="{{tList}}" wx:key="index">
     <view class="navigatorTabItem" 
     wx:if="{{nowIndex==index}}"

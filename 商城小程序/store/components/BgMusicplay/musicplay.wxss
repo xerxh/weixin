@@ -148,7 +148,7 @@
 }
 .flew_around{
   display: flex;
-  margin-top: 38px;
+  margin-top: 175rpx;
   padding: 20rpx 0;
   border-top: 1px solid rgba(230,230,230,1);
   justify-content: space-around;

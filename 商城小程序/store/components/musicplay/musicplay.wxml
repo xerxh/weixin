@@ -11,13 +11,15 @@
       backgroundColor="gray" /> -->
     <view class="flex_start">
       <view>
-        <image class="closeImg" src="../../images/music/close.png" />
+        <image class="closeImg" 
+          catchtap="close"
+          src="../../images/music/close.png" />
         <image class="musicImg" 
           src="http://file.hartedu.com/hart/user/1/1542351231_c19f814ef2ed4bb1af5ea3d90c373619.jpg" />
       </view>
      
       <view class="musicTitle">
-        中世纪艺术的游戏
+        {{musicList[nowMusicMark].videoName}}
       </view>
       <view>
         <!-- <image class="icon" src="../../images/music/left.png"></image>
@@ -42,7 +44,7 @@
     <view class="music_img_box">
       <image class="music_inner_img" 
         src="http://file.hartedu.com/hart/user/1/1542351231_c19f814ef2ed4bb1af5ea3d90c373619.jpg" />
-      <view class="width_box">中世纪的艺术游戏</view>
+      <view class="width_box">{{musicList[nowMusicMark].videoName}}</view>
       <view class="flex_between width_box">
         <text class="btn">定时</text>
         <text class="btn">倍速</text>

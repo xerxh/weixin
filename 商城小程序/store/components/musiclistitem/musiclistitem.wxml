@@ -1,13 +1,15 @@
 <!--components/musiclistitem/musiclistitem.wxml-->
+<wxs src="./statusFormat.wxs" module="tools" />
+
 <view class="flex_between">
-  <view class="flex_leftStyle">
-    <view>{{index + 1}}. 可好玩又好用的西方服装史</view>
+  <view class="flex_leftStyle" bindtap="jumpMusicDetail">
+    <view decode="{{true}}">{{index + 1}}. {{obj.videoName}}</view>
     <view>
-      <text>21分03秒</text>
+      <text>{{obj.duration}}</text>
       |
       <text>226人学过</text>
       |
-      <text>已学完</text>
+      <text>{{tools.status(obj.videoStatus)}}</text>
     </view>
   </view>
   <view class="flex_start">

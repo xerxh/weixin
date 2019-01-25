@@ -1,18 +1,29 @@
 // pages/extractMoneyDetail/extractMoneyDetail.js
+import { My } from "../../models/my"
+const my = new My()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    myExtract: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    // 1：体现明细 2：分销明细
+    my.getMyExtract(1)
+      .then(res => {
+        console.log(res)
+        this.setData({
+          myExtract: res.data.data
+        })
+      })
   },
 
   /**

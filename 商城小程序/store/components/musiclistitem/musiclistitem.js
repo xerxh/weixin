@@ -44,6 +44,12 @@ Component({
       this.triggerEvent('musicPlay', {
         index:this.data.index
       })
+    },
+    jumpMusicDetail() {
+      console.log('跳转音乐详情')
+      wx.navigateTo({
+        url: `/pages/musicDetail/musicDetail?id=${this.data.obj.videoId}`
+      })
     }
   }
 })
