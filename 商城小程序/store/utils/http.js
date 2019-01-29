@@ -39,8 +39,8 @@ class HTTP {
                 resolve(res)
                 break;
               case 1003: // 用户过期
-                // resolve(res)
-                reloadLogin()
+                resolve(res)
+                // reloadLogin()
                 break;
               default:
                 // 错误码处理方法

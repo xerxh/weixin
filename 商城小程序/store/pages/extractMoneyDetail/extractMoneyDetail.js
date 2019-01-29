@@ -16,8 +16,8 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-    // 1：体现明细 2：分销明细
-    my.getMyExtract(1)
+    // 2：体现明细 1：分销明细
+    my.getMyExtract(2)
       .then(res => {
         console.log(res)
         this.setData({

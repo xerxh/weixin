@@ -1,13 +1,13 @@
 <!--个人主页-->
 <navi_TopView bg="bg">
   <image slot="centerTitle" class="topImg" src="../../images/top.png" />
-    <user_info userInfo="{{userInfo}}" isShow="true"></user_info>
+    <user_info wx:if="{{isShowUser}}" userInfo="{{userInfo}}" isShow="true"></user_info>
     <navigator_table 
-    tList="{{navData}}"
-    nowIndex="{{switchIndex}}" 
-    bind:switchPage="switchPage"/>
+      tList="{{navData}}"
+      nowIndex="{{switchIndex}}" 
+      bind:switchPage="switchPage" />
 </navi_TopView>
-<view class="body">
+<view class="body" wx:if="{{isRefresh}}">
   <view 
     class='border-bottom'
     wx:if='{{switchIndex == 0}}'>
@@ -21,6 +21,6 @@
   <view
     class='border-bottom'
     wx:if='{{switchIndex == 2 && userInfo.isDistribution}}'>
-    <my_money />
+    <my_money isFroze="{{userInfo.isPastDue}}"/>
   </view>
 </view>

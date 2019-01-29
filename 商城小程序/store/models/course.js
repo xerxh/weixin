@@ -21,9 +21,14 @@ class AllCourse extends HTTP {
   }
 
   // 获取主页数据
-  getCategorData(url) {
+  getCategorData(url, pageindex, pagecount, criteria) {
     let params = {
-      url: url
+      url: url,
+      data: {
+        pageindex,
+        pagecount,
+        criteria
+      }
     }
     return this.request(params)
   }

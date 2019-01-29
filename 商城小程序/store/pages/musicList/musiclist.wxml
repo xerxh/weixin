@@ -14,7 +14,7 @@
           <view class="flex">
             <image src="{{ AudioCoverInfo.isCollect ? isCollectImgList['actived'] : isCollectImgList['url'] }}" bindtap="collection"></image>
             <img-btn class="share-btn" open-type="share">
-              <image slot="img" src="../../images/dowload.png"></image>            
+              <image slot="img" src="../../images/music/musicShare.png"></image>            
             </img-btn>
             <!-- <text>下载</text> -->
           </view>
@@ -26,6 +26,7 @@
 <view class='container'>
   <musicList 
     curriculumId="{{AudioCoverInfo.curriculumId}}"
+    picUrl="{{AudioCoverInfo.picurl}}"
     bind:getAudioList="getAudioList" 
     AudioList="{{AudioList}}" />
 </view>

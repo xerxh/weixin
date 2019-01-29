@@ -83,11 +83,24 @@
   color: 357AF3;
 }
 .historyItem, .hotItem {
-  width: 100%;
-  padding: 20rpx 0;
-  font-size: 26rpx;
+  /* width: 100%; */
+  /* padding: 20rpx 0; */
+  /* font-size: 26rpx; */
   color: #357AF3;
   border-bottom: 1rpx solid #E6E6E6;
+
+  background:#F2F3F7;
+  /* color:#666666; */
+  font-size:28rpx;
+  border-radius:10rpx;
+  height:55rpx;
+  padding:13rpx 26rpx;
+  margin-right:40rpx;
+  text-align:center;
+  margin-top:30rpx;
+  line-height:55rpx;
+  display: inline-block;
+
 }
 .courseItemBox {
   display: flex;

@@ -8,15 +8,28 @@
 }
 .bg{
   height:260rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .flex_colum{
   display: flex;
   flex: 1;
   flex-direction: column;
+  text-align: left;
 }
 .icon{
   width:30rpx;
   height:27rpx;
+}
+/* 有效期 */
+.timeStyle{
+  color: red;
+}
+.box{
+  width: 750rpx;
+  padding-left: 385rpx;
 }
 .avatar{
   width: 130rpx;

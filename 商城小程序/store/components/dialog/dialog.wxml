@@ -1,5 +1,5 @@
 <!--components/dialog/dialog.wxml-->
-<view class='wx_dialog_container' catchtap='isShowTap' hidden='{{!isShow}}'>
+<view catchtouchmove='true' class='wx_dialog_container' catchtap='isShowTap' hidden='{{!isShow}}'>
     <view class='wx_dialog' wx:if="{{!isSlot}}" catchtap='_stop_bubble'>
         <view class='wx_dialog_title'>
             {{title}}

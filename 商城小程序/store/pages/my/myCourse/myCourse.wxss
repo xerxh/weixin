@@ -1,11 +1,14 @@
 /* pages/my/myCourse/myCourse.wxss */
 .img{
-  width:250rpx;
-  height:180rpx;
+  /* width:250rpx;
+  height:180rpx; */
+  width:150rpx;
+  height:200rpx;
   border-radius:6rpx;
 }
 .flex{
   display: flex;
+  flex: 1;
 }
 .boxStyle{
   padding: 30rpx 0;
@@ -32,6 +35,13 @@
   font-family:PingFang-SC-Medium;
   font-weight:500;
   color:rgba(153,153,153,1);
+  white-space: normal;
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  text-overflow: ellipsis;
 }
 
 .empty{

@@ -5,6 +5,6 @@
     <view class="content">{{obj.intro}}</view>
   </view>
   <view>
-    <image class="iconImg" src="../../../images/logo.png" />
+    <image class="iconImg" src="{{obj.imagePath}}" />
   </view>
 </view>

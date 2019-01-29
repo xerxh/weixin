@@ -23,6 +23,7 @@ Component({
       value: '',
       observer: function(newVal, old) {
         console.log('搜索', this.data.firstRender)
+        console.log(this.data.dataArray)
         this.initPagination()
         this.getdata()
       }

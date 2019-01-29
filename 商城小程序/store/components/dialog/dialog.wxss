@@ -12,16 +12,19 @@
 .wx_dialog {
   position: fixed;
   z-index: 2000;
-  width : 80%;
+  /* width : 80%; */
   /* height : 300rpx; */
-  max-width : 600rpx;
+  /* max-width : 600rpx;
   top : 50%;
-  left : 50%;
-  background: #ffff;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%,-50%);
+  left : 50%; */
+  background: rgb(255,255,255);
+  /* -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%); */
   text-align: center;
   border-radius: 3px;
+  top: 0;
+  /* top: 200rpx; */
+  /* bottom: 0; */
   overflow: hidden;
 }
 .wx_dialog_title {

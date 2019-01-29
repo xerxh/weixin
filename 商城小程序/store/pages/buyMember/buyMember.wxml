@@ -4,7 +4,7 @@
 <navi_TopView bg="bg" isShow="true">
   <image slot="centerTitle" class="topImg" src="../../images/top.png" />
 </navi_TopView>
-<view class="body">
+<view class="body  {{isShow ? 'fixed' : ''}}">
   <!-- 用户信息 -->
   <view class="bg">
     <user_info userInfo="{{userInfo}}"/>  
@@ -58,3 +58,37 @@
   </view>  
   </view>
 </view>
+
+<!-- 会员申请 -->
+<dialog isSlot="true" isShow="{{isShow}}" bind:showClick="showClick">
+  <form catchtouchmove='true' bindsubmit="formSubmit" bindreset="formReset" wx:if="{{isShow}}">
+    <view class='confrim'>
+      <view>
+        <text>姓名：</text>
+        <input placeholder="姓名" name="name" auto-focus />
+      </view>
+      <view>
+        <text>电话：</text>
+        <input placeholder="电话" name="phone" />
+      </view>
+      <view>
+        <text>邮箱：</text>
+        <input placeholder="邮箱"  name="eMail"/>    
+      </view>
+      <view class="textareaBox">
+        <text>备注：</text>
+        <textarea
+          class="textarea"
+          name="intro"
+          placeholder='klklkl'
+          maxlength='20'
+          placeholder-style="color:red;"
+        />
+      </view>
+
+      <button 
+        class="btn" 
+        form-type="submit">立即申请</button>
+    </view>
+   </form> 
+</dialog>

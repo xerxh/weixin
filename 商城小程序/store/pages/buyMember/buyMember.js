@@ -16,6 +16,7 @@ Page({
     isActive: {},
     index: -1,
     isPlus: false,
+    isShow: false,
     userInfo: {}
   },
 
@@ -75,10 +76,8 @@ Page({
           duration: 1000
         })
       }else{
-        wx.showToast({
-          title: '申请提交成功',
-          icon: 'none',
-          duration: 1000
+        this.setData({
+          isShow: true
         })
       }
       return
@@ -102,7 +101,12 @@ Page({
       return
     }
     // 获取推荐人id
-    const referrerNo = app.globalData.referrerNo
+    let referrerNo
+    if (wx.getStorageSync('parentId')){
+      referrerNo = wx.getStorageSync('parentId')
+    }else{
+      referrerNo = app.globalData.parentId
+    }
     const memberRuleId = this.data.memerList[this.data.index].memberRuleId
     my.buyMember(memberRuleId, referrerNo)
       .then(res => {
@@ -192,6 +196,13 @@ Page({
   onShareAppMessage: function () {
 
   },
+  showClick() {
+    // 隐藏
+    console.log('隐藏')
+    this.setData({
+      isShow: false
+    })
+  },
   switchChange(e) {
     const selectIndex = e.currentTarget.dataset.index
     console.log(`${e.currentTarget.dataset.index} 发生 change 事件，携带值为`, e.detail.value)
@@ -208,5 +219,50 @@ Page({
     wx.navigateTo({
       url: `/pages/musicDetail/musicDetail?guid=${this.data.btnList[index].guid}`
     })
+  },
+  formSubmit(e) {
+    console.log(this.data.index)
+    console.log(e,'高级会员申请')
+    // 非空判断
+    if(e.detail.value.name == ''){
+      wx.showToast({
+        title: '请填写姓名',
+        icon: 'none',
+        duration: 1000
+      })
+      return
+    }else if(e.detail.value.phone == ''){
+      wx.showToast({
+        title: '请填写手机号',
+        icon: 'none',
+        duration: 1000
+      })
+      return
+    }else if(e.detail.value.eMail == ''){
+      wx.showToast({
+        title: '请填写邮箱',
+        icon: 'none',
+        duration: 1000
+      })
+      return
+    } 
+    const obj = {
+      ...e.detail.value,
+      memberRuleId: this.data.memerList[this.data.index].memberRuleId
+    }
+    console.log(obj)
+    my.plusSend(obj)
+      .then(res => {
+        wx.showToast({
+          title: '已经成功申请',
+          icon: 'none',
+          duration: 200
+        })
+        setTimeout(() => {
+          this.setData({
+            isShow: false
+          })
+        }, 200)
+      })
   }
 })

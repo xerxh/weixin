@@ -1,6 +1,7 @@
 const config = {
   // 服务器地址
   api_blink_url: 'https://csscxcx.hartedu.com/hart/market/api',
+
   // api_blink_url: 'http://10.0.192.12:8686/hart/market/api',
 
     /**

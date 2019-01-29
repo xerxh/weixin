@@ -70,7 +70,7 @@
   z-index: 999999;
   position: fixed;
   height: 600rpx;
-  bottom: 120rpx;
+  bottom: 135rpx;
   left: 0;
   right: 0;
   padding: 0 50rpx;

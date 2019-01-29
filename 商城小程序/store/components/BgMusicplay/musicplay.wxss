@@ -134,13 +134,16 @@
 .music_btn > image{
   /* width: 100rpx;
   height: 100rpx; */
-  width:50rpx;
-  height:50rpx;
+  /* width:50rpx;
+  height:50rpx; */
+  width: 40rpx;
+  height: 40rpx;
   margin-right: 50rpx;
+  margin-left: 50rpx;
 }
 .music_btn > image.playImg{
-  width: 100rpx;
-  height: 100rpx;
+  width: 140rpx;
+  height: 140rpx;
 }
 .music_time{
   font-size: 30rpx;
@@ -148,10 +151,13 @@
 }
 .flew_around{
   display: flex;
-  margin-top: 175rpx;
+  /* margin-top: 175rpx; */
   padding: 20rpx 0;
+  width: 750rpx;
   border-top: 1px solid rgba(230,230,230,1);
   justify-content: space-around;
+  position: fixed;
+  bottom: 0;
 }
 .icon_btn{
   /* width: 60rpx;

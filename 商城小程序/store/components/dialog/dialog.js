@@ -78,6 +78,7 @@ Component({
       this.setData({
         isShow: false
       })
+      this.triggerEvent('showClick')
     },
     _stop_bubble() {
       console.log('阻止冒泡')

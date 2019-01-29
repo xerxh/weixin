@@ -85,7 +85,7 @@ class My extends HTTP {
             data: {
                 token: wx.getStorageSync('token'),
                 memberRuleId,
-                referrerNo
+                referrerNo: wx.getStorageSync('parentId')
             },
             method: 'post'
         }
@@ -122,6 +122,22 @@ class My extends HTTP {
                 money,
                 token: wx.getStorageSync('token')
             }
+        }
+        return this.request(params)
+    }
+
+    // 高级会员申请
+    plusSend({memberRuleId, name, eMail, phone}) {
+        let params = {
+            url : '/user/addApplyForMember',
+            data: {
+                token: wx.getStorageSync('token'),
+                memberRuleId,
+                name,
+                eMail,
+                phone
+            },
+            method: 'post'
         }
         return this.request(params)
     }

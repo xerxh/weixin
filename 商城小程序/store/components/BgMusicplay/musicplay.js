@@ -14,6 +14,10 @@ Component({
       type: Array,
       value: []
     },
+    picUrl: {
+      type: String,
+      value: ''
+    },
     isShow: {
       type: Boolean,
       value: true
@@ -69,16 +73,17 @@ Component({
               })
             break;
           case false:
-            console.log('暂停')
-            if(this.data.localprogressAllTime){
-              this.setData({
-                progressAllTime: formatMusicTime(this.data.localprogressAllTime),
-                progressValue: formatMusicTime(this.data.localprogressAllTime),
-                musicAlltime: this.data.localprogressAllTime,
-                musicTime: this.data.localprogressAllTime
-              })
-            }
+            console.log('暂停', new Date())
+            // if(this.data.localSum){
+            //   this.setData({
+            //     progressAllTime: formatMusicTime(this.data.localprogressAllTime),
+            //     progressValue: formatMusicTime(this.data.localprogressAllTime),
+            //     musicAlltime: this.data.localprogressAllTime,
+            //     musicTime: this.data.localprogressAllTime
+            //   })
+            // }
             this.data.innerAudioContext.pause()
+            
             this.setData({
               isPlay: false
             })
@@ -101,16 +106,16 @@ Component({
     defaultShow: true,
     innerAudioContext: '', // 音频播放实例
     musicBtn: [
-      {src: '../../images/music/jumpLeftTime.png', mark: 'jumpTimeLeft',
-        activeSrc: "../../images/music/jumpLeftTime.png"},
+      // {src: '../../images/music/jumpLeftTime.png', mark: 'jumpTimeLeft',
+      //   activeSrc: "../../images/music/jumpLeftTime.png"},
       {src: '../../images/music/musicLeft.png', mark: 'musicLeft',
         activeSrc: "../../images/music/musicLeft.png"},
       {src: '../../images/music/musicPlay.png', mark: 'musicPlay', 
         activeSrc: "../../images/music/musicParse.png"},
       {src: '../../images/music/musicRight.png', mark: 'musicRight',
         activeSrc: "../../images/music/musicRight.png"},
-      {src: '../../images/music/jumpRightTime.png', mark: 'jumpTimeRight',
-        activeSrc: "../../images/music/jumpRightTime.png"}
+      // {src: '../../images/music/jumpRightTime.png', mark: 'jumpTimeRight',
+      //   activeSrc: "../../images/music/jumpRightTime.png"}
     ],
     fixedBtnArray: [
       {src: '../../images/music/left.png', mark: 'musicLeft',
@@ -144,7 +149,9 @@ Component({
     // 是否正在拖拽进度
     isSlider: false,
     // 是否为停止状态
-    isStop: false
+    isStop: false,
+    // 已经播放到最后了
+    isEnd: false
   },
 
   ready() {
@@ -215,6 +222,7 @@ Component({
     // 监听播放进度
     innerAudioContext.onTimeUpdate((res) => {
       // 如果没有拖拽进行更新  防止和拖拽事件冲突
+      if(innerAudioContext.duration == 0) return
       if(!this.data.isSlider){
         this.setData({
           progressAllTime: formatMusicTime(innerAudioContext.duration),
@@ -222,11 +230,13 @@ Component({
           musicAlltime: innerAudioContext.duration,
           musicTime: innerAudioContext.currentTime,
         })
+        console.log(this.data.currentTime, innerAudioContext.duration)
         // 缓存总时间
         if(this.data.localSum == 0) {
           this.setData({
             localprogressAllTime: innerAudioContext.duration
           })
+          console.log(innerAudioContext.duration, '缓存时间')
           this.data.localSum += 1
         }
       }
@@ -262,21 +272,31 @@ Component({
         isSlider: true,
         progressValue: formatMusicTime(e.detail.value)
       })
-      // 将缓存清空
-      this.data.localprogressAllTime = 0
-      this.data.localSum = 0
-      this.triggerEvent('sendLocalAllTime', {
-        localprogressAllTime: this.data.localprogressAllTime
-      })
     },
     sliderchange(e) { // 进度拖拽完成后事件
       console.log(e.detail.value)
+      if(this.data.isEnd){
+        this.data.innerAudioContext.title = this.data.musicList[this.data.nowMusicMark].videoName
+        this.data.innerAudioContext.src = this.data.musicList[this.data.nowMusicMark].src
+        this.data.innerAudioContext.play()
+        this.data.innerAudioContext.pause()
+      }
+      debugger
       this.data.innerAudioContext.seek(e.detail.value)
       this.setData({
         musicTime: e.detail.value,
         progressValue: formatMusicTime(e.detail.value),
         isSlider: false
       })
+      // 将缓存清空
+      if(!this.data.localprogressAllTime) return
+      this.triggerEvent('sendLocalAllTime', {
+        localprogressAllTime: 0
+      })
+      console.log('音频设置')
+      // 重新设置音频 用来回听
+
+      // this.data.innerAudioContext.pause()
     },
     noShowCompoent() {
       console.log('收起组件')
@@ -292,7 +312,9 @@ Component({
         })
         // 缓存下总时间
         console.log(this.data.localprogressAllTime, '总时间')
-        console.log(this.data)
+        console.log(new Date())
+        // 设置是否最后一曲的标记位
+        this.data.isEnd = true
         // 父元素保存作为标记 用来判断
         this.triggerEvent('swicthPlay', {
           isplay: false,

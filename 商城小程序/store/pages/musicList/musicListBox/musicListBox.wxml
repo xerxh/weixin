@@ -19,15 +19,16 @@
         <image class="icon" src="../../../images/music/sort.png" />
         <text>{{sort ? '正序' : '倒序'}}</text>
       </view>
-      <view class="btnBox">
+      <view class="btnBox" 
+        data-index="{{nowMusicIndex}}"  
+        bindtap="continuePlay">
         <image 
           hidden="{{nowMusicIndex == -1}}"
           class="icon" 
           src="../../../images/music/play.png" />
         <text 
         data-index="{{nowMusicIndex}}" 
-        hidden="{{nowMusicIndex == -1}}"
-        bindtap="continuePlay">{{isPlay ? '暂停' : '继续播放'}}</text>
+        hidden="{{nowMusicIndex == -1}}">{{isPlay ? '暂停' : '继续播放'}}</text>
       </view>
     </view>
   </view>
@@ -53,7 +54,8 @@
   bind:musicOver="musicOver"
   bind:isShowList="isShowList"
   bind:sendLocalAllTime="sendLocalAllTime"
-  musicList="{{AudioList}}" 
+  musicList="{{AudioList}}"
+  picUrl="{{picUrl}}" 
   nowMusicMark="{{nowMusicIndex}}" 
   isSelectPlay="{{isPlay}}"/>
 

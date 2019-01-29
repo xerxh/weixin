@@ -1,15 +1,22 @@
 <!--用户信息-->
-<view class="flex_box bg">
-  <open-data class="avatar" type="userAvatarUrl"></open-data>
-  <view class="flex_colum">
-    <open-data type="userNickName" class="userName"></open-data>
-    <view class="memberMarkBox">
-      <image  
-        class="icon"
-        wx:if="{{memerImgMark[userInfo.memberGrade]}}"
-        src="{{memerImgMark[userInfo.memberGrade].src}}"/>
-      <text  class="memberMark">{{userInfo.memberName}}</text>    
+<view class="bg">
+  <view class="flex_box">
+    <open-data class="avatar" type="userAvatarUrl"></open-data>
+    <view class="flex_colum">
+      <open-data type="userNickName" class="userName"></open-data>
+      <view class="memberMarkBox">
+        <image  
+          class="icon"
+          wx:if="{{memerImgMark[userInfo.memberGrade]}}"
+          src="{{memerImgMark[userInfo.memberGrade].src}}"/>
+        <text wx:if="{{userInfo.memberName}}" class="memberMark">{{userInfo.memberName}}{{isPastDueObj[userInfo.isPastDue]}}</text>    
+      </view>
     </view>
+    <text class="btn" bindtap="jumpBuy" wx:if="{{isShow}}">会员续费</text>
   </view>
-  <text class="btn" bindtap="jumpBuy" wx:if="{{isShow}}">会员续费</text>
+  <view  class="memberMark box" wx:if="{{userInfo.isPastDue == 0}}">
+    VIP将于:
+    <text class="timeStyle"> {{userInfo.memberExpireDate}} </text>
+    到期
+  </view>
 </view>

@@ -21,7 +21,7 @@ Component({
   },
   // 节点树完成，可以用setData渲染节点，但无法操作节点
   attached () {
-    console.log('初始化')
+    console.log('初始化Money')
     // 第一次数据初始化
     this.getMyCourse()
   },

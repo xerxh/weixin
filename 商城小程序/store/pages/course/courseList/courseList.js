@@ -77,7 +77,13 @@ Component({
     // 获取首页推荐数据
     getRecommend() {
       console.log('获取数据')
-      allCourse.getCategorData(this.data.url)
+      if (!this.hasMore()) {
+        return
+      }
+      const pageindex = this.data.start
+      const pagecount = this.data.count
+      const search = this.data.search
+      allCourse.getCategorData(this.data.url, pageindex, pagecount, search)
       .then(res => {
         let { data : {data: arr} } = res
         console.log(arr)

@@ -34,6 +34,9 @@ Page({
     this.setData({
       id: options.id
     })
+    if (options.parentId) {
+      wx.setStorageSync('parentId', options.parentId)
+    }
     // 获取封面信息
     MusicMode.getAudioCoverInfo(options.id)
       .then(res => {

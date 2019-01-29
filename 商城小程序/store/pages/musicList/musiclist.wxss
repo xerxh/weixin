@@ -1,7 +1,6 @@
 /* pages/musicList/musiclist.wxss */
 .bg{
-  background: gray !important;
-
+  background: #BCBCBD !important;
 }
 .position_style{
   margin-left: 35rpx;
@@ -10,6 +9,7 @@
   font-size: 26rpx;
   font-family:PingFang-SC-Medium;
   font-weight:500;
+  flex: 1;
   /* padding: 40rpx 0; */
 }
 .position_style > text:first-child{
@@ -20,11 +20,24 @@
 }
 .intro{
   flex: 1;
+  /* height: 200rpx; */
+  white-space: normal;
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  text-overflow: ellipsis;
+  margin-bottom: 15rpx;
 }
 .layout{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* margin: 90rpx 0 0 0; */
+}
+.layout text{
+  padding-bottom: 20rpx;
 }
 .boxStyle{
   padding: 52rpx 24rpx 52rpx 24rpx;

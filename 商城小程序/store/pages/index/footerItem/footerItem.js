@@ -28,8 +28,8 @@ Component({
         if(this.data.obj.mark == -1) return
         console.log('跳转小程序')
         wx.navigateToMiniProgram({
-          appId: 'xxxxxxxxxxxxxxxxxx', // 要跳转的小程序的appid
-          path: 'page/index/index', // 跳转的目标页面
+          appId: 'wx95635a1a7b207fc0', // 要跳转的小程序的appid
+          path: 'pages/index/index', // 跳转的目标页面    "pages/index/index",
           extarData: {
             open: 'auth'
           },

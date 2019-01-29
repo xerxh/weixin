@@ -7,7 +7,7 @@
     tList="{{navData}}" bind:switchPage="switchNav" wx:if="{{searchInput}}"/>
     <view wx:else>
     </view> -->
-    <view wx:if="{{url == 'undefined'}}">
+    <view>
       <search clear-position="clearPosition" 
         bind:search="search" 
         bind:clear="clear"

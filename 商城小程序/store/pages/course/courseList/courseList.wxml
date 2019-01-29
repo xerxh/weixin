@@ -10,9 +10,9 @@
             <goods_item external-width='actualWidth' 
                 lessongoods-img="lessongoodsImg" 
                 style="width:44%" 
-                imagePath="{{sonItem.picurl}}" 
-                title="{{sonItem.curriculumName}}"
-                artcleTiltle="{{sonItem.intro}}" 
+                imagePath="{{sonItem.picListUrl}}" 
+                title="{{sonItem.intro}}"
+                artcleTiltle="{{sonItem.curriculumName}}" 
                 price="{{sonItem.discountPrice}}" 
                 sum="{{sonItem.virtualPurchases}}"
                 goodsId="{{sonItem.curriculumId}}" 

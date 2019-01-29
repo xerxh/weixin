@@ -13,6 +13,9 @@ Component({
     // 课程id
     curriculumId: {
       type: String
+    },
+    picUrl: {
+      type: String
     }
   },
 
@@ -186,9 +189,17 @@ Component({
     },
     isShowList(e) {
       console.log(e)
-      this.setData({
-        isShowListData: !this.data.isShowListData
-      })
+      // 关闭整个组件时
+      if(e.detail == false) {
+        this.setData({
+          isShowListData: e.detail
+        })
+      }else{
+        this.setData({
+          isShowListData: !this.data.isShowListData
+        })
+      }
+    
     }
   }
 })

@@ -7,7 +7,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    isFroze: {
+      type: String
+    }
   },
 
   /**
@@ -39,6 +41,17 @@ Component({
   methods: {
     jump(e) {
       // 进行账号是否被冻结判断
+      console.log(this.data.isFroze, '是否冻结')
+      // 会员 冻结
+      if(this.data.isFroze == 3){
+        wx.showToast({
+          title: '您的账户已经被冻结',
+          duration: 1000,
+          icon: 'none'
+        })
+        return
+      }
+      // 提现冻结
       if(this.data.myAccount.isValid){
         let myAccount = JSON.stringify(this.data.myAccount)
         wx.navigateTo({

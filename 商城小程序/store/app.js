@@ -18,7 +18,7 @@ App({
     // 搜索默认值
     pleacholder: '',
     referrerNo: '',
-    parentId: ''
+    parentId: '',
   },
   onLaunch: function (options) {
     console.log(options,'app的onLaunch')
@@ -26,6 +26,7 @@ App({
     if(options.query.parentId) {
       console.log('获取分享id', options.query)
       this.globalData.parentId = options.query.parentId
+      wx.setStorageSync('parentId', options.query.parentId)
     }
     this.globalData.shareTicket = options.shareTicket
 
@@ -66,4 +67,5 @@ App({
       }
     })
     }
+
 })

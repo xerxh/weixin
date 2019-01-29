@@ -7,8 +7,10 @@
   height: 330rpx
 } 
 .lessongoodsImg{
-  width: 330rpx;
-  height: 238rpx;
+  /* width: 330rpx;
+  height: 238rpx; */
+  width:330rpx;
+  height:175rpx;
 }
 .actualWidth{
   width: 100%;
@@ -48,8 +50,8 @@
   position: relative;
 }
 .titleImg{
-  width: 240rpx;
-  height: 168rpx;
+  width: 161rpx;
+  height: 144rpx;
   margin-left: 95rpx;
 }
 .titleImgBox{
@@ -58,7 +60,7 @@
 }
 .studentPepleBg{
   position: absolute;
-  top: 200rpx;
+  top: 140rpx;
   left: 0rpx;
   right: 0rpx;
   width:329rpx;
@@ -70,7 +72,7 @@
 }
 .studentPeple{
   position: absolute;
-  top: 200rpx;
+  top: 140rpx;
   left: 20rpx;
   right: 0rpx;
   height:38rpx;
@@ -86,6 +88,7 @@ goods_item > view > view{
 }
 goods_item > view{
   margin-bottom: 30rpx;
+  height: 358rpx;
 }
 goods_item > view > view > view{
   margin-left: 15rpx;

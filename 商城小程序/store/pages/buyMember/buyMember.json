@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "navi_TopView":"../../components/navitopview/navitopview",
-    "user_info": "../../components/userInfo/userInfo"
-  }
+    "user_info": "../../components/userInfo/userInfo",
+    "dialog": "../../components/dialog/dialog"
+  },
+  "enablePullDownRefresh": false
 }

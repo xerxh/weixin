@@ -10,6 +10,7 @@
   <view 
     wx:for="{{btnList}}"
     class="btnBox" 
+    data-index="{{index}}"
     bindtap="jump">
     <view class="btnNameBox">
       <image class="btnImg" src="{{item.src}}"/>

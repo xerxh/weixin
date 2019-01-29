@@ -29,7 +29,11 @@ Page({
     interval: 3000,
     duration:'400',
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    // 记录是否固定定位
+    isFiexed:false,
+    pageCount: 2,
+    pageIndex : 0
   },
   //事件处理函数
   bindViewTap: function () {
@@ -69,10 +73,10 @@ Page({
     // 1:公司简介，2：帮助中心，3：会员制度，4：用户协议，5：隐私协议' guid
     this.setData({
       footerData: [
-        {title: '康石石', mark: 1, intro: '公司简介'},
-        {title: '会员制度', intro: '公司简介', guid: 3},
-        {title: '公司简介', intro: '会员制度', guid: 1},
-        {title: '待定', intro: '公司简介', mark : -1}
+        { title: '康石石', mark: 1, intro: '公司简介', imagePath:'../img/kss.png'},
+        { title: '会员制度', intro: '公司简介', guid: 3, imagePath:'../img/hy.png'},
+        { title: '公司简介', intro: '会员制度', guid: 1, imagePath:'../img/qy.png'},
+        { title: '待定', intro: '公司简介', mark: -1, imagePath:'../img/qy.png'}
       ]
     })
 
@@ -142,7 +146,7 @@ Page({
   // 获取热门推荐
   getGoodsHotList: function () {
     return new Promise((resolve, reject)=>{
-      storeModel.getHotList().then(res => {
+      storeModel.getHotList(this.data.pageIndex, this.data.pageCount).then(res => {
         this.setData({
           hotList: res.data.data,
           hotParamsObj: {
@@ -158,7 +162,7 @@ Page({
   // 获取最新课程
   getRecentGoods: function () {
     return new Promise((resolve, reject)=>{
-      storeModel.getRecentGoods().then(res => {
+      storeModel.getRecentGoods(this.data.pageIndex, this.data.pageCount).then(res => {
         this.setData({
           recently: res.data.data,
           recentlyParamsObj: {
@@ -174,7 +178,7 @@ Page({
   // 获取汉艺推荐
   getHyRecomend: function() {
     return new Promise((resolve, reject)=>{
-      storeModel.getHyRecomend().then(res => {
+      storeModel.getHyRecomend(this.data.pageIndex, this.data.pageCount).then(res => {
         console.log(res)
         this.setData({
           recommendList: res.data.data,
@@ -275,6 +279,19 @@ Page({
         wx.hideNavigationBarLoading() //完成停止加载
         wx.stopPullDownRefresh() //停止下拉刷新、
       })
+  },
+  // 通过对滚动位置的判断 进行搜索框的位置变化
+  onPageScroll: function (e) {
+    console.log(e.scrollTop) //这个就是滚动到的位置,可以用这个位置来写判断
+    if(e.scrollTop > 143) {
+      this.setData({
+        isFiexed: true
+      })
+    }else{
+      this.setData({
+        isFiexed: false
+      })
+    }
   }
 
 })

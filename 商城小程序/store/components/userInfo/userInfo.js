@@ -38,6 +38,11 @@ Component({
         src: `${base_img_url}/memer.png`,
         name: '体验会员'
       }
+    },
+    isPastDueObj: { // 1：过期  2 非会员  0：未过期  3冻结
+        1 : '（会员已过期）',
+        2 : '（非会员）',
+        3 : '（会员被冻结）'
     }
   },
 

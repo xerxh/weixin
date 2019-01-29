@@ -3,7 +3,7 @@
   <view class='flex between fontStyle'>
     <view class='flex column'>
       <text>账号余额</text>
-      <text class="money">{{myAccount.sumMoney}}</text>
+      <text class="money">{{myAccount.surplusMoney}}</text>
     </view>
     <view class="moneyDetailBtn" 
       data-jumpurl="/pages/extractMoney/extractMoney"

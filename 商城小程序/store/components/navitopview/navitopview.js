@@ -11,6 +11,13 @@ Component({
     isShow: {
       type: Boolean,
       value: false
+    },
+    url: {
+      type: String,
+      value: '',
+      observer:function(newVal) {
+        console.log(newVal)
+      }
     }
   },
 
@@ -27,6 +34,10 @@ Component({
   methods: {
     goBack() {
       console.log('返回');
+      console.log(this.data.url)
+      if (this.data.url){
+        wx.setStorageSync('myIndex', 3)
+      }
       wx.navigateBack();
     },
   }

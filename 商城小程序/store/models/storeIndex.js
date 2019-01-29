@@ -32,22 +32,37 @@ class StoreModel extends HTTP {
     return this.request(params)
   }
   // 获取汉艺推荐
-  getHyRecomend() {
+  getHyRecomend(pageindex, pagecount, criteria = '') {
     return this.request({
-      url: '/home/getHartRecd'
+      url: '/home/getHartRecd',
+      data: {
+        pageindex,
+        pagecount,
+        criteria
+      }
     })
   }
   // 获取热门推荐
-  getHotList() {
+  getHotList(pageindex, pagecount, criteria = '') {
     let params = {
       url: '/home/getHotCurriculum',
+      data: {
+        pageindex,
+        pagecount,
+        criteria
+      }
     }
     return this.request(params)
   }
   // 获取最新课程
-  getRecentGoods() {
+  getRecentGoods(pageindex, pagecount, criteria = '') {
     let params = {
       url: '/home/getNewCurriculum',
+      data: {
+        pageindex,
+        pagecount,
+        criteria
+      }
     }
     return this.request(params)
   }

@@ -30,8 +30,8 @@ Component({
    */
   data: {
     playOrparuse: {
-      src: '../../images/music/play.png',
-      paruseSrc: '../../images/music/nowPlay.png'
+      src: '../../images/music/flexStop.png',
+      paruseSrc: '../../images/music/flexParuse.png'
     }
   },
 

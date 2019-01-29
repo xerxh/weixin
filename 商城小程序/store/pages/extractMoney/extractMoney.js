@@ -98,9 +98,13 @@ Page({
     })
   },
   // 跳转提现明细页面
-  jump() {
-    wx.navigateTo({
-      url: '/pages/extractMoneyDetail/extractMoneyDetail',
-    })
+  jump(e) {
+    console.log(e)
+    let index = e.currentTarget.dataset.index
+    if(index){
+      wx.navigateTo({
+        url: '/pages/extractMoneyDetail/extractMoneyDetail',
+      })
+    }
   }
 })
