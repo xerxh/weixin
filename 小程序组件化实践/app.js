@@ -3,7 +3,6 @@ App({
   onLaunch: function (options) {
     console.log(options)
     this.globalData.shareTicket = options.shareTicket
-    
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
