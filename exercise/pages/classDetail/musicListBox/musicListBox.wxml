@@ -1,0 +1,61 @@
+<!--pages/musicList/musicListBox/musicListBox.wxml-->
+<scroll-view 
+  class="scroll_box" 
+  scroll-x="true" 
+  upper-threshold="50" 
+  lower-threshold="50" 
+  scroll-top="0" 
+  scroll-left="0" 
+  scroll-into-view="" 
+  scroll-with-animation="false" 
+  enable-back-to-top="false" 
+  bindscrolltoupper="" 
+  bindscrolltolower="" 
+  bindscroll="">
+  <view class="flex_between">
+    <text class="courseSum">共{{AudioList.length}}节</text>
+    <view class="flex_start">
+      <view class="btnBox" bindtap="sortList">
+        <image class="icon" src="../../../images/music/sort.png" />
+        <text>{{sort ? '正序' : '倒序'}}</text>
+      </view>
+      <view class="btnBox" 
+        data-index="{{nowMusicIndex}}"  
+        bindtap="continuePlay">
+        <image 
+          hidden="{{nowMusicIndex == -1}}"
+          class="icon" 
+          src="../../../images/music/play.png" />
+        <text 
+        data-index="{{nowMusicIndex}}" 
+        hidden="{{nowMusicIndex == -1}}">{{isPlay ? '暂停' : '继续播放'}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="nowPlay" hidden="{{nowMusicIndex == -1}}" decode="{{true}}">
+    继续播放：{{nowMusicIndex + 1}}. {{AudioList[nowMusicIndex].videoName}}
+  </view>
+  <view  class="{{!isShowListData ? '' : 'z-index'}}">
+    <block 
+      wx:for="{{AudioList}}" 
+      wx:key="{{index}}">
+      <music_list_item 
+        bind:musicPlay="musicPlay"
+        obj="{{item}}"
+        isPlay="{{isPlayList[index]}}"
+        index="{{index}}" />    
+    </block>
+    <noListData isHidden="{{AudioList.length}}" />
+  </view>
+</scroll-view>
+<!-- 音频播放 -->
+<music_bg_play 
+  isShow="{{isShowFixComponent}}"
+  bind:swicthPlay="swicthPlay"
+  bind:musicOver="musicOver"
+  bind:isShowList="isShowList"
+  bind:sendLocalAllTime="sendLocalAllTime"
+  musicList="{{AudioList}}"
+  picUrl="{{picUrl}}" 
+  nowMusicMark="{{nowMusicIndex}}" 
+  isSelectPlay="{{isPlay}}"/>

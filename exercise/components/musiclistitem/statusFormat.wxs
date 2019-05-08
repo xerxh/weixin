@@ -1,0 +1,16 @@
+function status(status) {
+    switch(status){
+        case 1:
+            return '上课中'
+            break
+        case 2:
+            return '未完结'
+            break
+        case 3:
+            return '已完结'
+            break 
+        default:
+            return '未上课'           
+    }
+}
+module.exports = { status : status}

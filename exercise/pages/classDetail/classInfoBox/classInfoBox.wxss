@@ -1,0 +1,20 @@
+/* pages/classDetail/classInfoBox/classInfoBox.wxss */
+.classBox{
+  padding: 10px 10px;
+}
+.teacherBox{
+
+}
+.teacherInfoBox{
+  display: flex;
+  align-items: center;
+}
+.teacherInfo{
+  display: flex;
+  flex-direction: column; 
+}
+.avator{
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+}

@@ -1,0 +1,43 @@
+
+<!-- 音频列表 -->
+<view class='classDetailBox'>
+ <!-- 导航标签 -->
+    <!-- <image class='topImg' src="../../images/logo.png"></image>
+    <view class='flex_col'>
+       <text>时尚的历程</text>
+       <text class='info'>现实中，大部分梦想成为Fashion Designer的人，还停留在想要身披光环的原点，却又不知道如何才能进...</text>
+       <text>全文</text>
+       <view class='flex space_around'>
+         <view>
+           <view>1563</view>
+           <view>人学习</view>
+         </view>
+         <view class='line'></view>
+         <view>
+            <view>5 / 12</view>
+            <view>已更新 / 总讲数</view>
+         </view>
+       </view>
+    </view> -->
+    <view class='tabBox'>
+      <navigator-table tList="{{navList}}" bind:switchPage="switchPage" />    
+    </view>
+
+  <view class='infoBox' hidden="{{nowIndex !== 0}}">
+    <classInfo></classInfo>
+  </view>
+  <view  hidden="{{nowIndex !== 1}}" class='infoBox'>
+    <musicList 
+    curriculumId="{{AudioCoverInfo.curriculumId}}"
+    picUrl="{{AudioCoverInfo.picurl}}"
+    bind:getAudioList="getAudioList" 
+    AudioList="{{AudioList}}" />
+  </view>
+</view>
+
+<!-- <music_play /> -->
+
+<!-- <view class='position_box'>
+  <bottom-btn></bottom-btn>
+</view> -->
+

@@ -27,9 +27,31 @@ App({
         "selectedIconPath": "/icon/mine_pre.png"
       }
     ],
-    isHideTabbar: false
+    isHideTabbar: false,
   },
-  onLaunch: function () {
+  // 全局音乐共享数据
+  music: {
+    list: [],
+    nowIndex: '22222'
+  },
+  onLaunch: function (options) {
+    // 绑定get  set
+    Object.defineProperty(this.music, 'list', {
+      get() {
+        console.log('获取全局列表数据')
+        return wx.getStorageSync('musicList')
+      }
+    })
+    Object.defineProperty(this.music, 'nowIndex', {
+      get() {
+        console.log('获取正在播放的音频下标')
+        wx.getStorageSync('nowIndex')
+      }
+    })
+
+
+
+    console.log(options)
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

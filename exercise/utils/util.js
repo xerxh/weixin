@@ -154,11 +154,32 @@ const upload_share_Result = (res, type, uid) => {
   // })
 }
 
+const formatMusicTime = (time) => {
+  // 获取当前时间 hh-mm  distanceMin 距离现在的分钟数
+  var today = new Date()
+  // 总毫秒数
+  var distanceTime = time * 1000
+  today.setTime(parseInt(distanceTime))
+  var oHours = Math.floor(distanceTime / 1000 / 3600)
+  var oMintes = (today.getMinutes()).toString();
+  var oSeconds = today.getSeconds()
+  oMintes = oMintes.toString()
+  oHours = oHours.toString()
+  if (oHours) {
+    if (oMintes <= 9) {
+      oMintes = '0' + oMintes
+    }
+    return [oHours, oMintes, oSeconds].join(":")
+  } else {
+    return [oMintes, oSeconds].join(":")
+  }
+}
 
 module.exports = {
   formatTime,
   GET,
   POST,
   omit,
+  formatMusicTime,
   upload_share_Result
 }

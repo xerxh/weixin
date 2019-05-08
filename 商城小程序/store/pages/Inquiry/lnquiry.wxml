@@ -1,6 +1,6 @@
 <!--pages/my/my.wxml-->
 <topNavigation >
-    <image slot="centerTitle" class='topImg' src="../../asset/images/top.png"></image>
+    <image slot="centerTitle" class='topImg' src="../../images/top.png"></image>
 </topNavigation>
 <view class='container'>
     <button class='btn'

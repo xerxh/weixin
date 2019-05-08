@@ -1,0 +1,4 @@
+/* components/noData/noData.wxss */
+.tipBox{
+  text-align: center;
+}

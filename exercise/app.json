@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/classDetail/classDetail",
     "pages/login/login",
+    "pages/logs/logs",
     "pages/loadPage/index",
     "pages/loadPageMulti/index",
     "pages/index1/index",
@@ -16,6 +17,9 @@
     "navigationBarTextStyle": "black",
     "navigationStyle": "default"
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "tabBar": {
     "color": "#333",
     "selectedColor": "red",
@@ -42,5 +46,6 @@
         "selectedIconPath": "assets/icon-grid.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -39,14 +39,14 @@
       {
         "pagePath": "pages/Inquiry/lnquiry",
         "text": "问询",
-        "iconPath": "images/nav/homeIcon__unselected@2x.png",
-        "selectedIconPath": "images/nav/homeIcon__selected@2x.png"
+        "iconPath": "images/nav/inquiry_icon__unselected@2x.png",
+        "selectedIconPath": "images/nav/inquiry_icon__selected@2x.png"
       },
       {
         "pagePath": "pages/collection/collection",
         "text": "收藏",
-        "iconPath": "images/nav/homeIcon__unselected@2x.png",
-        "selectedIconPath": "images/nav/homeIcon__selected@2x.png"
+        "iconPath": "images/nav/collection_icon_unselected@2x.png",
+        "selectedIconPath": "images/nav/collection_icon_selected@2x.png"
       },
       {
         "pagePath": "pages/my/my",

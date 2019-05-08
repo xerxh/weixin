@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "musicList": "./musicListBox/musicListBox",
+    "navigator-table": "../../components/navigator-table/index",
+    "classInfo": "./classInfoBox/classInfoBox",
+    "music_play": "../../components/BgMusicplay/musicplay"
+  }
+}

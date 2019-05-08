@@ -25,6 +25,7 @@
     <form bind:submit="testSubmit" report-submit="true">
           <button formType="submit">发送模板消息</button>
     </form>
+    <button>音乐播放器</button>
     <view>
         <parent>
             <!-- 子组件1 -->

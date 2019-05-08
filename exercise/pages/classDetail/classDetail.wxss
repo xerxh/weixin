@@ -1,0 +1,48 @@
+/* pages/classDetail/classDetail.wxss */
+.classDetailBox{
+  margin-top: 150rpx;
+  /* margin-bottom: 100px; */
+  height: 100%;
+}
+.padding_top{
+  padding-top: 890rpx;
+}
+.topImg{
+  margin-top: 20px;
+  height: 300rpx;
+  width: 750rpx;
+}
+.flex{
+  display: flex;
+}
+.flex_col{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+}
+.space_around{
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.line{
+  border-right: 1px solid gray;
+  height: 30px;
+}
+.info{
+  margin: 10px 0;
+  font-size: 12px;
+  color: #666666;
+  font-family: 'Arial Normal', 'Arial';
+  font-weight: 400;
+}
+.infoBox{
+  margin-bottom: 70px;
+}
+.tabBox{
+  width: 750rpx;
+}
+.position_box{
+  position: fixed;
+  bottom: 0;
+}
