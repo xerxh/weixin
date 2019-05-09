@@ -6,6 +6,7 @@
   right: 24rpx;
   background:rgba(153,153,153,1);
   border-radius:18rpx;
+  transition: all 0.5 linear;
 }
 .top{
   top: 0;

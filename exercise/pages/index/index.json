@@ -4,6 +4,7 @@
       "carrousel" : "/components/carrousel/index",
       "parent" : "/components/parent/parent",
       "sonb": "/components/son1/index",
-      "sonc": "/components/son2/index"
+      "sonc": "/components/son2/index",
+      "loading": "/components/loading/index"
   }
 }

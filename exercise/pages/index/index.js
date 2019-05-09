@@ -131,6 +131,12 @@ Page({
   getPhoneNumber (e) {
     console.log(e)
   },
+  jumpPlay() {
+    wx.navigateTo({
+      url: '/pages/classDetail/classDetail'
+    })
+  },
+  
   //获取轮播图片
   getBanners() {
     console.log(222)

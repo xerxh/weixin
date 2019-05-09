@@ -32,9 +32,9 @@
       </view>
     </view>
   </view>
-  <view class="nowPlay" hidden="{{nowMusicIndex == -1}}" decode="{{true}}">
+  <!-- <view class="nowPlay" hidden="{{nowMusicIndex == -1}}" decode="{{true}}">
     继续播放：{{nowMusicIndex + 1}}. {{AudioList[nowMusicIndex].videoName}}
-  </view>
+  </view> -->
   <view  class="{{!isShowListData ? '' : 'z-index'}}">
     <block 
       wx:for="{{AudioList}}" 

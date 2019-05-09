@@ -25,7 +25,8 @@
     <form bind:submit="testSubmit" report-submit="true">
           <button formType="submit">发送模板消息</button>
     </form>
-    <button>音乐播放器</button>
+    <button bindtap='jumpPlay'>音乐播放器</button>
+    <button hover-class="plain-hover">按钮效果</button>
     <view>
         <parent>
             <!-- 子组件1 -->
@@ -39,5 +40,8 @@
         </parent>
     </view>
 
+    <view class='center'>
+      <loading></loading>
+    </view>
     <canvas class='canvas' canvas-id='ripple'></canvas>
 </view>
