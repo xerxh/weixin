@@ -6,7 +6,7 @@
   right: 24rpx;
   background:rgba(153,153,153,1);
   border-radius:18rpx;
-  transition: all 0.5 linear;
+  /* transition: all 0.4 linear; */
 }
 .top{
   top: 0;
@@ -58,10 +58,13 @@
   margin-right: 14rpx;
   margin-left: 17rpx;
 }
+
 .container_box{
   height: 100%;
-  background:rgba(224,224,224,1)
+  background:rgba(224,224,224,1);
 }
+
+
 .arrow_bottom{
   width:40px;
   height:16px;
@@ -75,8 +78,8 @@
   /* width: 500rpx;
   height: 500rpx; */
   width:366rpx;
-  height:480rpx;
-  border-radius:8rpx;
+  height:366rpx;
+  border-radius:50%;
 }
 .width_box{
   width: 500rpx;

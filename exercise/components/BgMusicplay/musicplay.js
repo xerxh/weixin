@@ -152,16 +152,18 @@ Component({
     // 记录是否是被拖拽状态
     darag: false,
 
+    // 
+    nowDeg: 1
   },
 
   ready() {
-    Object.defineProperty(this.data, 'nowData',{
-      get() {
-        console.log('开始')
-        return wx.getStorageSync('nowIndex')
-      }
-    })
-    console.log(this.data.nowIndex)
+    this.animation = wx.createAnimation()
+    setInterval(() => {
+      this.data.nowDeg++
+      this.animation.rotate(this.data.nowDeg*2).step()
+      this.setData({ animation: this.animation.export() })
+    }, 200)
+
 
 
     // 为音频播放进行一些初始化设定

@@ -12,7 +12,7 @@
     <view class="flex_start">
       <view>
         <image class="closeImg" 
-          catchtap="closeBg"
+          catchtap="closeBg "
           src="../../images/music/close.png" />
         <image class="musicImg" 
           src="{{picUrl}}" />
@@ -42,8 +42,9 @@
       catchtap="noShowCompoent"
       src="../../images/music/arrow-bottom.png"/>
     <view class="music_img_box">
-      <image class="music_inner_img" 
-        src="{{picUrl}}" />
+      <image class="music_inner_img"
+        animation="{{animation}}" 
+        src="../../images/logo.png" />
       <view class="width_box">{{musicList[nowMusicMark].videoName}}</view>
       <!--
         <view class="flex_between width_box">
