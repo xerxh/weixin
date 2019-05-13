@@ -39,6 +39,8 @@ Component({
       console.log(e)
       this.setData({
         swiperIndex : e.detail.current
+
+        
       })
     }
   }
