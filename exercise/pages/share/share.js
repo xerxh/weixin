@@ -14,6 +14,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 根据手机宽高比动态计算屏幕的高度
+    var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        let clientHeight = res.windowHeight,
+          clientWidth = res.windowWidth,
+          rpxR = 750 / clientWidth;
+        var calc = clientHeight * rpxR;
+        console.log(calc, clientWidth)
+        console.log(clientHeight)
+        that.setData({
+          windowHeight: calc
+        });
+      }
+    });
     // 开启分享携带  转发信息
     wx.showShareMenu({
       withShareTicket: true
