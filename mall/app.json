@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/searchPage/searchPage",
+    "pages/classLevel/classLevel",
+    "pages/info/info",
+    "pages/notification/notification",
+    "pages/course/course",
+    "pages/payMember/payMember",
+    "pages/my/my",
+    "pages/writeComment/writeComment",
+    "pages/classDetail/classDetail",
+    "pages/login/index",
+    "pages/feedBack/feedBack",
+    "pages/examination/examination",
+    "pages/apply/apply",
+    "pages/richText/richText",
+    "pages/setting/setting",
+    "pages/integral/integral",
+    "pages/bindPhone/bindPhone",
+    "pages/distribution/distribution",
+    "pages/playPage/playPage",
+    "pages/classContent/classContent",
+    "pages/logs/logs",
+    "pages/progress/progress",
+    "pages/help/help"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#c7c7c7",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/nav/homeIcon__unselected@2x.png",
+        "selectedIconPath": "images/nav/homeIcon__selected@2x.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/nav/teacherIcon__unselected@2x.png",
+        "selectedIconPath": "images/nav/teacherIcon__selected@2x.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx95635a1a7b207fc0"
+  ],
+  "sitemapLocation": "sitemap.json"
+}
