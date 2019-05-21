@@ -35,7 +35,7 @@ class HTTP {
           if (startChar == '2') {
             // 成功处理方法
             switch (res.data.code) {
-              case 600: // 正常
+              case 0: // 正常
                 resolve(res)
                 break;
               case 603: // 用户过期
@@ -49,7 +49,7 @@ class HTTP {
                   duration: 1000
                 })
                 reject('没有权限')
-                reloadLogin()
+                // reloadLogin()
                 break;
               default:
                 // 错误码处理方法
