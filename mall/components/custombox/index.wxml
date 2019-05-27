@@ -1,0 +1,12 @@
+<!--components/custombox/index.wxml-->
+<view>
+  <slot></slot>
+  <view class='customBox'>
+  <block wx:for="{{list}}" wx:key="key" >
+    <view class='childBox' bindtap='itemBtn' data-title='{{item.categoryName}}' data-id='{{item.categoryId}}'>
+      <image src='{{item.categoryIcon}}' class='my-image-class'></image>
+      <text class='my-text-class'>{{item.categoryName}}</text>
+    </view>
+  </block>
+  </view>
+</view>

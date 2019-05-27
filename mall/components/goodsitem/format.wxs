@@ -1,0 +1,14 @@
+
+// 进行空格替换
+var format = function(text) {
+  // console.log(title)
+  // var string = String.fromCodePoint("\u00A0")
+  return text.replace("：",':')
+}
+
+/*
+* 导出
+*/
+module.exports = {
+  format:format
+}

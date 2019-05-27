@@ -1,0 +1,13 @@
+<!--components/classItem/classItem.wxml-->
+<view class='classContainer' bindtap='jumpDetail'>
+  <view class='classImgBox'>
+    <image src="../../images/index/classImg.png" class='classImg'></image>
+    <view class='classSum'>
+      <image class='iconImg' src="../../images/index/listen.png"></image>
+      <text class='sum'>2301</text>
+    </view>
+  </view>
+  <text class='title'>时尚的历程三万月薪的求职作品集</text>
+  <text class='classIntro'>进入时尚的圈子，拥有身披光环的实力</text>
+  <text class='money'>￥ 19.90</text>
+</view>

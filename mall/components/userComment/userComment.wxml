@@ -1,0 +1,17 @@
+<!--用户评论组件-->
+<view class='margin_top'>
+  <view class='flex'>
+    <image class='teacherImg' src="../../images/logo.png"></image>
+    <view class='flex col'>
+      <text>季老师</text>
+      <text>2019-3-29</text>
+    </view>
+  </view>
+  <view class='commentBox'>
+    <text>停留在想要身披光环的原点，却又不知道如何才能进入时尚的圈子，拥有身披光环的实力。</text>
+    <view class='flex_end'>
+      <text class='zan'>👍 15</text>
+      <text class='noZan'>👎 3</text>
+    </view>
+  </view>
+</view>

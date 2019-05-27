@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9e6e7;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .cls-3 {
+        fill: #ff747b;
+      }
+    </style>
+  </defs>
+  <g id="邀请好友" transform="translate(-23 -796)">
+    <g id="组_361" data-name="组 361">
+      <circle id="椭圆_18" data-name="椭圆 18" class="cls-1" cx="45" cy="45" r="45" transform="translate(23 796)"/>
+      <g id="组_354" data-name="组 354" transform="translate(-1588.333 48)">
+        <g id="组_350" data-name="组 350" transform="translate(1669.906 785.128)">
+          <path id="路径_195" data-name="路径 195" class="cls-2" d="M1747.125,810.723" transform="translate(-1747.125 -810.723)"/>
+        </g>
+        <g id="组_351" data-name="组 351" transform="translate(1636.333 783.916)">
+          <path id="路径_196" data-name="路径 196" d="M1674.157,834.818h-35.648a2.179,2.179,0,0,1-2.176-2.176V808.085a1.363,1.363,0,0,1,1.362-1.362h5.053a1.212,1.212,0,1,1,0,2.424h-3.99v23.246h35.151V809.147h-3.964a1.212,1.212,0,0,1,0-2.424h5.027a1.363,1.363,0,0,1,1.361,1.362v24.558A2.178,2.178,0,0,1,1674.157,834.818Zm.814-25.671h0Z" transform="translate(-1636.333 -806.723)"/>
+        </g>
+        <g id="组_352" data-name="组 352" transform="translate(1641.787 774)">
+          <path id="路径_197" data-name="路径 197" class="cls-3" d="M1682.212,794.471a1.212,1.212,0,0,1-1.212-1.212V776.424h-24.242v16.835a1.212,1.212,0,1,1-2.424,0V775.388a1.377,1.377,0,0,1,1.362-1.388h26.368a1.376,1.376,0,0,1,1.361,1.388v17.871A1.212,1.212,0,0,1,1682.212,794.471Z" transform="translate(-1654.333 -774)"/>
+        </g>
+        <g id="组_353" data-name="组 353" transform="translate(1636.852 789.67)">
+          <path id="路径_198" data-name="路径 198" d="M1657.527,840.261a1.63,1.63,0,0,1-.907-.276l-18.035-12.052a1.212,1.212,0,1,1,1.347-2.016l17.595,11.758,17.6-11.758a1.212,1.212,0,0,1,1.347,2.016l-18.036,12.052A1.629,1.629,0,0,1,1657.527,840.261Z" transform="translate(-1638.046 -825.712)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

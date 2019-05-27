@@ -1,0 +1,10 @@
+<!--components/bottom-btn/bottom-btn.wxml-->
+<view class='btnBox'>
+   <button class='shareBtn' open-type='share'>
+    <image class='shareImg' src="../../images/classShare.svg"></image>
+   </button>
+   <!-- <view class='line'> -->
+    <view class='line'></view>
+    <view class='btn' bindtap='jumpList'>去听课</view>
+   <!-- </view> -->
+</view>

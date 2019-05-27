@@ -1,0 +1,32 @@
+/* components/userComment/userComment.wxss */
+.flex{
+  display: flex;
+}
+.between{
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+.col{
+  flex-direction: column;
+  margin-left: 10px;
+}
+.teacherImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.commentBox{
+  padding-left: 100rpx;
+  margin: 10px 0;
+}
+.flex_end{
+  display: flex;
+  justify-content: flex-end;
+}
+.flex_end > text{
+  margin-right: 20px;
+}
+.margin_top{
+  margin-top: 10px;
+}

@@ -1,0 +1,47 @@
+/* components/bottom-btn/bottom-btn.wxss */
+.btnBox{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  height:125rpx;
+  align-items: center;
+  border-top: 1px solid rgba(236,236,236,1);
+  box-sizing: border-box;
+  width: 750rpx;
+  background: #ffff;
+}
+.line{
+  border-right: 1px solid gainsboro;
+  height: 25px;
+}
+.btn{
+  /* border: 1px solid gray; */
+  /* padding: 10rpx 180rpx; */
+  width: 460rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 6px;
+  background:rgba(255,200,20,1);
+}
+/* .line{
+  padding-left: 57rpx;
+  border-left: 2px solid rgba(223,223,223,1);
+} */
+
+/* 去除分享按钮的默认样式 */
+.shareBtn{
+  border-radius:0;
+  background-color:white;
+  margin: 0;
+}
+.shareBtn::after {
+  border: none;
+}
+.shareBtn::before {
+  border: none;
+}
+.shareImg{
+  width: 47rpx;
+  height: 47rpx;
+}

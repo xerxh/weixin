@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cceffe;
+      }
+
+      .cls-2 {
+        fill: #00b3ff;
+      }
+    </style>
+  </defs>
+  <g id="分享福利" transform="translate(-23 -661)">
+    <circle id="椭圆_17" data-name="椭圆 17" class="cls-1" cx="45" cy="45" r="45" transform="translate(23 661)"/>
+    <g id="组_376" data-name="组 376" transform="translate(-386.07 -1027.279)">
+      <g id="组_371" data-name="组 371" transform="translate(456.106 1714.453)">
+        <path id="路径_208" data-name="路径 208" class="cls-2" d="M517.887,1734.7a1.336,1.336,0,0,1-.944-2.28l14.357-14.357a1.336,1.336,0,0,1,1.889,1.889l-14.357,14.358A1.331,1.331,0,0,1,517.887,1734.7Z" transform="translate(-516.551 -1717.673)"/>
+      </g>
+      <g id="组_372" data-name="组 372" transform="translate(434.07 1713.279)">
+        <path id="路径_209" data-name="路径 209" d="M470.643,1753.068H437.286a3.22,3.22,0,0,1-3.216-3.216V1716.5a3.22,3.22,0,0,1,3.216-3.216h18.178a1.336,1.336,0,1,1,0,2.672H437.286a.545.545,0,0,0-.544.544v33.357a.545.545,0,0,0,.544.544h33.357a.545.545,0,0,0,.544-.544v-18.419a1.336,1.336,0,0,1,2.672,0v18.419A3.22,3.22,0,0,1,470.643,1753.068Z" transform="translate(-434.07 -1713.279)"/>
+      </g>
+      <g id="组_375" data-name="组 375" transform="translate(462.29 1713.959)">
+        <g id="组_373" data-name="组 373" transform="translate(8.802 0.015)">
+          <path id="路径_210" data-name="路径 210" class="cls-2" d="M573.977,1727.07a1.336,1.336,0,0,1-1.336-1.336v-8.52a1.336,1.336,0,1,1,2.672,0v8.52A1.336,1.336,0,0,1,573.977,1727.07Z" transform="translate(-572.641 -1715.878)"/>
+        </g>
+        <g id="组_374" data-name="组 374" transform="translate(0 0)">
+          <path id="路径_211" data-name="路径 211" class="cls-2" d="M549.552,1718.495h-8.52a1.336,1.336,0,1,1,0-2.672h8.52a1.336,1.336,0,1,1,0,2.672Z" transform="translate(-539.696 -1715.823)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

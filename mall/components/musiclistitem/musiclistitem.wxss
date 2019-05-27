@@ -1,0 +1,49 @@
+/* components/musiclistitem/musiclistitem.wxss */
+.flex_between{
+  display: flex;
+  justify-content: space-between;
+  /* padding: 40rpx 0; */
+  /* padding-bottom: 30rpx; */
+  /* border-bottom: 1px solid rgba(230,230,230,1); */
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  /* color:rgba(153,153,153,1); */
+  font-size:32rpx;
+}
+/* 完成的样式 */
+.complete{
+  color:rgba(153,153,153,1);
+}
+.flex_start{
+  display: flex;
+}
+.musicName{
+  margin-top: 40rpx;
+  font-size:15px;
+  margin-bottom: 8px;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.flex_leftStyle > view:nth-child(2){
+  font-size:13px;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.btnBox{
+  display: flex;
+  align-items: center;
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+}
+.flex_start > view:first-child{
+  margin-right: 30rpx;
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,8 @@
+<!--老师组件-->
+<view class='teacherInfoBox'>
+  <image class='avator' src="../../images/logo.png"></image>
+  <view class='teacherInfo'>
+    <text class='teacherName'>王某某</text>
+    <text class='teacherTip'>老师信息，老师信息，老师信息，老师信息，老师信息，老师信息，老师信息老师信息</text>
+  </view>
+</view>

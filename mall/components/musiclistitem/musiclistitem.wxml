@@ -1,0 +1,25 @@
+<!--components/musiclistitem/musiclistitem.wxml-->
+<wxs src="./statusFormat.wxs" module="tools" />
+
+<view class="flex_between">
+  <view class="flex_leftStyle" bindtap="jumpMusicDetail">
+    <view class='musicName' decode="{{true}}">{{index + 1}}. {{obj.videoName}}</view>
+    <view>
+      <text>{{obj.duration}}</text>
+      |
+      <text>226人学过</text>
+      |
+      <text>{{tools.status(obj.videoStatus)}}</text>
+    </view>
+  </view>
+  <view class="flex_start">
+    <view class="btnBox">
+      <!-- <image class="icon" src="../../images/music/up.png" /> -->
+      <!-- <text>正序</text> -->
+    </view>
+    <view class="btnBox" bindtap="playMusic">
+      <image class="icon" src="{{isPlay ? playOrparuse.paruseSrc : playOrparuse.src}}" />
+      <!-- <text>{{isPlay ? '暂停' : '播放'}}</text> -->
+    </view>
+  </view>
+</view>

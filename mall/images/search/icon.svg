@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #666;
+      }
+    </style>
+  </defs>
+  <g id="组_81" data-name="组 81" transform="translate(-1936.5 -1430.25)">
+    <g id="组_76" data-name="组 76" transform="translate(1936.5 1430.25)">
+      <path id="路径_35" data-name="路径 35" class="cls-1" d="M1948.5,1454.25a12,12,0,1,1,12-12A12.014,12.014,0,0,1,1948.5,1454.25Zm0-22.837a10.836,10.836,0,1,0,10.836,10.836A10.849,10.849,0,0,0,1948.5,1431.414Z" transform="translate(-1936.5 -1430.25)"/>
+    </g>
+    <g id="组_79" data-name="组 79" transform="translate(1947.349 1434.367)">
+      <g id="组_77" data-name="组 77" transform="translate(0 0)">
+        <path id="路径_36" data-name="路径 36" class="cls-1" d="M2012.6,1469.2a.6.6,0,0,1-.6-.6V1460.6a.6.6,0,1,1,1.206,0v7.992A.6.6,0,0,1,2012.6,1469.2Z" transform="translate(-2012 -1460)"/>
+      </g>
+      <g id="组_78" data-name="组 78" transform="translate(0 7.992)">
+        <path id="路径_37" data-name="路径 37" class="cls-1" d="M2017.579,1519.182a.6.6,0,0,1-.427-.177l-4.976-4.976a.6.6,0,0,1,.853-.853l4.976,4.976a.6.6,0,0,1-.426,1.03Z" transform="translate(-2012 -1513)"/>
+      </g>
+    </g>
+  </g>
+</svg>

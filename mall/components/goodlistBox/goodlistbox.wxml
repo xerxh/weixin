@@ -1,0 +1,18 @@
+<!--components/goodlistBox/goodlistbox.wxml-->
+<view class='hotList'>
+  <view class='menuPanel' wx:if="{{!paramsObj.isHidden}}">
+    <div class="hotLine" wx:if="{{isShowLine}}"></div>
+    <text class="hotTitle">{{paramsObj.title}}</text>
+    <view class="getMore" 
+      wx:if="{{paramsObj.isSeeMore}}" 
+      bindtap="getMore">
+        <text class='more'>更多</text>
+        <image class='arrow' src="../../images/index/back.svg"></image>
+      </view>
+    <!-- <image 
+      wx:if="{{paramsObj.isSeeMore}}" 
+      src='../../images/goback.png' 
+      class='moreImg'/> -->
+  </view>
+  <slot></slot>
+</view>

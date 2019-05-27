@@ -1,0 +1,23 @@
+/* components/carrousel/index.wxss */
+.swiperCarrousel {
+  margin : 0;
+  height: 260rpx;
+  margin-top : 10px;
+  /* background: red; */
+}
+
+.slide-image {
+  width : 100%;
+  height : 100%;
+  border-radius: 20rpx;
+  position: relative;
+  transition: all 0.2 ease-in 0s;
+}
+
+image.active {
+  transform: none;
+}
+
+image.quit {
+  transform: scale(0.9);
+}

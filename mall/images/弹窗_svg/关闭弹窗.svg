@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="组_141" data-name="组 141" transform="translate(-553 -1895)">
+    <g id="组_139" data-name="组 139" transform="translate(568.985 1911.069)">
+      <g id="组_137" data-name="组 137" transform="translate(0)">
+        <path id="路径_56" data-name="路径 56" class="cls-1" d="M623.489,1967.029a1.286,1.286,0,0,1-.912-.378L601.128,1945.2a1.29,1.29,0,0,1,1.824-1.824l21.449,21.449a1.29,1.29,0,0,1-.912,2.2Z" transform="translate(-600.75 -1943)"/>
+      </g>
+      <g id="组_138" data-name="组 138" transform="translate(0)">
+        <path id="路径_57" data-name="路径 57" class="cls-1" d="M602.04,1967.029a1.29,1.29,0,0,1-.912-2.2l21.449-21.449a1.29,1.29,0,0,1,1.824,1.824l-21.449,21.449A1.286,1.286,0,0,1,602.04,1967.029Z" transform="translate(-600.75 -1943)"/>
+      </g>
+    </g>
+    <g id="组_140" data-name="组 140" transform="translate(553 1895)">
+      <path id="路径_58" data-name="路径 58" class="cls-1" d="M581,1951a28,28,0,1,1,28-28A28.032,28.032,0,0,1,581,1951Zm0-53.365A25.365,25.365,0,1,0,606.365,1923,25.393,25.393,0,0,0,581,1897.635Z" transform="translate(-553 -1895)"/>
+    </g>
+  </g>
+</svg>

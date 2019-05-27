@@ -1,0 +1,4 @@
+<!--components/noData/noData.wxml-->
+<view class='tipBox' wx:if="{{!isHidden}}">
+  <text>{{tip}}</text>
+</view>  
