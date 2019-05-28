@@ -33,6 +33,11 @@ Component({
         this.data.darag = false
         if(this.data.musicList[val]){
           // 暂停上一曲音频 将下一曲音频的属性设置到播放器
+          // 是否外部切换 利用定时器的延迟性
+          this.data.isPlaySwicth = true
+          setTimeout(() => {
+            this.data.isPlaySwicth = false
+          },100)
           this.data.innerAudioContext.pause()
           // 清空缓存的音频播放时间数据
           this.data.localprogressAllTime = 0  
@@ -159,6 +164,7 @@ Component({
   ready() {
     this.animation = wx.createAnimation()
     setInterval(() => {
+      if (!this.data.isPlay) return
       this.data.nowDeg++
       this.animation.rotate(this.data.nowDeg*2).step()
       this.setData({ animation: this.animation.export() })
@@ -221,11 +227,12 @@ Component({
       // this.setData({
       //   isPlay: false
       // })
+      if (this.data.isPlaySwicth) return
       // // 切换列表的播放视图
-      // this.triggerEvent('swicthPlay', {
-      //   isplay: false,
-      //   nowMusicMark: this.data.nowMusicMark,
-      // })
+      this.triggerEvent('swicthPlay', {
+        isplay: false,
+        nowMusicMark: this.data.nowMusicMark,
+      })
     })
     innerAudioContext.onError((res) => {
       console.log('监听到音频播放错误')
