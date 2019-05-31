@@ -1,0 +1,32 @@
+<!--分销申请页面-->
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view slot="centerTitle">填写个人信息</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class="applyBox">
+  <view class='inputBox'>
+    <view class='flex'>
+      <input placeholder="请输入姓名"></input>
+      <input placeholder="请输入姓名">请输入性别</input>
+    </view>
+    <input class='input' placeholder="请输入手机号"></input>
+    <input class='input' placeholder="请输入邮箱"></input>
+    <input class='input' placeholder="请输入地址"></input>  
+  </view>
+
+  <view class='flex between'>
+   <view class='imgBox'>
+     <view class='img'>图片区域</view>
+     <text class='name'>身份证反面照</text>
+   </view>
+    <view class='imgBox'>
+     <view class='img'>图片区域</view>
+     <text class='name'>身份证正面照</text>
+   </view>
+  </view>
+  <view class='sendFile'>上传文件</view>
+  <view class='btn' bindtap='jumpExamination'>提交</view>
+</view>
