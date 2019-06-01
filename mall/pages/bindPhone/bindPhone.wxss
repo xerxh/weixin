@@ -1,0 +1,20 @@
+/* pages/bindPhone/bindPhone.wxss */
+.flexBox{
+  padding-top: 200rpx;
+}
+.flex{
+  display: flex;
+  margin-bottom: 50rpx;
+  margin-left: 30rpx;
+}
+input{
+  margin-left: 30rpx;
+  border: 1px solid gainsboro;
+}
+.phoneInput{
+  width: 500rpx;
+}
+.validateInput{
+  width: 275rpx;
+  margin-right: 30rpx;
+}

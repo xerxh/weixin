@@ -1,0 +1,18 @@
+<!--绑定手机号-->
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view slot="centerTitle">绑定手机号</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+<view class='flexBox'>
+  <view class='flex'>
+    <text>手机号</text>
+    <input class='phoneInput' placeholder="请输入您的手机号" auto-focus />
+  </view>
+  <view class='flex'>
+    <text>手机号</text>
+    <input class='validateInput' placeholder="请输入验证码"/>
+    <text>获取验证码</text>
+  </view>
+</view>
