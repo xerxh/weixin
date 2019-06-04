@@ -1,0 +1,47 @@
+<!--课程文稿-->
+<navi_TopView isShow="true" bg="bg">
+    <!-- 导航中间标题 -->
+    <text slot="centerTitle">课程详情</text>
+</navi_TopView>
+
+<view class='contentBox'>
+  <view class='teacherBox'>
+    <image class='topImg' src="../../images/logo.png"></image>
+    <view>中世纪的权利游戏</view>
+
+    <view class='flex between'>
+      <view class='flex'>
+        <image class='teacherImg' src="../../images/logo.png"></image>
+        <view class='flex col'>
+          <text>季老师</text>
+          <text>2019-3-29</text>
+        </view>
+      </view>
+      <text  class="classBtn">进入课程</text>
+    </view>
+
+    <text>
+            现实中，大部分梦想成为Fashion Designer的人，还停留在想要身披光环的原点，却又不知道如何才能进入时尚的圈子，拥有身披光环的实力。
+
+
+
+        停留在想要身披光环的原点，却又不知道如何才能进入时尚的圈子，拥有身披光环的实力。
+
+
+
+        大部分梦想成为Fashion Designer的人，还停留在想要身披光环的原点，却又不知道如何才能进入时尚的圈子，拥有身披光环的实力。
+
+
+
+        如何才能进入时尚的圈子，拥有着身披光环的实力。
+    </text>
+  </view>
+
+  <view class='commentBox'>
+    <view class='flex between'>
+      <text>用户留言</text>
+      <text class='commentBtn' bindtap='jumpComment'>写留言</text>
+    </view>
+    <userComment wx:for="{{4}}" />
+  </view>
+</view>

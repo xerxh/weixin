@@ -1,0 +1,43 @@
+/* pages/classContent/classContent.wxss */
+.contentBox{
+  padding-top: 120rpx;
+}
+.teacherBox{
+  padding: 20px 10px;
+  border-bottom: 1px solid #999999;
+}
+.flex{
+  display: flex;
+}
+.between{
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+.col{
+  flex-direction: column;
+  margin-left: 10px;
+}
+.teacherImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.topImg{
+  height: 150px;
+}
+.classBtn{
+  border:1px solid gray; 
+  border-radius: 10rpx;
+  color: #999999;
+}
+.commentBox{
+  padding: 10px 10px;
+}
+.commentBtn{
+  border: 1px solid gray;
+  padding: 0 10px;
+  border-radius: 10rpx;
+  background: gray;
+  color: #ffff;
+}
