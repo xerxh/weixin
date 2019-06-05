@@ -1,0 +1,15 @@
+<!--pages/classDetail/classInfoBox/classInfoBox.wxml-->
+<view class='classBox'>
+  <!-- 老师简介 -->
+  <view class='teacherBox'>
+    <text class='title'>老师简介</text>
+    <view class="teacher_margin_top" wx:for="{{2}}">
+      <teacher  />    
+    </view>
+  </view>
+  <!-- 课程大纲 -->
+  <view>
+    <view class='title classOutline'>课程大纲</view>
+    <text class='content'>谈及摄协，每个人都有自己的印象，我也一样。真正接触后发现，国内摄协的朋友，很多都是十分优秀的摄影师，各种曝光完美，中景、远景、构图都特别好，图片质量很高，但其中多数作品更多关注点在于呈现，在表达上多少有所欠缺。 而这欠缺的部分是许多国外院校重点培养的部分，也是大家区别于艺术家和摄影师的一个重要内容。借助我的所学和这么长时间的实践体验，去尽力填补国内这部分欠缺，也是我成为老师的理由之一。</text>
+  </view>
+</view>
