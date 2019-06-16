@@ -1,0 +1,97 @@
+/* pages/classLevel/classLevel.wxss */
+.search{
+  /* position: fixed;
+  top: 17px;
+  width: 425rpx;
+  left: 100rpx; */
+  margin: 0 10rpx 30rpx 30rpx;
+}
+.classLevelBox{
+  margin-top: 246rpx;
+  /* border-top: 1px solid rgba(236,236,236,1); */
+  width: 750rpx;
+  display: flex;
+  height: 100%;
+  padding-left: 171rpx; 
+  box-sizing: border-box;
+}
+.boxLeft{
+  width: 171rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid gainsboro;
+}
+.btn {
+  margin-top: 44rpx;
+  font-size:26rpx;
+}
+.btnActive{
+  /* background: gainsboro; */
+  /* border-radius: 10px; */
+  width:150rpx;
+  height:44rpx;
+  text-align: center;
+  line-height:36rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  padding:5rpx 0;
+  background:rgba(255,200,20,1);
+  border-radius:22rpx;
+}
+.boxRight{
+  flex: 1;
+}
+/* 课程内容 */
+.class_box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  /* padding-right:30rpx; */
+}
+.itemBox{
+  width: 40%;
+}
+.fixBox{
+  border-bottom: 1px solid gainsboro;
+  position: fixed;
+  width: 750rpx;
+  height: 40rpx;
+  top: 206rpx;
+  background: white;
+}
+.fixLeft{
+  position: fixed;
+  border-top: 1px solid gainsboro;
+  top: 246rpx;
+  left: 0;
+  bottom: 0;
+  overflow:scroll;
+  box-sizing: border-box;
+}
+
+
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/*  goodsitem 外部样式类 */
+.lessongoodsImg{
+  /* width: 210rpx; */
+  width: 210rpx;
+  height: 210rpx;
+}
+.box_margin{
+  box-sizing: border-box;
+  padding: 50rpx 10px 0 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.class_row_Box{
+  margin-top: 246rpx;
+}

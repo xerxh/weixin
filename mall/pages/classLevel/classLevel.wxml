@@ -1,0 +1,60 @@
+<!--二级课程类页面-->
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view class='search'>
+      <search 
+        bind:search="search" 
+        bind:clear="clear"
+        placeholder="{{pleacholder}}" 
+        isShowBtn="true"/>
+    </view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<!-- 当有类别类型时 -->
+<view class='classLevelBox' wx:if="{{btn.length}}">
+  <view class='fixBox'></view>
+  <view class='boxLeft fixLeft'>
+    <text 
+      class='btn {{isSelectIndex == index && "btnActive" }}' 
+      wx:for="{{btn}}"
+      wx:key="{{index}}"
+      data-index="{{index}}"
+      bindtap='clickBtn'>{{item}}</text>
+    <!-- <text class='btn'>美国</text>
+    <text class='btn'>英国</text>
+    <text class='btn'>其他</text> -->
+  </view>
+  <view class='boxRight'>
+      <!-- <view class="class_box">
+        <view class='itemBox' wx:for="{{5}}" wx:key="{{index}}">
+          <class_item_col  />
+          <class_item  />
+        </view>
+      </view> -->
+    <!-- </good_item_listBox> -->
+    <block wx:for="{{6}}">
+      <view class="box_margin" wx:for="{{hotList}}" wx:key='key'>
+        <goods_item external-width='actualWidth' 
+          lessongoods-img="lessongoodsImg" 
+          class="hotListItem"
+          imagePath="{{item.picurl}}" 
+          artcleTiltle="{{item.curriculumName}}" 
+          title="{{item.intro}}"
+          price="{{item.discountPrice}}" 
+          goodsId="{{item.curriculumId}}" 
+          bind:goDetail="goDetail">
+        </goods_item>
+      </view>
+    </block>
+
+  </view>
+</view>
+
+<!-- 当没有类别类型时 -->
+<view class='class_row_Box' wx:if="{{!btn.length}}">
+  <class_row  />
+</view>
+
+

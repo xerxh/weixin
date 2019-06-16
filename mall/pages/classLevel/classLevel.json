@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navi_TopView": "../../components/navitopview/navitopview",
+    "search": "../../components/search/index",
+    "goods_item": "../../components/goodsitem/goodsitem",
+    "good_item_listBox": "../../components/goodlistBox/goodlistbox",
+    "class_row": "./class_row/class_row"
+  }
+}
