@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "my_dialog": "../../components/dialog/dialog",
+        "goods_item": "../../components/goodsitem/goodsitem",
+        "navi_TopView": "../../components/navitopview/navitopview",
+        "search": "../../components/search/index",
+        "good_item_listBox": "../../components/goodlistBox/goodlistbox",
+        "courseList": "./courseList/courseList"
+    },
+    "enablePullDownRefresh": false
+}

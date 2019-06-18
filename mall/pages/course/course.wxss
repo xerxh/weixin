@@ -1,0 +1,11 @@
+/* pages/lesson/index.wxss */
+.classListBox{
+  /* margin-top: 240rpx; */
+  margin-top: 160rpx;
+}
+.clearPosition{
+  right: 135rpx;
+}
+.searchBox{
+  margin-left: 30rpx;
+}

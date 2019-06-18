@@ -1,0 +1,20 @@
+<!--pages/lesson/index.wxml-->
+<navi_TopView isShow="true">
+    <!-- 导航中间标题 -->
+    <text slot="centerTitle">{{headerTitle}}</text>
+    <!-- 搜索 -->
+    <view class='searchBox' wx:if="{{false}}">
+      <search clear-position="clearPosition" 
+        bind:search="search" 
+        bind:clear="clear"
+        placeholder="{{pleacholders}}" isShowBtn="true"/>
+    </view>
+</navi_TopView>
+<!-- 列表 -->
+<view class='classListBox' wx:if="{{canSend}}">
+  <courseList 
+    categoryid="{{categoryId}}"
+    url="{{url}}"
+    search="{{search}}"
+    more="{{more}}"></courseList>
+</view>
