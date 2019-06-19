@@ -1,0 +1,64 @@
+/* pages/distribution/distribution.wxss */
+.distributionBox{
+  padding: 200rpx 30rpx 30rpx 30rpx;
+}
+.flex{
+  display: flex;
+}
+.center{
+  align-items: center;
+}
+.userImg{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.between{
+  justify-content: space-between;
+}
+.margin_top{
+  margin-top: 30rpx;
+}
+.avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.switchBox{
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+.switchBox > text:nth-child(2){
+  margin-left: 40rpx;
+}
+.active{
+  /* margin-right: 30rpx; */
+  font-weight: bold;
+}
+.fixBox{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 750rpx;
+  height: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  width: 80%;
+  background: gainsboro;
+  border-radius: 30rpx;
+  text-align: center;
+  padding: 5px 0;
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

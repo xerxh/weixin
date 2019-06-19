@@ -1,0 +1,38 @@
+<!--分销页面-->
+<navi_TopView>
+    <!-- 导航标签 -->
+    <view slot="centerTitle">分销页面</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class='distributionBox'>
+  <view class='flex center'>
+    <image class='userImg' src="../../images/logo.png"></image>
+    <text>用户名</text>
+  </view>
+  <view class='switchBox'>
+    <text 
+      class='{{nowIndex == index && "active"}}' 
+      data-index="{{index}}" 
+      wx:for="{{switchBtnList}}"
+      wx:key="{{index}}"
+      bindtap='btnClick'>{{item}}</text>
+  </view>
+  <!-- 列表滚动 -->
+  <view>
+    <scroll-view  scroll-y  style="height: 50%;" scroll-with-animation="true">
+      <view class='flex center between margin_top' wx:for="{{10}}">
+        <view class='flex center'>
+          <image class='avatar' src="../../images/logo.png"></image>
+          <text>用户名</text>
+        </view>
+        <text>+ 399元</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='fixBox'>
+    <text class='btn'>邀请传播者</text>
+  </view>
+</view>
