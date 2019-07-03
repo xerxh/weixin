@@ -1,0 +1,23 @@
+<!--申请进度-->
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view slot="centerTitle">审核进度</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class='examinationBox'>
+  <view class='tipBox'>
+    <text>信息已提交！</text>
+    <text>正在审核中~</text>
+    <text class='btn' bindtap='switchShow'>查看审核进度</text>
+  </view>
+
+  <!-- <view class='progressBox' wx:if="{{!isShow}}">
+    <text>提交信息</text>
+    <text class='line'></text>
+    <text>审核中</text>
+    <text class='line'></text>
+    <text>审核完成</text>
+  </view> -->
+</view>
