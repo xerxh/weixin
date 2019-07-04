@@ -1,0 +1,21 @@
+/* pages/feedBack/feedBack.wxss */
+.feedBackBox{
+  margin-top: 200rpx;
+  padding: 0 10px;
+}
+.input{
+  border: 1px solid gray;
+  margin: 10px 0 20px 0;
+}
+.contentBox{
+  border: 1px solid gray;
+  height: 150rpx;
+  margin: 10px 0 20px 0;
+}
+.btnBox{
+  text-align: right;
+}
+.btn{
+  border: 1px solid gray;
+  padding: 10rpx 20rpx;
+}

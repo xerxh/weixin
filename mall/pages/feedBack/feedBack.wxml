@@ -1,0 +1,19 @@
+<!--意见反馈-->
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view slot="centerTitle">意见反馈</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class='feedBackBox'>
+   <view>联系方式</view>
+   <input class='input' placeholder='联系方式'></input>
+
+   <view>反馈内容</view>
+   <textarea class='contentBox'></textarea>
+
+   <view class='btnBox'>
+      <text  class='btn'>提交</text>
+   </view>
+</view>
