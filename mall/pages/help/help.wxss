@@ -1,0 +1,10 @@
+/* pages/help/help.wxss */
+.settingBox{
+  padding-top: 200rpx;
+  padding-left: 100rpx;
+  display: flex;
+  flex-direction: column;
+}
+.settingBox > text{
+  margin-bottom: 30rpx;
+}

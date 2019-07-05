@@ -1,0 +1,14 @@
+<!--pages/help/help.wxml-->
+<!--设置页面-->
+<navi_TopView>
+    <!-- 导航标签 -->
+    <view slot="centerTitle">帮助中心</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+<view class='settingBox'>
+  <text bindtap='jumpBindPhone'>常见问题</text>
+  <text>热门分类</text>
+  <text bindtap='jumpFeedback'>意见反馈</text>
+</view>
+
