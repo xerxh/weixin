@@ -1,0 +1,85 @@
+<!--index.wxml-->
+
+<navi_TopView>
+    <!-- 导航标签 -->
+    <view slot="centerTitle">康石石</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class="indexBox">
+
+  <!-- 搜索框 -->
+  <view 
+    class="searchBoxShadow" 
+    hidden='{{networkType == "none"}}'>
+    <view  class='flex'>
+      <view class='searchInput'>
+        <search bind:jump="jump" placeholder="{{pleacholder}}" isDisable="true" />
+      </view>
+      <image 
+      class='email' 
+      src="../../images/index/email.svg"
+      bindtap='jumpInfo'></image>
+    </view>
+  </view>
+
+  <!-- 轮播图 -->
+  <carrousel 
+    imgUrls="{{bannerList}}"
+    autoplay="{{true}}"/>
+
+  <!-- 课程类型导航栏 -->
+  <view  class="typeBox">
+    <custom_box 
+      list="{{classTypeList}}"  
+      my-image-class="imageClass" 
+      my-text-class="textClass" 
+      style="width:100%" 
+      bind:itemSkip="itemSkip" />
+  </view>
+ <div class="lineDiv"></div>
+
+  <!-- 最新上线 -->
+  <view  wx:if="{{recently}}">
+    <good_item_listBox paramsObj="{{recentlyParamsObj}}">
+      <view class="class_box">
+        <class_item classContent="item"  wx:for="{{4}}" wx:key='key' />
+      </view>
+    </good_item_listBox>
+  </view>  
+
+  <!-- 热门推荐 -->
+  <view  wx:if="{{hotList}}">
+    <good_item_listBox paramsObj="{{hotParamsObj}}">
+      <!-- <view class="box_margin" wx:for="{{hotList}}" wx:key='key'>
+        <goods_item external-width='actualWidth' 
+          lessongoods-img="lessongoodsImg" 
+          class="hotListItem"
+          imagePath="{{item.picurl}}" 
+          artcleTiltle="{{item.curriculumName}}" 
+          title="{{item.intro}}"
+          price="{{item.discountPrice}}" 
+          goodsId="{{item.curriculumId}}" 
+          bind:goDetail="goDetail">
+          <text class="slotText" slot="tourDiyCount">{{item.virtualPurchases}}人购买</text>
+        </goods_item>
+      </view> -->
+      <view class="class_box">
+        <class_item classContent="item"  wx:for="{{4}}" wx:key='key' />
+      </view>
+    </good_item_listBox> 
+  </view> 
+  <div class="lineDiv"></div>
+
+  <!-- 汉艺推荐 -->
+  <view  wx:if="{{recommendList}}">
+    <good_item_listBox paramsObj="{{recommenedParamsObj}}">
+        <view class="class_box">
+          <class_item classContent="item"  wx:for="{{4}}" wx:key='key' />
+        </view>
+    </good_item_listBox>
+  </view>
+      
+
+</view>

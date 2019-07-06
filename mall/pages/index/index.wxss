@@ -1,0 +1,109 @@
+/**index.wxss**/
+.indexBox{
+  padding-top: 205rpx;
+  width: 750rpx;
+}
+.topImg{
+  width: 140rpx;
+  height: 50rpx;
+
+}
+.pageTitle{
+  position: absolute;
+  left: 30rpx;
+  top: 82rpx;
+  /* padding-left: 20rpx; */
+  font-size: 20px;
+}
+.searchBoxShadow{
+  position: fixed;
+  top: 135rpx;
+  width: 750rpx;
+  padding: 0 30rpx 0 0;
+  box-sizing: border-box;
+  background: white;
+}
+.goodsList{
+ box-shadow:0px 10px 0px 0px #abcdef inset;
+ padding-top: 10px; 
+}
+.slotText{
+  font-size:20rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.actualWidth{
+  /* width: 250rpx;  */
+  display: flex;
+  margin-right: 30rpx;
+  border: 1px solid gainsboro;
+  padding: 20rpx 21rpx 20rpx 30rpx;
+}
+goods_item > view > view > view {
+  /* height: 100%; */
+  /* background: red; */
+  margin-left: 31rpx !important;
+}
+/* 外部样式类 */
+.my_style{
+  width: 280rpx;
+  margin-bottom: 22rpx;
+}
+.lessongoodsImg{
+  width: 150rpx;
+  height: 200rpx;
+}
+
+/* 搜索框  消息通知*/
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchInput{
+  width: 80%;
+  margin-left: 30rpx;
+}
+.email{
+  /* margin-right: 30rpx; */
+  width: 25px;
+  height: 30px;
+  margin-left: 28rpx;
+}
+/* 轮播图 */
+.swiperView{
+  /* width: 690rpx;
+  height: 300rpx; */
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 30rpx;
+  overflow: hidden;
+  transition: all 0.2 ease-in 0s;
+}
+/* 课程类型导航栏 */
+.typeBox{
+  width: 750rpx;
+  /* padding:63rpx 69rpx 49rpx 72rpx; */
+  padding: 63rpx 0 49rpx 0;
+}
+.imageClass{
+  width: 60rpx;
+  height: 53rpx; 
+  /* border-radius: 50%; */
+  /* background-color: #EBEFFF; */
+}
+.textClass{
+  font-size: 26rpx;
+  margin-top: 29rpx;
+}
+/* 课程内容 */
+.class_box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right:30rpx;
+}

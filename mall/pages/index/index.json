@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "my_dialog": "../../components/dialog/dialog",
+    "navi_TopView": "../../components/navitopview/navitopview",
+    "search": "../../components/search/index",
+    "custom_box": "../../components/custombox/index",
+    "class_item": "../../components/classItem/classItem",
+    "carrousel": "/components/carrousel/index",
+    "good_item_listBox": "../../components/goodlistBox/goodlistbox"
+  },
+  "enablePullDownRefresh": false
+}
