@@ -1,0 +1,29 @@
+<!--信息页面-->
+
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view slot="centerTitle">消息</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class="box">
+  <view  class='infoBox' wx:for="{{info}}">
+    <view class='imgBox'>
+      <image class='avatarImg defaultClass' src="../../images/logo.png" />
+    </view>
+    <view class='contentBox isSelectActive'>
+      <view class='flexBox'>
+        <view class="emailTitle">
+          <text>标题</text>
+        </view>
+        <view class='title'>
+          05/08 14:00
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    {{info[0].content}}
+  </view>
+</view>
