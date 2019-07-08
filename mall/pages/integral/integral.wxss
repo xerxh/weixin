@@ -1,0 +1,84 @@
+/* pages/integral/integral.wxss */
+.integralBox{
+  padding-top: 130rpx;
+}
+.iconImg{
+  width: 30px;
+  height: 30px;
+}
+.flex{
+  display: flex;
+}
+.align_center{
+  align-items: center;
+}
+.box{
+  flex: 1;
+  margin-left: 20rpx;
+}
+.topBox{
+  padding: 50rpx 30rpx 70rpx 30rpx;
+  border-bottom: 1px solid gainsboro;
+  margin-bottom: 30rpx;
+  background: rgba(255,211,67,1);
+}
+.topBg{
+  background: rgba(255,211,67,1) !important;
+}
+.between{
+  justify-content: space-between;
+}
+.title{
+  margin-bottom: 20rpx;
+}
+.col{
+  flex-direction: column;
+}
+.taskBox{
+  /* height: 60px; */
+  padding: 20rpx 30rpx;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+}
+.btn{
+  border: 1px solid gray;
+  border-radius: 20rpx;
+}
+.tip{
+  /* color: gainsboro; */
+  padding: 20rpx 30rpx;
+}
+.taskImg{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 27rpx;
+}
+.line{
+  height: 1px;
+  width: 50px;
+  background: gainsboro;
+}
+.bg{
+  background: gray;
+  font-size: 15px;
+  padding: 10rpx 5rpx;
+}
+
+.IntegralInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.IntergralSum{
+  font-size:70rpx;
+  font-family:SF Pro Text;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}
+.intergralTip{
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+}

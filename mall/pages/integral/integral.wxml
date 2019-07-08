@@ -1,0 +1,35 @@
+<!--积分任务-->
+<navi_TopView isShow="true" bg="topBg">
+    <!-- 导航标签 -->
+    <view slot="centerTitle" class='intergralTip'>积分</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class='integralBox'>
+ <!-- 积分信息 -->
+  <view class='flex align_center topBox'>
+    <view class='IntegralInfo'>
+      <text class='IntergralSum'>1635</text>
+      <text class='intergralTip'>可用积分</text>
+    </view>
+  </view>
+ <!-- 积分任务 -->
+  <view class='flex col'>
+    <!-- 积分提示 -->
+    <!-- <view class='flex'> -->
+      <text class='tip'>做任务赚积分</text>
+    <!-- </view> -->
+    <!-- 积分任务项 -->
+    <view class='flex between align_center taskBox' wx:for="{{taskArray}}">
+      <view class='flex align_center'>
+        <image class='taskImg' src="{{item.src}}"></image>
+        <view class='flex col'>
+          <text class='title'>听课时长</text>
+          <text>充值 +5积分</text>
+        </view>
+      </view>
+      <text class='btn'>去听课</text>
+    </view>
+  </view>
+</view>
