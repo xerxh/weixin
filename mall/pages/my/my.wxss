@@ -1,0 +1,168 @@
+/* pages/my/my.wxss */
+.userBox{
+  height: 100%;
+  padding-top: 120rpx;
+}
+.userImg{
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 59rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userName{
+  font-size:17px;
+  font-family:PingFang SC;
+  font-weight:bold;
+  line-height:28px;
+  margin: 19rpx 0;
+  color:rgba(51,51,51,1);
+}
+.btnImg{
+  width: 38rpx;
+  height: 36rpx;
+  margin-right: 22rpx;
+}
+.btnName{
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(0,0,0,1);
+}
+.vipLevelBox{
+  display: flex;
+  align-items: center;
+}
+.vipIcon{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right:20rpx;
+}
+.sum{
+  font-size:40rpx;
+  font-family:San Francisco Text;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.sumTitle{
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.vipName{
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+}
+.flex{
+  display: flex;
+}
+.col{
+  flex-direction: column;
+  align-items: center;
+}
+.between{
+  justify-content: space-around;
+}
+.iconImg{
+  width: 20px;
+  height: 20px;
+}
+.signBtn{
+  position: absolute;
+  left: 250px;
+  top: 90px;
+  font-size:13px;
+  font-family:PingFang SC;
+  font-weight:400;
+  background:rgba(255,0,0,1);
+  color:rgba(255,255,255,1);
+  padding: 5rpx 40rpx;
+  border-radius: 25rpx;
+}
+.setBtn{
+  position: absolute;
+  right: 285px;
+  top: 65rpx;
+  width: 42rpx;
+  height: 42rpx;
+}
+.tipBox{
+  margin:30rpx 30rpx 54rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 35rpx 24rpx 30rpx;
+  box-sizing: border-box;
+  color: #666666;
+  border-radius: 10rpx 10rpx 0 0;
+  background: -webkit-linear-gradient(left, #FFC814 , #FFF09A); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right,#FFC814 , #FFF09A); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #FFC814 , #FFF09A); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right,#FFC814 , #FFF09A); /* 标准的语法 */
+}
+.btnBox{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.vipTipTitle{
+  font-size:35rpx;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+}
+.vipSumTitle{
+  font-size:26rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  margin-left: 20rpx;
+}
+.flex_between{
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom:15px;
+
+}
+.number{
+  margin-right: 20px;
+  color: gainsboro;
+}
+.classBox{
+  padding: 0 10px 10px 10px;
+  font-size:35rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+
+.classImg{
+  /* height: 100px;
+  width: 100px; */
+  height: 180rpx;
+  width: 270rpx;
+  border-radius: 20rpx;
+}
+.classTitle{
+  display: block;
+  font-size:35rpx;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.scoll_box{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  display: inline-block;
+  height: 180rpx;
+  width: 270rpx;
+  margin: 10px 30rpx 10px 0;
+}
+.arrowImg{
+  width:20rpx;
+  height:25rpx;
+}

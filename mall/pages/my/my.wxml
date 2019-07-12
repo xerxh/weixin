@@ -1,0 +1,87 @@
+<!--我的页面-->
+<navi_TopView>
+    <!-- 导航标签 -->
+    <view slot="centerTitle">我的页面</view>
+    <image src="../../images/my/seting.svg" class='setBtn' bindtap='jumpSetting'></image>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+
+
+<view class='userBox'>
+ <!-- 用户基本信息 -->
+  <view class='flex col'>
+    <view  class="userImg">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <text class='userName'>章鱼小丸子</text>
+    <view class='vipLevelBox'>
+      <image class='vipIcon' src="../../images/my/goldVip.svg"></image>
+      <text class='vipName'>白银VIP</text>    
+    </view>
+    <text class='signBtn'>签到</text>
+    <!-- <image class='setBtn' bindtap='jumpSetting'>设置</image> -->
+  </view>
+  <view class='flex between'>
+    <view class='flex col' bindtap='jumpDistribution'>
+     <!-- <image class='iconImg' src="../../images/logo.png"></image> -->
+     <text class='sum'>1200</text>
+     <text class='sumTitle'>知识传播者</text>
+    </view>
+    <view class='flex col' bindtap='jumpIntegral'>
+     <text class='sum'>1200</text>
+     <text class='sumTitle'>积分</text>
+    </view>
+  </view>
+  <view class='flex tipBox' bindtap='jumpPayMember'>
+    <view>
+      <text class='vipTipTitle'>开通黄金VIP</text>
+      <text class='vipSumTitle'>享豪华特权</text>
+    </view>
+    <text>></text>
+  </view>
+  <!-- 页面按钮 -->
+  <view class='btnBox'>
+    <view class="flex flex_between" wx:for="{{3}}">
+      <view>
+        <image 
+          class='btnImg'
+        src="../../images/my/collection.png"></image>
+        <text class='btnName'>我的收藏</text>
+      </view>
+      <view>
+       <!-- <text class='number'>15</text> -->
+        <image class='arrowImg' src="../../images/my/arrow.png"></image> 
+      </view>
+    </view>
+    <view class="flex flex_between" bindtap='jumpHelp'>
+      <view>
+       <image 
+          class='btnImg'
+        src="../../images/my/collection.png"></image>
+        <text class='btnName'>帮助中心</text>
+      </view>
+      <view>
+       <!-- <text class='number'>15</text> -->
+      <image class='arrowImg' src="../../images/my/arrow.png"></image> 
+      </view>
+    </view>
+  </view>
+
+  <!-- 已购买课程 -->
+  <view class='classBox'>
+    <view>购买课程(12)</view>
+    <view class='scoll_box'>
+      <scroll-view
+        scroll-x
+        style="width: 100%;"
+      >
+        <view class="scroll-view-item" wx:for="{{4}}" bindtap='jumpDetail'>
+          <image class='classImg' src="../../images/logo.png" ></image>
+          <text class='classTitle'>Rhino软件核心技法啦啦啦啦</text>
+        </view>
+      </scroll-view>
+    </view> 
+  </view>  
+</view>

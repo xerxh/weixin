@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navi_TopView": "../../components/navitopview/navitopview",
+    "image-button": "../../components/image-button/index"
+  }
+}
