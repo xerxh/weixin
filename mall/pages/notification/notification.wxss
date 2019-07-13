@@ -1,0 +1,120 @@
+/* pages/notification/notification.wxss */
+.notificationBox{
+  height: 100%;
+  padding: 200rpx 0 0 0;
+  box-sizing: border-box;
+}
+.infoBox{
+  display: flex;
+  /* justify-content: space-around; */
+  padding: 25rpx 0 0 0;
+  /* border-bottom: 1px solid gainsboro; */
+  border-bottom:1px solid rgba(236,236,236,1);
+  /* margin-bottom: 15px; */
+  position: relative;
+  left: 0px;
+  box-sizing: border-box;
+  width: 750rpx;
+  /* width: 850rpx; */
+}
+.imgBox{
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+.selectImg{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 30rpx 0 24rpx;
+}
+.isSelectActive{
+  width: 570rpx;
+}
+.delImg{
+  width: 40rpx;
+  height: 42rpx;
+}
+.cricle{
+  width:5px;
+  height:5px;
+  border-radius: 50%;
+  background:rgba(255,0,0,1);
+  margin-right: 13rpx;
+}
+.defaultClass{
+  margin-left: 40rpx;
+}
+.avatarImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.emailTitle{
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(0,0,0,1);
+  display: flex;
+  align-items: center;  
+}
+.flexBox{
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 30px 10px 10px; */
+}
+.title{
+  font-size: 12px;
+  font-family:San Francisco Text;
+  font-weight:400;
+  color:rgba(204,204,204,1);
+}
+.contentBox{
+  /* padding-left: 30rpx; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0 30rpx 17rpx 16rpx; 
+  box-sizing: border-box;
+}
+
+.delBtn{
+  width: 210rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,0,0,1);
+}
+.content{
+  margin-bottom: 17rpx;
+  margin-top: 13rpx;
+  /* padding-left: 13rpx; */
+  font-size:14px;
+  font-family:PingFang SC;
+  font-weight:400;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  flex: 1;
+  /* width: 580rpx; */
+  color:rgba(153,153,153,1);
+}
+.allDelBtn{
+  border: 1px solid gray;
+  width:200rpx;
+  height:60rpx;
+  text-align: center;
+  background:rgba(255,200,20,1);
+  border-radius:6px;
+}
+.bottomBox{
+  display: flex;
+  position: fixed;
+  width: 750rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}

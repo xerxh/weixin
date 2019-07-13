@@ -1,0 +1,57 @@
+<!--消息通知页面-->
+<text>消息通知页面</text>
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view slot="centerTitle">消息通知</view>
+</navi_TopView>
+
+<view class='notificationBox'>
+  <view  class='infoBox' wx:for="{{items}}" data-index="{{index}}" 
+    bindlongpress="touchLong" 
+    bindtouchstart="touchstart" 
+    bindtouchmove="touchmove">
+    <view class='imgBox' wx:if="{{!item.isTouchMove}}">
+      <image 
+      class='selectImg'
+      wx:if="{{isShowSelect}}"
+      src="{{!item.isSelected ? '../../images/index/no-select.svg' :'../../images/index/selected.svg'}}" 
+      data-index="{{index}}"
+      data-id="{{item.id}}"
+      catchtap="selectSwitch"></image>
+      <image class='avatarImg {{!isShowSelect ? "defaultClass" : " "}}' src="../../images/logo.png"  wx:if="{{!item.isTouchMove}}" />
+    </view>
+    <view class='contentBox {{!item.isTouchMove || "isSelectActive"}}'>
+      <view class='flexBox'>
+        <view class="emailTitle">
+          <view class='cricle' wx:if="{{item.isSee}}"></view>
+          <text>标题</text>
+        </view>
+        <view class='title'>
+          05/08 14:00
+        </view>
+      </view>
+      <view class='content'>
+        {{item.content}}
+      </view>
+    </view>
+    <view class='delBtn' 
+      wx:if="{{item.isTouchMove}}" 
+      data-index="{{index}}"
+      data-id="{{item.id}}"
+      bindtap='delInfo'>
+      <image class='delImg' src="../../images/index/delBtn.svg"></image>
+    </view>
+  </view>
+</view>
+
+<view class='bottomBox'>
+  <view >
+    <image 
+      class='selectImg'
+      hidden="{{!isShowSelect}}"
+      src="{{!allSelect ? '../../images/index/no-select.svg' :'../../images/index/selected.svg'}}" 
+      catchtap="allSelect"></image>
+    <text hidden="{{!isShowSelect}}">全选</text>
+  </view>
+  <text class='allDelBtn' bindtap='allDel'>{{isShowSelect ? btnName[0] : btnName[1]}}</text>
+</view>
