@@ -1,0 +1,74 @@
+<!--会员购买界面-->
+<navi_TopView isShow="true">
+    <!-- 导航标签 -->
+    <view slot="centerTitle">我的会员</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+
+<view class='payMemberBox'>
+  <!-- 会员卡牌 -->
+    <!-- 轮播图 -->
+  <swiper 
+    wx:if="{{!isShowPlay}}"
+    next-margin="10px"
+    previous-margin="20px"
+    indicator-dots>
+    <swiper-item wx:for="{{2}}">
+      <view class="item">
+        <view class='flex col memberCard' wx:if="{{!isShowPlay}}">
+          <view class='flex'>
+          <image src="../../images/logo.png" class="memberImg" />
+          <view class='flex col'>
+            <text class='font_bold'>白银vip</text>
+            <text class='vipTip'>白银VIP专属权益</text>
+          </view>
+          </view>
+          <view class='memberDate'>2020-10-5 到期</view>
+        </view>
+      </view>
+    </swiper-item> 
+  </swiper>  
+
+  <!-- 会员购买切换 -->
+  <view wx:if="{{isShowPlay}}" class='memberSwitchBox'>
+    <view class='flex'>
+      <image src="../../images/logo.png" class="memberImg" />
+      <view class='flex col'>
+        <text class='font_bold'>用户名</text>
+        <text>当前未开通VIP</text>
+      </view>
+    </view>
+    <view class='switchBox'>
+       <view class='switchBtn'>
+         <!-- <text class='activeBtn'>白金VIP</text>
+         <text>黄金VIP</text> -->
+         <text 
+          class='{{nowIndex == index && "activeBtn"}}' 
+          data-index="{{index}}"
+          bindtap='switchBtnClick'
+          wx:for="{{vipBtnList}}">{{item}}</text>
+       </view>
+    </view>
+  </view>
+  <!-- 会员专属权益 -->
+   <view class='equityBox'>
+     <text class='font_bold left_line'>专属权益</text>
+     <view class='flex flex_wrap between'>
+       <!-- <view class="equityBtn" wx:for="{{4}}">购物优惠</view> -->
+       <view wx:for="{{qL}}" class='equityItem'>
+         <image class='equityIcon' src="{{item.src}}"></image>
+         <text class='itemName'>{{item.name}}</text>
+       </view>
+     </view>
+   </view>
+
+  <view class='equityBox couponBox'>
+    <text class='font_bold left_line' hidden='true'>专属权益</text>
+
+  </view>
+
+  <view class='btn font_bold' bindtap='switchStatus'>
+    {{!isShowPlay ? '立即开通' : '购买会员'}}
+  </view>
+</view>
