@@ -1,0 +1,100 @@
+/* pages/playPage/playPage.wxss */
+.playBox{
+  margin-top: 100px;
+  height: 100%;
+}
+.padding_box{
+  padding: 0 10px;
+  border-bottom: 1px solid rgba(236,236,236,1);
+  padding-bottom: 15px;
+}
+.flex{
+  display: flex;
+}
+.between{
+  justify-content: space-between;
+  flex: 1;
+}
+.col{
+  flex-direction: column;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  margin-left: 40rpx;
+}
+.classImg{
+  width: 160rpx;
+  height: 200rpx;
+}
+.iconImg{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+.className{
+  font-size:16px;
+  font-family:PingFang SC;
+  font-weight:400;
+}
+.title{
+  padding: 20px 0;
+  font-weight:bold;
+  font-size:16px;
+}
+.centerTxt{
+  align-items: center;
+}
+.payInfo{
+  border-radius: 10rpx;
+  color:rgba(102,102,102,1);
+  font-size: 13px;
+  margin-top: 10px;
+}
+.money{
+  font-size:18px;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(255,205,43,1);
+}
+.payTip{
+  padding: 10px 10px;
+}
+.btn{
+  /* margin-top: 28%;
+  width: 90%; */
+  width:240rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  background:rgba(255,200,20,1);
+  opacity:0.9;
+  font-weight:bold;
+  border-radius:6rpx;
+  text-align: center;
+  display: inline-block;
+}
+.flex_between{
+  justify-content: space-between;
+  padding:10px 10px;
+  margin-top: 220rpx;
+}
+.tipBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30%;
+  height: 100%
+}
+.tipBtn{
+  border: 1px solid gray;
+  padding: 10rpx 20rpx;
+  text-align: center;
+}
+.btnBox{
+  display: flex;
+  margin-top: 100rpx;
+}
+.btnBox :first-child{
+  margin-right: 20px;
+}
+.btnBox :last-child{
+  margin-left: 20px;
+}

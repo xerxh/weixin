@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navi_TopView": "../../components/navitopview/navitopview",
+    "dialog": "../../components/dialog/dialog"
+  }
+}

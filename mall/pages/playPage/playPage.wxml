@@ -1,0 +1,55 @@
+<!--购买课程界面-->
+<navi_TopView isShow="true" bg="bg">
+    <!-- 导航中间标题 -->
+    <text slot="centerTitle">购买课程</text>
+</navi_TopView>
+
+<view class='playBox'>
+  <!-- 购买前 -->
+  <view wx:if="{{!isShow}}">
+    <view class='flex padding_box'>
+      <image class="classImg" src="../../images/logo.png"></image>
+      <view class='flex col'>
+        <text class='className'>考研道路上的对与错</text>
+        <!-- <text>有效期至：2020.04.01</text> -->
+        <text>￥199</text>
+      </view>
+    </view>
+    <view class='padding_box'>
+      <view class='title'>支付方式</view>
+      <view class='flex'>
+        <image class="iconImg" src="../../images/logo.png"></image>
+        <view class='flex between'>
+          <!-- <text>积分兑换  -1200</text> -->
+          <text>微信支付</text>
+          <radio value="" checked="true" />
+        </view>
+      </view>
+    </view>
+
+    <view class='payTip'>
+      <view>购买须知</view>
+      <view class='payInfo'>
+        *你将购买的商品位虚拟内容服务，购买后不支持退订、转让、退换，请斟酌确认。 
+      </view>
+      <view class='payInfo'>
+        *购买后可在已购查看和使用。
+      </view>
+    </view>
+    <view class='flex flex_between'>
+      <view class='flex centerTxt'>
+        <text>支付：</text>
+        <text class='money'> ￥ 2999</text>   
+      </view>
+      <text class='btn' bindtap='switchStatus'>付款</text>      
+    </view>
+  </view>
+  <!-- 购买后提示 -->
+  <view wx:if="{{isShow}}" class='tipBox'>
+      <view>恭喜您支付成功</view>
+      <view class='btnBox'>
+        <view class='tipBtn' bindtap='jumpIndex'>查看订单</view>
+        <view class='tipBtn' bindtap='jumpIndex'>返回首页</view>
+      </view>
+  </view>
+</view>
