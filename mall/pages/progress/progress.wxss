@@ -1,0 +1,16 @@
+/* pages/progress/progress.wxss *//* pages/examination/examination.wxss */
+.examinationBox{
+  margin-top: 200rpx;
+  height: 100%;
+}
+.progressBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+}
+.line{
+  height: 1px;
+  width: 50px;
+  background: gainsboro;
+}
