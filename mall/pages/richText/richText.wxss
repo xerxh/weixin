@@ -1,0 +1,5 @@
+/* pages/richText/richText.wxss */
+.textBox{
+  margin-top: 200rpx;
+  padding: 0 10px;
+}
