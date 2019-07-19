@@ -1,0 +1,42 @@
+<!--pages/searchPage/index.wxml-->
+<import src="../../templete/list-item/list-item-template.wxml" />
+
+<topNavigation isShow="true">
+
+    <image slot="centerTitle" class='topImg' src="../../images/top.png"></image>
+    <view class='searchBox'>
+        <search clear-position="clearPosition" 
+        bind:search="search" inputVal="{{inputValue}}"
+        placeholder="{{pleacholders}}" isShowBtn="true" bind:clear ="clear"/>
+    </view>
+</topNavigation>
+<view class="listBox">
+    <view class="hotListDataBox" wx:if="{{isShowHot}}">
+      <view class="hotTitle">热门搜索</view>
+      <block wx:for="{{hotListData}}">
+        <view class="hotItem"  bindtap="searchItem">{{item}}</view>
+      </block>
+    </view>
+    <view class="hotListDataBox" wx:if="{{isShowHot}}">
+      <view class="hotTitle">历史搜索</view>
+      <block wx:for="{{hotListData}}">
+        <view class='oldSearchBox' wx:if="{{index < 4}}">
+          <view class='oldSearch'>
+            <image class='iconImg' src="../../images/search/icon.svg"></image>
+            <text bindtap="searchItem">{{item}}</text> 
+          </view>
+          <image class="delBtn" src="../../images/search/del.svg"></image>       
+        </view>
+      </block>
+      <view class='clearBtn'>清除搜索历史</view>
+    </view>
+    <view hidden="{{!isShowCourse}}">
+      <searchList more="{{more}}" search="{{searchStr}}"></searchList>
+    </view>
+</view>
+
+
+
+
+
+
