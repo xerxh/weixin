@@ -1,0 +1,12 @@
+<!--设置页面-->
+<navi_TopView>
+    <!-- 导航标签 -->
+    <view slot="centerTitle">我的页面</view>
+    <!-- <image slot="centerTitle" class="topImg" src="../../images/top.png" /> -->
+    <!-- 搜索组件 -->
+</navi_TopView>
+<view class='settingBox'>
+  <text bindtap='jumpBindPhone'>帐号 / 绑定设置</text>
+  <text>推送消息</text>
+  <text bindtap='jumpRichText'>关于我们</text>
+</view>
