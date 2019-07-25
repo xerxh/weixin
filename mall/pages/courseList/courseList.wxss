@@ -1,0 +1,20 @@
+/* pages/lesson/index.wxss */
+.container{
+    margin-top: 250rpx;
+  }
+
+  /* 课程内容 */
+.class_box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right:30rpx;
+  padding-left: 30rpx;
+}
+.ending{
+  text-align: center;
+  /* font-size:26px; */
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}

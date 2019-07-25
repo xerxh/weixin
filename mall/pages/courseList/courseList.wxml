@@ -1,0 +1,7 @@
+<view>
+    <view class='class_box'>
+      <class_item classContent="item"  wx:for="{{4}}" wx:key='key' />    
+    </view>
+    <noSearch top-size="topSize" isHidden="{{!empty}}"></noSearch>
+    <view isHidden="{{ending}}" class='ending'>没有更多了~</view>
+</view>
