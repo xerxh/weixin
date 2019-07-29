@@ -1,0 +1,41 @@
+/* pages/writeComment/writeComment.wxss */
+.commentBox{
+    padding: 152rpx 20rpx 0 20rpx;
+    height: 1100rpx; 
+    background-color: #ffffff;
+}
+.commentBox textarea{
+    width: 702rpx;
+    height: 280rpx;
+    font-size: 28rpx;
+    border: 1px solid gray;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.btn{
+   border: 1px solid gray;
+   border-radius: 10rpx;
+   padding: 0 10px;
+}
+.typeBtn{
+  background: gray;
+  border-radius: 15rpx;
+  padding: 0 15rpx;
+}
+.tip{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tip > text{
+  margin-bottom: 10px;
+}
+
+.bg{
+  background: gainsboro;
+}

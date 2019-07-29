@@ -1,0 +1,24 @@
+<!--评论留言-->
+<navi_TopView isShow="true" bg="bg">
+  <!-- 导航中间标题 -->
+  <text slot="centerTitle">写留言</text>
+</navi_TopView>
+
+<view class='commentBox'>
+    <!-- <textarea value="{{textVal}}" placeholder='请输入评论' />
+    <button>确定</button> -->
+    <form class='form' bindsubmit="bindFormSubmit" wx:if="{{!isShowTip}}">
+        <textarea auto-focus 
+        placeholder="请输入" 
+        value="{{textareaVal}}" 
+        bindblur="getText"/>
+        <view class='flex'>
+          <text class='typeBtn {{isShowName || "bg"}}' bindtap='switchStatus'>公开</text>
+          <text class="btn" bindtap='bindFormSubmit'>提交</text>          
+        </view>
+    </form>
+    <view class='tip' wx:if="{{isShowTip}}">
+      <text>已发布评论</text>
+      <text class="btn" bindtap='jumpBack'>进入留言区</text>
+    </view>
+</view>
