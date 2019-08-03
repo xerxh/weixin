@@ -19,6 +19,7 @@ App({
     pleacholder: '',
     referrerNo: '',
     parentId: '',
+    
   },
   onLaunch: function (options) {
     console.log(options,'app的onLaunch')
