@@ -1,7 +1,6 @@
 const config = {
   // 服务器地址
   api_blink_url: 'https://h5h5.hartedu.com',
-
     /**
      * 错误状态码
      * @ successCode ： 成功响应状态码
