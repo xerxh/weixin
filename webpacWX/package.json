@@ -12,6 +12,7 @@
 		"watch:alipay": "run-s deprecate:watch start:alipay",
 		"prestart": "rimraf dist",
 		"prebuild": "rimraf dist",
+    
 		"build:wechat": "cross-env NODE_ENV=production webpack --env.target=Wechat --env.min",
 		"build:alipay": "cross-env NODE_ENV=production webpack --env.target=Alipay --env.min",
 		"build": "run-s build:*",
