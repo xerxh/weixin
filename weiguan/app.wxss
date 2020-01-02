@@ -10,7 +10,6 @@ page{
   justify-content: space-between;
   padding-top: 400rpx;
   box-sizing: border-box;
-  
 } 
 view,text{
   word-break: break-all;
