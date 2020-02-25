@@ -10,6 +10,7 @@
     "pages/advisory/advisory",
     "pages/listDetail/listDetail",
     "pages/searchPage/index",
+    
     "pages/techer/index",
     "pages/about/about"
   ],
