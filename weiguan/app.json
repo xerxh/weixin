@@ -19,7 +19,6 @@
     "navigationBarBackgroundColor": "#ffff",
     "enablePullDownRefresh": true,
     "backgroundColor": "#F2F2F2",
-    
     "backgroundTextStyle": "dark",
     "navigationStyle": "custom"
   },
